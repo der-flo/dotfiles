@@ -1,1 +1,10 @@
 http://gitimmersion.com/lab_11.html : .profile
+
+tmux config, see Evernote
+stuff from https://github.com/thoughtbot/dotfiles
+stuff from https://github.com/ryanb/dotfiles
+
+PS1: git, rvm?
+
+VIM: http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
+	update_bundles?
