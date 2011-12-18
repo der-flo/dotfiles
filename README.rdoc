@@ -1,0 +1,12 @@
+= My dot files
+
+== Installation
+
+  git clone git://github.com/der-flo/dotfiles ~/dotfiles
+  cd ~/dotfiles
+  rake install
+
+== Inspirations
+
+* https://github.com/ryanb/dotfiles
+* https://github.com/thoughtbot/dotfiles

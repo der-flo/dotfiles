@@ -1,0 +1,15 @@
+[user]
+name = Florian Dütsch
+email = mail@florian-duetsch.de
+
+[core]
+autocrlf = input
+safecrlf = true
+
+[alias]
+co = checkout
+ci = commit
+st = status
+br = branch
+hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+prs = pull --rebase --stat
