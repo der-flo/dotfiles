@@ -27,3 +27,7 @@ set mouse=a
 
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
+
+let mapleader = ","
+let NERDTreeShowHidden=1
+map <Leader>n :NERDTreeToggle<CR>

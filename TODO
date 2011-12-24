@@ -4,17 +4,22 @@ tmux config, see Evernote
 stuff from https://github.com/thoughtbot/dotfiles
 stuff from https://github.com/ryanb/dotfiles
 
-PS1: git, rvm?
-* http://asemanfar.com/Current-Git-Branch-in-Bash-Prompt
-
 VIM
 * http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
 ** update_bundles?
+* Bundles as submodules?
+* "set grepprg=ack\ -a"?
+* https://github.com/robgleeson/hammer.vim/issues/22 ?
+* https://github.com/carlhuda/janus/issues/222
 
 https://github.com/sven-q/vimfiles/blob/master/vimrc
 
 http://www.vim.org/scripts/script.php?script_id=105
 
 ZSH!
+* PS1: rvm?
 * http://friedcpu.wordpress.com/2007/07/24/zsh-the-last-shell-youll-ever-need/
 * http://zinformatik.de/tipps-tricks/interessante-programme/die-z-shell-zsh-eine-machtige-alternative-zur-bash/
+* https://github.com/robbyrussell/oh-my-zsh
+* http://beginrescueend.com/integration/zsh/
+* Navigation
