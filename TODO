@@ -1,5 +1,3 @@
-http://gitimmersion.com/lab_11.html : .profile
-
 tmux config, see Evernote
 stuff from https://github.com/thoughtbot/dotfiles
 stuff from https://github.com/ryanb/dotfiles
@@ -11,6 +9,7 @@ VIM
 * "set grepprg=ack\ -a"?
 * https://github.com/robgleeson/hammer.vim/issues/22 ?
 * https://github.com/carlhuda/janus/issues/222
+* http://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim
 
 https://github.com/sven-q/vimfiles/blob/master/vimrc
 
