@@ -31,3 +31,7 @@ set directory=~/.vim/backup
 let mapleader = ","
 let NERDTreeShowHidden=1
 map <Leader>n :NERDTreeToggle<CR>
+
+autocmd FileType make set noexpandtab
+autocmd BufRead,BufNewFile {Gemfile,Rakefile,config.ru,Guardfile} set ft=ruby
+
