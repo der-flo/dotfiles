@@ -2,11 +2,11 @@
 
 # TODO: Check every option
 
-if [[ -n $SSH_CONNECTION ]]; then
-  export PS1='%m:%3~$(git_info_for_prompt)%# '
-else
-  export PS1='%3~$(git_info_for_prompt)%# '
-fi
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export PS1='%m:%3~$(git_info_for_prompt)%# '
+# else
+#   export PS1='%3~$(git_info_for_prompt)%# '
+# fi
 
 export EDITOR=vim
 #export PATH="$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
@@ -15,6 +15,8 @@ export EDITOR=vim
 fpath=(~/.zsh/functions $fpath)
 
 autoload -U ~/.zsh/functions/*(:t)
+autoload -U colors
+colors
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
@@ -54,3 +56,14 @@ bindkey '^?' backward-delete-char
 # add some readline keys back
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
+
+# TODO: Other colors
+# From: http://peepcode.com/blog/2012/my-command-line-prompt
+# Save a smiley to a local variable if the last command exited with success.
+local smiley="%(?,%{$fg[green]%}☺%{$reset_color%},%{$fg[red]%}☹%{$reset_color%})"
+# Show the relative path on one line, then the smiley.
+PROMPT='
+%~
+${smiley}  %{$reset_color%}'
+RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt)$(~/.zsh/bin/git-cwd-info.rb)%{$reset_color%}'
+
