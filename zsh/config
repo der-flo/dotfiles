@@ -57,7 +57,6 @@ bindkey '^?' backward-delete-char
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 
-# TODO: Other colors
 # From: http://peepcode.com/blog/2012/my-command-line-prompt
 # Save a smiley to a local variable if the last command exited with success.
 local smiley="%(?,%{$fg[green]%}☺%{$reset_color%},%{$fg[red]%}☹%{$reset_color%})"
@@ -65,5 +64,5 @@ local smiley="%(?,%{$fg[green]%}☺%{$reset_color%},%{$fg[red]%}☹%{$reset_colo
 PROMPT='
 %~
 ${smiley}  %{$reset_color%}'
-RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt)$(~/.zsh/bin/git-cwd-info.rb)%{$reset_color%}'
+RPROMPT='%{$fg_bold[black]%} $(~/.rvm/bin/rvm-prompt)$(~/.zsh/bin/git-cwd-info.rb)%{$reset_color%}'
 

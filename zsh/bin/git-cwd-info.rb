@@ -10,6 +10,9 @@
 # MODIFIED:
 #    Geoffrey Grosenbach http://peepcode.com
 
+
+# For colors see: https://github.com/flori/term-ansicolor/blob/master/lib/term/ansicolor.rb
+
 # The methods that get called more than once are memoized.
 
 def git_repo_path
@@ -32,7 +35,7 @@ def git_head_commit_id
 end
 
 def git_cwd_dirty
-  " %{\e[90m%}✗%{\e[0m%}" unless git_repo_path == '.' || `git ls-files -m`.strip.empty?
+  " %{\e[31m%}✗%{\e[0m%}" unless git_repo_path == '.' || `git ls-files -m`.strip.empty?
 end
 
 def rebasing_etc
@@ -46,5 +49,5 @@ def rebasing_etc
 end
 
 if in_git_repo
-  print " %{\e[90m%}#{git_parse_branch} %{\e[37m%}#{git_head_commit_id}%{\e[0m%}#{rebasing_etc}#{git_cwd_dirty}"
+  print " %{\e[0m%}%{\e[37m%}#{git_parse_branch} %{\e[90m%}#{git_head_commit_id}%{\e[0m%}#{rebasing_etc}#{git_cwd_dirty}"
 end
