@@ -1,6 +1,7 @@
 [user]
 name = Florian Dütsch
-email = mail@florian-duetsch.de
+# email address is set via environment variable $EMAIL
+# email = mail@florian-duetsch.de
 
 [core]
 autocrlf = input
@@ -16,3 +17,4 @@ prs = pull --rebase --stat
 
 [color]
 ui = true
+

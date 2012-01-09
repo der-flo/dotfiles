@@ -2,8 +2,16 @@
 . ~/.zsh/aliases
 . ~/.zsh/completion
 
-# This loads RVM into a shell session.
-[[ -s "/Users/der_flo/.rvm/scripts/rvm" ]] && \
-  source "/Users/der_flo/.rvm/scripts/rvm"
+case `hostname -s` in
+  flo-mb) export EMAIL="mail@florian-duetsch.de" ;;
+  flo) export EMAIL="florian.duetsch@nix-wie-weg.de" ;;
+esac
 
-export PATH=$PATH:/Users/der_flo/soft/android-sdk-macosx/tools:/Users/der_flo/soft/android-sdk-macosx/platform-tools
+# This loads RVM into a shell session.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+android_path=$HOME/soft/android-sdk-macosx
+if [[ -d $android_path ]]; then
+  export PATH=$PATH:$android_path/tools:$android_path/platform-tools
+fi
+
