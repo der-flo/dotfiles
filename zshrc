@@ -7,4 +7,3 @@
   source "/Users/der_flo/.rvm/scripts/rvm"
 
 export PATH=$PATH:/Users/der_flo/soft/android-sdk-macosx/tools:/Users/der_flo/soft/android-sdk-macosx/platform-tools
-
