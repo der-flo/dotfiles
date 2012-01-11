@@ -7,10 +7,8 @@ stuff from https://github.com/ryanb/dotfiles
 stuff from https://github.com/benhoskings/dot-files
 
 VIM
-* nerdtree is missing in the repo
 * http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
 ** update_bundles?
-* Bundles as submodules?
 * "set grepprg=ack\ -a"?
 * https://github.com/robgleeson/hammer.vim/issues/22 ?
 * https://github.com/carlhuda/janus/issues/222
@@ -31,5 +29,4 @@ ZSH!
 * http://beginrescueend.com/integration/zsh/
 * Navigation
 
-TODO: Cooler license, eg. WTFPL
 TODO inspriations: Hint to all the comments in the files
