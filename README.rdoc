@@ -12,6 +12,8 @@
 
   git clone git://github.com/der-flo/dotfiles ~/dotfiles
   cd ~/dotfiles
+  git submodule init
+  git submodule update
   rake install
 
 == Inspirations
