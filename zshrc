@@ -15,10 +15,6 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
 ## TODO?
 #[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
-#
-#if [ -f `brew --prefix`/etc/bash_completion ]; then
-#  . `brew --prefix`/etc/bash_completion
-#fi
 
 # TODO?
 #export SHELL='/bin/zsh --login'
