@@ -1,6 +1,3 @@
-host-specific gitconfig:
-# http://lenni.info/blog/2011/06/sharing-a-single-gitconfig-between-your-work-and-home-computers-and-taking-care-of-user-email/
-
 tmux config, see Evernote
 stuff from https://github.com/thoughtbot/dotfiles
 stuff from https://github.com/ryanb/dotfiles
@@ -30,3 +27,4 @@ ZSH!
 * Navigation
 
 TODO inspriations: Hint to all the comments in the files
+
