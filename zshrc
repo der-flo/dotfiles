@@ -5,7 +5,7 @@
 # Used for git configuration
 case `hostname -s` in
   flo-mb) export EMAIL="mail@florian-duetsch.de" ;;
-  flo) export EMAIL="florian.duetsch@nix-wie-weg.de" ;;
+  flo | nix-wie-weg) export EMAIL="florian.duetsch@nix-wie-weg.de" ;;
 esac
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
