@@ -64,5 +64,10 @@ local smiley="%(?,%{$fg[green]%}☺%{$reset_color%},%{$fg[red]%}☹%{$reset_colo
 PROMPT='
 %~
 ${smiley}  %{$reset_color%}'
-RPROMPT='%{$fg_bold[black]%} $(~/.rvm/bin/rvm-prompt)$(~/.zsh/bin/git-cwd-info.rb)%{$reset_color%}'
+
+if [[ -f ~/.rvm/bin/rvm-prompt ]] ; then
+  RPROMPT='%{$fg_bold[black]%} $(~/.rvm/bin/rvm-prompt)$(~/.zsh/bin/git-cwd-info.rb)%{$reset_color%}'
+else
+  RPROMPT='%{$fg_bold[black]%} $(~/.zsh/bin/git-cwd-info.rb)%{$reset_color%}'
+fi
 
