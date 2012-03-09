@@ -3,13 +3,14 @@
 == Prerequisites
 
 * A working RVM installation
-
-  chmod +x ~/.rvm/hooks/after_cd_bundler
+    chmod +x ~/.rvm/hooks/after_cd_bundler
 
 * {reattach-to-user-namespace}[https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard]
   on Mac OS X
+    brew install reattach-to-user-namespace
 
-  brew install reattach-to-user-namespace
+* A terminal with support for 256 colors (<tt>TERM=xterm-256color</tt>)
+
 
 == Installation
 
