@@ -50,3 +50,7 @@ map <Leader>n :NERDTreeToggle<CR>
 autocmd FileType make set noexpandtab
 autocmd BufRead,BufNewFile {Gemfile,Rakefile,config.ru,Guardfile} set ft=ruby
 
+" http://vimcolorschemetest.googlecode.com/svn/html/index-html.html
+set t_Co=256
+colorscheme colorful256
+
