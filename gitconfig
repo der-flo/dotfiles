@@ -16,6 +16,7 @@ st = status
 br = branch
 hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 prs = pull --rebase --stat
+sprs = !git stash && git prs && git stash pop
 
 [color]
 ui = true
