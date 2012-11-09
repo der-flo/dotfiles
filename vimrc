@@ -18,7 +18,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab                 " use spaces, not tabs
 
-" TODO: ?
+" TODO: what does this mean?
 set backspace=indent,eol,start  " backspace through everything in insert
 
 " TODO: more discreet
