@@ -17,7 +17,11 @@ set number
 set nowrap                    " don't wrap lines
 set tabstop=2
 set shiftwidth=2
+set shiftround
 set expandtab                 " use spaces, not tabs
+set autoindent
+set copyindent
+set smarttab
 
 " TODO: what does this mean?
 set backspace=indent,eol,start  " backspace through everything in insert
@@ -27,24 +31,28 @@ set list listchars=tab:»·,trail:·,precedes:<,extends:>
 
 
 " Searching
+set showmatch
 set hlsearch                  " highlight searches
 set incsearch                 " incremental searching
 set ignorecase                " searches are case insensitive ...
 set smartcase                 " ... unless they contain at least on capital
                               " letter
 
+let mapleader = ","
+
+set hidden                    " Buffers are hidden instead of closed
 
 set colorcolumn=80
-
+set title
 set visualbell
-
-
+set noerrorbells
+set history=1000
+set undolevels=1000
+" set wildignore=*.swp
 set mouse=a
+set nobackup
+set noswapfile
 
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
-
-let mapleader = ","
 let NERDTreeShowHidden=1
 map <Leader>n :NERDTreeToggle<CR>
 
