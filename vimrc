@@ -1,6 +1,7 @@
 " From:
 " * http://mislav.uniqpath.com/2011/12/vim-revisited/
 
+" https://github.com/tpope/vim-pathogen
 call pathogen#infect()
 call pathogen#helptags()
 
