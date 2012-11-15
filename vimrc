@@ -1,6 +1,8 @@
 " From:
 " * http://mislav.uniqpath.com/2011/12/vim-revisited/
 
+" TODO: F12-vim-mousetoggle does actually not work under Mac OS X.
+
 " https://github.com/tpope/vim-pathogen
 call pathogen#infect()
 call pathogen#helptags()
@@ -37,6 +39,8 @@ set incsearch                 " incremental searching
 set ignorecase                " searches are case insensitive ...
 set smartcase                 " ... unless they contain at least on capital
                               " letter
+nmap <silent> \ :nohlsearch<CR>     " stop highlighting
+
 
 let mapleader = ","
 
@@ -62,4 +66,14 @@ autocmd BufRead,BufNewFile {Gemfile,Rakefile,config.ru,Guardfile} set ft=ruby
 " http://vimcolorschemetest.googlecode.com/svn/html/index-html.html
 set t_Co=256
 colorscheme colorful256
+
+set pastetoggle=<F2>
+
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+cmap w!! w !sudo tee % >/dev/null
 
