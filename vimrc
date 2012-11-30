@@ -77,3 +77,6 @@ map <C-l> <C-w>l
 
 cmap w!! w !sudo tee % >/dev/null
 
+" Enable system clipboard
+set clipboard=unnamed
+
