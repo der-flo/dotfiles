@@ -22,3 +22,6 @@ sprs = !git stash && git prs && git stash pop
 [color]
 ui = true
 
+[push]
+default = simple
+
