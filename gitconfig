@@ -1,8 +1,9 @@
+[include]
+# http://stackoverflow.com/questions/1557183/is-it-possible-to-include-a-file-in-your-gitconfig
+path = .git.local
+
 [user]
 name = Florian Dütsch
-# email address is set via environment variable $EMAIL
-# http://lenni.info/blog/2011/06/sharing-a-single-gitconfig-between-your-work-and-home-computers-and-taking-care-of-user-email/
-# email = mail@florian-duetsch.de
 
 [core]
 autocrlf = input

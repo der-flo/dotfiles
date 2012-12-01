@@ -36,6 +36,12 @@ task :install do
   end
 end
 
+HOSTNAME = `hostname -s`.chomp
+EMAIL = case HOSTNAME
+        when 'flo-mb' then 'mail@florian-duetsch.de'
+        when 'flo', 'nix-wie-weg' then 'florian.duetsch@nix-wie-weg.de'
+        end
+
 def replace_file(file)
   system %Q{rm -rf "$HOME/.#{file.sub('.erb', '')}"}
   link_file(file)

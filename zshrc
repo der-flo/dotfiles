@@ -2,19 +2,6 @@
 . ~/.zsh/aliases
 . ~/.zsh/completion
 
-# Used for git configuration
-case `hostname -s` in
-  flo-mb)
-    export EMAIL="mail@florian-duetsch.de"
-    ;;
-  flo | nix-wie-weg)
-    export EMAIL="florian.duetsch@nix-wie-weg.de"
-esac
-
-export GIT_COMMITTER_EMAIL=$EMAIL
-export GIT_AUTHOR_EMAIL=$EMAIL
-
-
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/bin
 
 # This loads RVM into a shell session.
