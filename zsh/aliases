@@ -35,3 +35,4 @@ alias ls="ls -F"
 # alias %=' '
 
 alias subl_nowait='subl &!'
+alias -g ...='../..'

@@ -13,9 +13,16 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/bin
 # TODO?
 #export SHELL='/bin/zsh --login'
 
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && \
+  . $HOME/.tmuxinator/scripts/tmuxinator
 
 android_path=$HOME/soft/android-sdk-macosx
 if [[ -d $android_path ]]; then
   export PATH=$PATH:$android_path/tools:$android_path/platform-tools
 fi
 
+if [[ -d $HOME/.rvm/bin ]]; then
+  export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+fi
+
+# TODO: /etc/zsh/newuser.zshrc.recommended interesting?
