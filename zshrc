@@ -26,3 +26,7 @@ if [[ -d $HOME/.rvm/bin ]]; then
 fi
 
 # TODO: /etc/zsh/newuser.zshrc.recommended interesting?
+
+# 256 color terminal, but do not report to TMUX
+[ -z "$TMUX" ] && export TERM=xterm-256color
+
