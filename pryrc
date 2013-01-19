@@ -14,6 +14,14 @@ end
 require_without_bundler 'awesome_print'
 Pry.config.print = proc { |output, value| output.puts value.ai(:indent => 2) }
 
+# require 'hirb'
+# Hirb.enable
+# old_print = Pry.config.print
+# Pry.config.print = proc do |output, value|
+#   Hirb::View.view_or_page_output(value) || old_print.call(output, value)
+# end
+
+
 rails = File.join(Dir.getwd, 'config', 'environment.rb')
 if File.exist?(rails) && ENV['SKIP_RAILS'].nil?
   require rails
