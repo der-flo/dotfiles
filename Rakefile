@@ -10,7 +10,7 @@ task :install do
     next if %w[Rakefile README.rdoc LICENSE].include? file
     handle_file(file)
   end
-  Dir['prezto/runcoms/*'].each do |file|
+  Dir['zprezto/runcoms/*'].each do |file|
     basename = File.basename(file)
     next if basename == 'README.md'
     handle_file(file, ".#{basename}")
