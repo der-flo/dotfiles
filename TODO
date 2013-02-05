@@ -1,9 +1,7 @@
-* Vim modules as git submodules
 * Settings of iTerm2, Sublime, Alfred
 * darwin-conditional
 * README preconditions to code
 * Check all the following TODOs
-
 
 tmux config, see Evernote
 stuff from https://github.com/thoughtbot/dotfiles

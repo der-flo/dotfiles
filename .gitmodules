@@ -1,15 +1,15 @@
+[submodule "zprezto"]
+	path = zprezto
+	url = https://github.com/der-flo/prezto.git
 [submodule "vim/vim/bundle/nerdtree"]
 	path = vim/vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
 [submodule "vim/vim/bundle/ctrlp.vim"]
 	path = vim/vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule "vim/vim/bundle/vim-togglemouse"]
-	path = vim/vim/bundle/vim-togglemouse
+[submodule "vim/vim/bundle/vim-togglemouse.git"]
+	path = vim/vim/bundle/vim-togglemouse.git
 	url = https://github.com/nvie/vim-togglemouse.git
 [submodule "vim/vim/bundle/tcomment_vim"]
 	path = vim/vim/bundle/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim.git
-[submodule "zprezto"]
-	path = zprezto
-	url = https://github.com/der-flo/prezto.git
