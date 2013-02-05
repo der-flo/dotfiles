@@ -3,28 +3,13 @@
 == Prerequisites
 
 * A working RVM installation
-    chmod +x ~/.rvm/hooks/after_cd_bundler
-
-* {reattach-to-user-namespace}[https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard]
-  on Mac OS X
-    brew install reattach-to-user-namespace
-
 * A terminal with support for 256 colors (<tt>TERM=xterm-256color</tt>)
-
-* Git 1.7.10+
-    brew install git
-
-* Git credential helper
-    cd ~/bin && curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain
 
 == Installation
 
   chsh -s /bin/zsh
-
   git clone git://github.com/der-flo/dotfiles ~/dotfiles
   cd ~/dotfiles
-  git submodule init
-  git submodule update
   rake install
 
 == Inspirations
@@ -33,4 +18,4 @@ Inspired by or shamelessly copied from
 
 * https://github.com/ryanb/dotfiles
 * https://github.com/thoughtbot/dotfiles
-
+* https://github.com/skwp/dotfiles

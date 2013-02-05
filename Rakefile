@@ -4,8 +4,12 @@
 require 'rake'
 require 'erb'
 
+# TODO: Error handling
+
 desc "install the dot files into user's home directory"
 task :install do
+  `git submodule update --init --recursive`
+  `chmod +x ~/.rvm/hooks/after_cd_bundler`
 
   %w(git misc ruby vim).each do |dir|
     handle_files(Dir.glob("#{dir}/*"))
@@ -14,6 +18,10 @@ task :install do
   handle_file('rvm_gemsets_global_gems', '.rvm/gemsets/global.gems')
 
   if mac?
+    unless File.exist?('~/bin/git-credential-osxkeychain')
+      `mkdir -p ~/bin && cd ~/bin && curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain`
+    end
+    `brew install reattach-to-user-namespace git`
     handle_file('sublime/Preferences.sublime-settings',
                 'Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings')
   end
