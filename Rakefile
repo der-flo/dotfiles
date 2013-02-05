@@ -13,6 +13,11 @@ task :install do
 
   handle_file('rvm_gemsets_global_gems', '.rvm/gemsets/global.gems')
 
+  if mac?
+    handle_file('sublime/Preferences.sublime-settings',
+                'Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings')
+  end
+
   Dir['zprezto/runcoms/*'].each do |file|
     basename = File.basename(file)
     next if basename == 'README.md'
@@ -27,7 +32,7 @@ EMAIL = case HOSTNAME
         end
 
 def replace_file(file, dest_path)
-  system %Q{rm -rf #{dest_path}}
+  system %Q{rm -rf "#{dest_path}"}
   link_file(file, dest_path)
 end
 
@@ -76,4 +81,8 @@ def handle_files(files)
   files.each do |f|
     handle_file(f)
   end
+end
+
+def mac?
+  RUBY_PLATFORM.downcase.include?("darwin")
 end
