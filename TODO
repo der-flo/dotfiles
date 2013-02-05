@@ -1,3 +1,10 @@
+* Vim modules as git submodules
+* Settings of iTerm2, Sublime, Alfred
+* darwin-conditional
+* README preconditions to code
+* Check all the following TODOs
+
+
 tmux config, see Evernote
 stuff from https://github.com/thoughtbot/dotfiles
 stuff from https://github.com/ryanb/dotfiles
@@ -25,5 +32,5 @@ ZSH!
 * http://beginrescueend.com/integration/zsh/
 * Navigation
 
-TODO inspriations: Hint to all the comments in the files
+TODO inspirations: Hint to all the comments in the files
 

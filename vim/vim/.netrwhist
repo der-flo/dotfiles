@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/der_flo/dotfiles/zsh'
+let g:netrw_dirhist_2='/Users/der_flo/.rvm/gems/ruby-1.9.3-p194/gems/knife-solo-0.0.14'
+let g:netrw_dirhist_3='/Users/der_flo/.rvm/gems/ruby-1.9.3-p194/gems/googlebase-0.2.1'
+let g:netrw_dirhist_4='/Users/der_flo/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8'
+let g:netrw_dirhist_5='/Users/der_flo/.rvm/gems/ruby-1.9.3-p194/gems/dynamoid-0.6.0'
+let g:netrw_dirhist_6='/Users/der_flo/.rvm/gems/ruby-1.9.3-p362/gems/dynamoid-0.6.1'

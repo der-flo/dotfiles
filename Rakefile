@@ -1,4 +1,4 @@
-# File borrowed from Ryan Bates:
+# Parts borrowed from Ryan Bates:
 # https://github.com/ryanb/dotfiles/blob/master/Rakefile
 
 require 'rake'
@@ -6,10 +6,13 @@ require 'erb'
 
 desc "install the dot files into user's home directory"
 task :install do
-  Dir['*'].each do |file|
-    next if %w[Rakefile README.rdoc LICENSE].include? file
-    handle_file(file)
+
+  %w(git misc ruby vim).each do |dir|
+    handle_files(Dir.glob("#{dir}/*"))
   end
+
+  handle_file('rvm_gemsets_global_gems', '.rvm/gemsets/global.gems')
+
   Dir['zprezto/runcoms/*'].each do |file|
     basename = File.basename(file)
     next if basename == 'README.md'
@@ -35,15 +38,16 @@ def link_file(file, dest_path)
       new_file.write ERB.new(File.read(file)).result(binding)
     end
   else
-    puts "linking #{dest_path}"
+    puts "linking #{file} to #{dest_path}"
     system %Q{ln -s "$PWD/#{file}" "#{dest_path}"}
   end
 end
 
 def handle_file(file, dest_file = nil)
   replace_all = false
-  dest_file ||= ".#{file.sub('.erb', '')}"
+  dest_file ||= ".#{file.split('/').last.sub('.erb', '')}"
   dest_path = File.join(ENV['HOME'], dest_file)
+
   if File.exist?(dest_path)
     if File.identical?(file, dest_path)
       puts "identical ~/#{dest_file}"
@@ -68,3 +72,8 @@ def handle_file(file, dest_file = nil)
   end
 end
 
+def handle_files(files)
+  files.each do |f|
+    handle_file(f)
+  end
+end
