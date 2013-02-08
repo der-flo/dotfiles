@@ -29,6 +29,7 @@ task :install do
                 'Library/Preferences/com.alfredapp.Alfred.plist')
   end
 
+  handle_file('zprezto', '.zprezto')
   Dir['zprezto/runcoms/*'].each do |file|
     basename = File.basename(file)
     next if basename == 'README.md'
