@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>keyword</key>
+		<string>#</string>
+		<key>spaces</key>
+		<true/>
+		<key>text</key>
+		<string>Redmine-Ticket</string>
+		<key>url</key>
+		<string>http://redmine.nwwo.de/search?q={query}</string>
+		<key>utf8</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>keyword</key>
+		<string>#z</string>
+		<key>spaces</key>
+		<false/>
+		<key>text</key>
+		<string>Redmine-Zeitbuchung</string>
+		<key>url</key>
+		<string>http://redmine.nwwo.de/issues/{query}/time_entries/new</string>
+		<key>utf8</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>keyword</key>
+		<string>gem</string>
+		<key>spaces</key>
+		<true/>
+		<key>text</key>
+		<string>Rubygems.org</string>
+		<key>url</key>
+		<string>http://rubygems.org/search?utf8=%E2%9C%93&amp;query={query}</string>
+		<key>utf8</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>keyword</key>
+		<string>wiki</string>
+		<key>spaces</key>
+		<true/>
+		<key>text</key>
+		<string>Nix-wie-weg Wiki</string>
+		<key>url</key>
+		<string>http://wiki.nwwo.de/StartSeite?action=fullsearch&amp;context=180&amp;value={query}&amp;titlesearch=Titel</string>
+		<key>utf8</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>keyword</key>
+		<string>leo</string>
+		<key>spaces</key>
+		<false/>
+		<key>text</key>
+		<string>LEO-Suche nach {query}</string>
+		<key>url</key>
+		<string>http://dict.leo.org/ende?search={query}</string>
+		<key>utf8</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>keyword</key>
+		<string>rmwiki</string>
+		<key>spaces</key>
+		<false/>
+		<key>text</key>
+		<string>Redmine-Wikisuche</string>
+		<key>url</key>
+		<string>http://redmine.nwwo.de/search?q={query}&amp;scope=all&amp;all_words=1&amp;titles_only=1&amp;wiki_pages=1&amp;submit=OK</string>
+		<key>utf8</key>
+		<false/>
+	</dict>
+</array>
+</plist>

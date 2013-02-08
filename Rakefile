@@ -24,6 +24,9 @@ task :install do
     `brew install reattach-to-user-namespace git`
     handle_file('sublime/Preferences.sublime-settings',
                 'Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings')
+    handle_file('alfred/appsupport', 'Library/Application Support/Alfred')
+    handle_file('alfred/com.alfredapp.Alfred.plist',
+                'Library/Preferences/com.alfredapp.Alfred.plist')
   end
 
   Dir['zprezto/runcoms/*'].each do |file|
