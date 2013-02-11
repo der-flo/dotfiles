@@ -1,7 +1,0 @@
---all
---type-add
-html=.haml
---type-add
-css=.sass,.scss
---type-add
-js=.coffee
