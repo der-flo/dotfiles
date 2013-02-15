@@ -1,33 +1,33 @@
 {
-  "caret_style": "phase",
-  "color_scheme": "Packages/Color Scheme - Default/Sunburst.tmTheme",
-  "draw_white_space": "all",
-  "ensure_newline_at_eof_on_save": true,
-  "file_exclude_patterns":
-  [
-    "._*",
-    ".DS_Store"
-  ],
-  "folder_exclude_patterns":
-  [
-    ".svn",
-    ".git",
-    ".bundle"
-  ],
-  "font_face": "Source Code Pro",
-  "font_size": 12.0,
-  "highlight_line": true,
-  "highlight_modified_tabs": true,
-  "ignored_packages":
-  [
-    "Vintage"
-  ],
-  "rulers":
-  [
-    80
-  ],
-  "show_full_path": true,
-  "tab_size": 2,
-  "translate_tabs_to_spaces": true,
-  "trim_trailing_white_space_on_save": true
+	"caret_style": "phase",
+	"color_scheme": "Packages/Color Scheme - Default/Sunburst.tmTheme",
+	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"._*",
+		".DS_Store"
+	],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".bundle"
+	],
+	"font_face": "Source Code Pro",
+	"font_size": 14.0,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"rulers":
+	[
+		80
+	],
+	"show_full_path": true,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
 }
