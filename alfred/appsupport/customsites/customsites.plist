@@ -22,7 +22,7 @@
 		<key>text</key>
 		<string>Redmine-Zeitbuchung</string>
 		<key>url</key>
-		<string>http://redmine.nwwo.de/issues/{query}/time_entries/new</string>
+		<string>http://www.nwwo.de/redmine/?q={query}</string>
 		<key>utf8</key>
 		<false/>
 	</dict>

@@ -1,3 +1,5 @@
+# TODO: https://github.com/nviennot/irb-config
+
 # From https://github.com/lucapette/dotfiles/blob/master/pryrc
 def require_without_bundler gem
   _gem_path = Dir.glob("#{Gem.path.grep(/global$/).first}/gems/#{gem}*/lib").first
@@ -9,7 +11,7 @@ def require_without_bundler gem
   end
 end
 
-# Based on https://github.com/danielbayerlein/dotfiles/blob/master/.pryr://github.com/danielbayerlein/dotfiles/blob/master/.pryrc
+# Based on https://github.com/danielbayerlein/dotfiles/blob/master/.pryrc
 
 require_without_bundler 'awesome_print'
 Pry.config.print = proc { |output, value| output.puts value.ai(:indent => 2) }
@@ -21,6 +23,7 @@ Pry.config.print = proc { |output, value| output.puts value.ai(:indent => 2) }
 #   Hirb::View.view_or_page_output(value) || old_print.call(output, value)
 # end
 
+# require_without_bundler 'pry-debugger'
 
 rails = File.join(Dir.getwd, 'config', 'environment.rb')
 if File.exist?(rails) && ENV['SKIP_RAILS'].nil?

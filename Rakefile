@@ -15,8 +15,6 @@ task :install do
     handle_files(Dir.glob("#{dir}/*"))
   end
 
-  handle_file('rvm_gemsets_global_gems', '.rvm/gemsets/global.gems')
-
   if mac?
     unless File.exist?('~/bin/git-credential-osxkeychain')
       `mkdir -p ~/bin && cd ~/bin && curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain`
