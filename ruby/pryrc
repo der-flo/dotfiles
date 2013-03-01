@@ -1,19 +1,8 @@
 # TODO: https://github.com/nviennot/irb-config
 
-# From https://github.com/lucapette/dotfiles/blob/master/pryrc
-def require_without_bundler gem
-  _gem_path = Dir.glob("#{Gem.path.grep(/global$/).first}/gems/#{gem}*/lib").first
-  if _gem_path
-    $LOAD_PATH << _gem_path
-    require gem
-  else
-    puts "Please put #{gem} in your global"
-  end
-end
-
 # Based on https://github.com/danielbayerlein/dotfiles/blob/master/.pryrc
 
-require_without_bundler 'awesome_print'
+require 'awesome_print'
 Pry.config.print = proc { |output, value| output.puts value.ai(:indent => 2) }
 
 # require 'hirb'
@@ -41,3 +30,4 @@ if File.exist?(rails) && ENV['SKIP_RAILS'].nil?
   end
 end
 
+Pry.config.theme = 'tomorrow-night'
