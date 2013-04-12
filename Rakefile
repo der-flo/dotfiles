@@ -101,7 +101,7 @@ end
 def install_prezto
   dir = File.join(ENV['ZDOTDIR'] || ENV['HOME'], '.zprezto')
   unless File.exists?(dir)
-    puts `git clone --recursive https://github.com/sorin-ionescu/prezto.git #{dir}`
+    puts `git clone --recursive https://github.com/der-flo/prezto.git #{dir}`
   end
   puts `cd #{dir} && git pull --rebase && git submodule update --init --recursive`
 end
