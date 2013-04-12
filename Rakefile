@@ -8,12 +8,16 @@ require 'erb'
 
 desc "install the dot files into user's home directory"
 task :install do
-  `git submodule update --init --recursive`
-  `chmod +x ~/.rvm/hooks/after_cd_bundler`
+
+  install_prezto
+
+  puts `git submodule update --init --recursive`
+  puts `chmod +x ~/.rvm/hooks/after_cd_bundler`
 
   %w(git misc ruby vim).each do |dir|
     handle_files(Dir.glob("#{dir}/*"))
   end
+  handle_files(Dir.glob('prezto/z*'))
 
   if mac?
     unless File.exist?('~/bin/git-credential-osxkeychain')
@@ -28,13 +32,6 @@ task :install do
     # TODO: Alfred overrides the file permanently
     handle_file('alfred/com.alfredapp.Alfred.plist',
                 'Library/Preferences/com.alfredapp.Alfred.plist')
-  end
-
-  handle_file('zprezto', '.zprezto')
-  Dir['zprezto/runcoms/*'].each do |file|
-    basename = File.basename(file)
-    next if basename == 'README.md'
-    handle_file(file, ".#{basename}")
   end
 end
 
@@ -98,4 +95,13 @@ end
 
 def mac?
   RUBY_PLATFORM.downcase.include?("darwin")
+end
+
+
+def install_prezto
+  dir = File.join(ENV['ZDOTDIR'] || ENV['HOME'], '.zprezto')
+  unless File.exists?(dir)
+    puts `git clone --recursive https://github.com/sorin-ionescu/prezto.git #{dir}`
+  end
+  puts `cd #{dir} && git pull --rebase && git submodule update --init --recursive`
 end

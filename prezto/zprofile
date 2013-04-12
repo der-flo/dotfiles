@@ -1,0 +1,16 @@
+#
+# Executes commands at login pre-zshrc.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+
+export JAVA_HOME="$(/usr/libexec/java_home)"
+export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.aws/pk-*.pem | /usr/bin/head -1)"
+export EC2_CERT="$(/bin/ls "$HOME"/.aws/cert-*.pem | /usr/bin/head -1)"
+export AWS_AUTO_SCALING_HOME="/usr/local/Library/LinkedKegs/auto-scaling/jars"
+export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
+export AWS_ACCESS_KEY_ID=`cat "$HOME"/.aws/access_key_id`
+export AWS_SECRET_ACCESS_KEY=`cat "$HOME"/.aws/secret_access_key`
+export EC2_URL="https://ec2.eu-west-1.amazonaws.com"
