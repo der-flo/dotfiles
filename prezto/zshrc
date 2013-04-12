@@ -13,17 +13,17 @@ fi
 # Customize to your needs...
 
 
-alias subl_nowait='subl &!'
 
-# TODO?
 # if [[ "$TERM" != "screen-256color" ]]
 # then
 #   tmux new-session
 #   exit
 # fi
 
-
+alias txn='tmux new-session'
+alias subl_nowait='subl &!'
 alias ag='noglob ag --hidden'
 alias agi='noglob ag --hidden --ignore-case'
 alias be='bundle exec'
 alias bo='VISUAL=subl bundle open'
+alias bi='bundle install'
