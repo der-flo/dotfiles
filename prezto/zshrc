@@ -15,9 +15,6 @@ fi
 
 alias subl_nowait='subl &!'
 
-# TODO: Remove
-source ~/.git-flow-completion.zsh
-
 # TODO?
 # if [[ "$TERM" != "screen-256color" ]]
 # then
