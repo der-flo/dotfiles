@@ -1,3 +1,5 @@
 !.gitkeep
 alfred/appsupport/knowledge.alfdb
 vim/vim/.netrwhist
+vim/vim/bundle/
+!vim/vim/bundle/vundle/

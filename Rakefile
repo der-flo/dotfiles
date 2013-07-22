@@ -12,6 +12,7 @@ task :install do
   install_prezto
 
   puts `git submodule update --init --recursive`
+  puts `vim +BundleInstall +q`
   puts `chmod +x ~/.rvm/hooks/after_cd_bundler`
 
   %w(git misc ruby vim).each do |dir|
