@@ -21,9 +21,12 @@ filetype plugin indent on
 " ... Vundle configuration
 
 set background=dark
-" TODO: Only when available
-colorscheme base16-bright
-" colorscheme colorful256
+" colorscheme perhaps not yet installed
+try
+  colorscheme base16-bright
+  " colorscheme colorful256
+catch /^Vim\%((\a\+)\)\=:E185/
+endtry
 
 
 " TODO: F12-vim-mousetoggle does actually not work under Mac OS X.
