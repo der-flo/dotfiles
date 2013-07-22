@@ -25,14 +25,8 @@ set background=dark
 colorscheme base16-bright
 " colorscheme colorful256
 
-" TODO: Pathogen raus
-
 
 " TODO: F12-vim-mousetoggle does actually not work under Mac OS X.
-
-" https://github.com/tpope/vim-pathogen
-call pathogen#infect()
-call pathogen#helptags()
 
 syntax on
 set encoding=utf-8
