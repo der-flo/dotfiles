@@ -27,3 +27,9 @@ alias agi='noglob ag --hidden --ignore-case'
 alias be='bundle exec'
 alias bo='VISUAL=subl bundle open'
 alias bi='bundle install'
+
+# http://www.saturnflyer.com/blog/jim/2013/03/15/searching-through-your-bundled-gems/
+function ag_gem() {
+  ag $1 `bundle show --paths`
+}
+
