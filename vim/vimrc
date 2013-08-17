@@ -1,7 +1,6 @@
 " From:
 " * http://mislav.uniqpath.com/2011/12/vim-revisited/
 
-
 " Vundle configuration ...
 set nocompatible
 filetype off
@@ -19,15 +18,6 @@ Bundle 'tomtom/tcomment_vim'
 
 filetype plugin indent on
 " ... Vundle configuration
-
-set background=dark
-" colorscheme perhaps not yet installed
-try
-  colorscheme base16-bright
-  " colorscheme colorful256
-catch /^Vim\%((\a\+)\)\=:E185/
-endtry
-
 
 " TODO: F12-vim-mousetoggle does actually not work under Mac OS X.
 
@@ -54,7 +44,6 @@ set backspace=indent,eol,start  " backspace through everything in insert
 " TODO: more discreet
 set list listchars=tab:»·,trail:·,precedes:<,extends:>
 
-
 " Searching
 set showmatch
 set hlsearch                  " highlight searches
@@ -63,7 +52,6 @@ set ignorecase                " searches are case insensitive ...
 set smartcase                 " ... unless they contain at least on capital
                               " letter
 nmap <silent> \ :nohlsearch<CR>     " stop highlighting
-
 
 let mapleader = ","
 
@@ -92,9 +80,6 @@ autocmd BufRead,BufNewFile {Gemfile,Rakefile,config.ru,Guardfile} set ft=ruby
 
 au BufRead,BufNewFile *.god setfiletype ruby
 
-" http://vimcolorschemetest.googlecode.com/svn/html/index-html.html
-set t_Co=256
-"colorscheme colorful256
 
 set pastetoggle=<F2>
 
@@ -108,4 +93,14 @@ cmap w!! w !sudo tee % >/dev/null
 
 " Enable system clipboard
 set clipboard=unnamed
+
+" http://vimcolorschemetest.googlecode.com/svn/html/index-html.html
+set t_Co=256
+set background=dark
+" colorscheme perhaps not yet installed
+try
+  colorscheme base16-bright
+  " colorscheme colorful256
+catch /^Vim\%((\a\+)\)\=:E185/
+endtry
 
