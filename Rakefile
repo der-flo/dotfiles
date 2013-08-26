@@ -21,9 +21,6 @@ task :install do
   handle_files(Dir.glob('prezto/z*'))
 
   if mac?
-    unless File.exist?('~/bin/git-credential-osxkeychain')
-      `mkdir -p ~/bin && cd ~/bin && curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain`
-    end
     `brew install reattach-to-user-namespace git`
     handle_file('alfred/appsupport', 'Library/Application Support/Alfred')
     # TODO: Alfred overrides the file permanently
