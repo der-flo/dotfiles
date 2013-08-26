@@ -25,10 +25,6 @@ task :install do
       `mkdir -p ~/bin && cd ~/bin && curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain`
     end
     `brew install reattach-to-user-namespace git`
-    handle_file('sublime/Preferences.sublime-settings',
-                'Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings')
-    handle_file('sublime/Default (OSX).sublime-keymap',
-                'Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap')
     handle_file('alfred/appsupport', 'Library/Application Support/Alfred')
     # TODO: Alfred overrides the file permanently
     handle_file('alfred/com.alfredapp.Alfred.plist',
