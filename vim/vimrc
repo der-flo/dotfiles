@@ -71,7 +71,7 @@ set noswapfile
 
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
-map <Leader>n :NERDTreeToggle<CR>
+map <Leader>n :NERDTreeFind<CR>
 " close vim if only NERDTree is left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
