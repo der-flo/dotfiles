@@ -12,7 +12,15 @@ fi
 
 # Customize to your needs...
 
-
+# Read history from file aka. import commands from other shells
+#
+# http://zsh.sourceforge.net/Doc/Release/Options.html#History
+#   If you find that you want more control over when commands get imported,
+#   you may wish to turn SHARE_HISTORY off, INC_APPEND_HISTORY on, and then
+#   manually import commands whenever you need them using ‘fc -RI’.
+unsetopt SHARE_HISTORY
+alias read_history='fc -RI'
+alias rh=read_history
 
 # if [[ "$TERM" != "screen-256color" ]]
 # then
