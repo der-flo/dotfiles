@@ -1,0 +1,8 @@
+{
+	"ensure_newline_at_eof_on_save": true,
+	"font_size": 18.0,
+	"rulers":
+	[
+		80
+	]
+}
