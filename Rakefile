@@ -27,7 +27,7 @@ task :install do
     handle_file('alfred/com.alfredapp.Alfred.plist',
                 'Library/Preferences/com.alfredapp.Alfred.plist')
     handle_file('sublime/User',
-                'Library/Application Support/Sublime Text 2/Packages/User')
+                'Library/Application Support/Sublime Text 3/Packages/User')
   end
 end
 
