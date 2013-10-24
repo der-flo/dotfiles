@@ -1,6 +1,6 @@
 {
 	"always_show_minimap_viewport": true,
-	"auto_complete_commit_on_tab": true,
+	"auto_complete_commit_on_tab": false,
 	"bold_folder_labels": false,
 	"caret_style": "phase",
 	"color_scheme": "Packages/User/Sunburst-Mod.tmTheme",
