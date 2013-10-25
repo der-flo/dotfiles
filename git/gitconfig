@@ -9,6 +9,7 @@ name = Florian Dütsch
 autocrlf = input
 safecrlf = true
 excludesfile = ~/.gitignore
+commentchar = >
 
 [alias]
 co = checkout
