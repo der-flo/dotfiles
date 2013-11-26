@@ -34,8 +34,9 @@ alias ag='noglob ag --hidden'
 alias agi='noglob ag --hidden --ignore-case'
 alias ag_todo1='ag TODO | grep -v "TODO Prio 2"'
 alias be='bundle exec'
-alias bo='VISUAL=subl bundle open'
-alias bi='bundle install'
+alias bo='VISUAL=subl_nowait bundle open'
+alias bi='bundle install -j4'
+alias bil='bundle install -j4 --local'
 
 # http://www.saturnflyer.com/blog/jim/2013/03/15/searching-through-your-bundled-gems/
 function ag_gem() {
