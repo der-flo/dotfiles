@@ -4,6 +4,7 @@
 
 * A working RVM installation
 * A terminal with support for 256 colors (<tt>TERM=xterm-256color</tt>)
+* A recent git version (1.8), (`brew install git`)
 
 == Installation
 
