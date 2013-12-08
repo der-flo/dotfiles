@@ -1,7 +1,9 @@
 {
 	"installed_packages":
 	[
+		"AdvancedNewFile",
 		"Better CoffeeScript",
+		"CTags",
 		"EasyMotion",
 		"ExportHtml",
 		"GitGutter",
