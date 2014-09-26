@@ -45,3 +45,4 @@ function ag_gem() {
   ag $1 `bundle show --paths`
 }
 
+alias rubocop_branch="git branchfiles | grep '\.rb$' | xargs rubocop"
