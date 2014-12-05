@@ -45,4 +45,29 @@ function ag_gem() {
   ag $1 `bundle show --paths`
 }
 
-alias rubocop_branch="git branchfiles | grep '\.rb$' | xargs rubocop"
+browse() { open $(eval ${1}) }
+
+alias http_dir='ruby -run -e httpd . --port=8080'
+
+
+# Git
+alias branch_current='git rev-parse --abbrev-ref HEAD'
+alias branch_oldest_ancestor='/usr/bin/diff -u <(git rev-list --first-parent master) <(git rev-list --first-parent HEAD) | sed -ne "s/^ //p" | head -1'
+alias branch_log='git log $(branch_oldest_ancestor)..HEAD'
+alias branch_diff='git diff $(branch_oldest_ancestor)..HEAD'
+alias branch_files='git diff $(branch_oldest_ancestor)..HEAD --diff-filter=ACMR --name-only --oneline'
+
+# Bitbucket
+alias bitbucket_repo_url='echo https://$(git remote -v | grep -oh "bitbucket.org[:/][^ .]\+" | head -1 | sed "s/:/\//")'
+alias bitbucket_review_url='echo $(bitbucket_repo_url)/branches/compare/$(branch_current)..$(branch_oldest_ancestor)'
+
+# Redmine
+alias redmine_url='echo http://redmine.nwwo.de/issues/$(branch_current | grep -oh "^[0-9]\+")'
+
+# Rubocop
+alias branch_rubocop="branch_files | grep '\.rb$' | xargs rubocop"
+
+# Shortcuts
+alias bbb='browse bitbucket_repo_url'
+alias bbbr='browse bitbucket_review_url'
+alias bred='browse redmine_url'
