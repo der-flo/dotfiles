@@ -40,10 +40,15 @@ alias bo='VISUAL=subl_nowait bundle open'
 alias bi='bundle install -j4'
 alias bil='bundle install -j4 --local'
 
+alias otrs_spool='ssh otrs.nwwo.de ls /opt/otrs/var/spool'
+
 # http://www.saturnflyer.com/blog/jim/2013/03/15/searching-through-your-bundled-gems/
 function ag_gem() {
   ag $1 `bundle show --paths`
 }
+
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 browse() { open $(eval ${1}) }
 
