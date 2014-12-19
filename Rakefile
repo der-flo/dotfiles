@@ -21,6 +21,7 @@ task :install do
   handle_files(Dir.glob('prezto/z*'))
 
   handle_file('bin/getswap', 'bin/getswap')
+  handle_file('bin/git-icdiff', 'bin/git-icdiff')
 
   if mac?
     `brew install reattach-to-user-namespace git`
