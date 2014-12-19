@@ -54,6 +54,7 @@ browse() { open $(eval ${1}) }
 
 alias http_dir='ruby -run -e httpd . --port=8080'
 
+alias topswap='getswap | egrep -v "Swap used: 0" | sort -n -k 5'
 
 # Git
 alias branch_current='git rev-parse --abbrev-ref HEAD'

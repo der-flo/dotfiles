@@ -12,13 +12,15 @@ task :install do
   install_prezto
 
   puts `git submodule update --init --recursive`
-  puts `vim +BundleInstall +q`
+  #puts `vim +BundleInstall +q`
   puts `chmod +x ~/.rvm/hooks/after_cd_bundler`
 
   %w(git misc ruby vim).each do |dir|
     handle_files(Dir.glob("#{dir}/*"))
   end
   handle_files(Dir.glob('prezto/z*'))
+
+  handle_file('bin/getswap', 'bin/getswap')
 
   if mac?
     `brew install reattach-to-user-namespace git`
