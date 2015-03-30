@@ -64,7 +64,7 @@ alias branch_diff='git diff $(branch_oldest_ancestor)..HEAD'
 alias branch_files='git diff $(branch_oldest_ancestor)..HEAD --diff-filter=ACMR --name-only --oneline'
 
 # Bitbucket
-alias bitbucket_repo_url='echo https://$(git remote -v | grep -oh "bitbucket.org[:/][^ .]\+" | head -1 | sed "s/:/\//")'
+alias bitbucket_repo_url='echo https://$(git remote -v | grep -oh "bitbucket.org[:/][^ ]\+.git" | head -1 | sed "s/:/\//" | sed "s/\.git$//")'
 alias bitbucket_review_url='echo $(bitbucket_repo_url)/branches/compare/$(branch_current)..$(branch_oldest_ancestor)'
 
 # Redmine
