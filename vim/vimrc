@@ -1,106 +1,38 @@
-" From:
-" * http://mislav.uniqpath.com/2011/12/vim-revisited/
+source ~/.vim/plugins.vim
+source ~/.vim/filetypes.vim
+source ~/.vim/key_mappings.vim
+source ~/.vim/syntastic.vim
 
-" Vundle configuration ...
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" Appearance
+set background=dark
+colorscheme PaperColor
+set colorcolumn=81 " show a limiting column after 80 characters
+set number " show line numbers
 
-Bundle 'gmarik/vundle'
-Bundle 'chriskempson/base16-vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-haml'
-Bundle 'scrooloose/nerdtree'
-Bundle 'nvie/vim-togglemouse'
-Bundle 'tomtom/tcomment_vim'
+set nowrap " do not wrap lines
 
-filetype plugin indent on
-" ... Vundle configuration
+" TODO: does not work yet inside tmux
+set title " show filename in window title
 
-" TODO: F12-vim-mousetoggle does actually not work under Mac OS X.
+" TODO: really write swap files?
 
-syntax on
-set encoding=utf-8
-set nocompatible              " choose no compatibility with legacy vi
-set showcmd                   " display incomplete commands
-set ruler                     " show the cursor all the time
-set number
-
-" Whitespace
-set nowrap                    " don't wrap lines
-set tabstop=2
-set shiftwidth=2
-set shiftround
-set expandtab                 " use spaces, not tabs
-set autoindent
-set copyindent
-set smarttab
-
-" TODO: what does this mean?
-set backspace=indent,eol,start  " backspace through everything in insert
-
-" TODO: more discreet
+" tab: show invisible tabs
+" trail: show trailing whitespace
+" precedes, extends: show whether lines are too long to be completely visible
 set list listchars=tab:»·,trail:·,precedes:<,extends:>
 
+" Indentation http://vim.wikia.com/wiki/Indenting_source_code
+set expandtab " expand tab key presses to spaces
+set softtabstop=2 " tabstops are two spaces
+set shiftwidth=2 " width of autoindentation
+
 " Searching
-set showmatch
-set hlsearch                  " highlight searches
-set incsearch                 " incremental searching
-set ignorecase                " searches are case insensitive ...
-set smartcase                 " ... unless they contain at least on capital
-                              " letter
-nmap <silent> \ :nohlsearch<CR>     " stop highlighting
+set hlsearch " highlight search results
+set incsearch " immediately start searching
+set ignorecase " ignore case when searching
+set smartcase " only ignore case when search string does not contain upper
+              " case characters
 
-let mapleader = ","
-
-set hidden                    " Buffers are hidden instead of closed
-
-set colorcolumn=80
-set title
-set visualbell
-set noerrorbells
-set history=1000
-set undolevels=1000
-" set wildignore=*.swp
-set mouse=a
+" Mouse
+set mouse=a " enable mouse in all modes
 set ttymouse=xterm2 " resize splits with mouse when inside tmux session
-set nobackup
-set noswapfile
-
-let NERDTreeShowHidden=1
-let NERDTreeQuitOnOpen=1
-map <Leader>n :NERDTreeFind<CR>
-" close vim if only NERDTree is left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-autocmd FileType make set noexpandtab
-autocmd BufRead,BufNewFile {Gemfile,Rakefile,config.ru,Guardfile} set ft=ruby
-
-au BufRead,BufNewFile *.god setfiletype ruby
-
-
-set pastetoggle=<F2>
-
-" Easy window navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
-cmap w!! w !sudo tee % >/dev/null
-
-" Enable system clipboard
-set clipboard=unnamed
-
-" http://vimcolorschemetest.googlecode.com/svn/html/index-html.html
-set t_Co=256
-set background=dark
-" colorscheme perhaps not yet installed
-try
-  colorscheme base16-bright
-  " colorscheme colorful256
-catch /^Vim\%((\a\+)\)\=:E185/
-endtry
-

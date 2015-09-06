@@ -1,5 +1,4 @@
-set guioptions-=T                 " Remove toolbar
-set guioptions-=r                 " Remove right scrollbar
-set lines=25 columns=85           " UI size
-set guifont=Source\ Code\ Pro:h14 " font size
-
+set guioptions-=T          " Remove toolbar
+set guioptions-=r          " Remove right scrollbar
+set lines=25 columns=85    " UI size
+set guifont=Fira\ Mono:h14 " Font and size
