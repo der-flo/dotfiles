@@ -10,7 +10,7 @@ desc "install the dot files into user's home directory"
 task :install do
   install_prezto
 
-  puts `git submodule update --init --recursive`
+  # puts `git submodule update --init --recursive`
   puts `vim +PlugUpdate +qall`
   puts `chmod +x ~/.rvm/hooks/after_cd_bundler`
 

@@ -1,8 +1,7 @@
 !.gitkeep
 alfred/appsupport/knowledge.alfdb
 vim/vim/.netrwhist
-vim/vim/bundle/
-!vim/vim/bundle/vundle/
+vim/vim/plugged
 sublime/User/Package Control.cache/
 sublime/User/Package Control.last-run
 sublime/User/Package Control.system-ca-bundle
