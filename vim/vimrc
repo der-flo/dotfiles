@@ -36,3 +36,8 @@ set smartcase " only ignore case when search string does not contain upper
 " Mouse
 set mouse=a " enable mouse in all modes
 set ttymouse=xterm2 " resize splits with mouse when inside tmux session
+
+set laststatus=2
+let g:airline#extensions#tabline#enabled=1
+let g:airline_powerline_fonts=1
+
