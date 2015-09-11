@@ -41,3 +41,6 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
 
+" Strip trailing whitespace when saving files
+" TODO Prio 2: "silent!" ?
+autocmd BufWritePre * :%s/\s\+$//e
