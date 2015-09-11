@@ -12,3 +12,7 @@ nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 
 let g:ctrlp_map = '<leader>t'
+
+nmap Q :Bdelete<CR>
+" TODO
+" nmap QQ :Bdelete!<CR>
