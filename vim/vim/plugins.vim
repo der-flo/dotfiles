@@ -7,5 +7,6 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-ruby/vim-ruby'
 Plug 'bling/vim-airline'
 Plug 'moll/vim-bbye'
+Plug 'tomtom/tcomment_vim'
 " Add plugins to &runtimepath
 call plug#end()
