@@ -8,5 +8,6 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'bling/vim-airline'
 Plug 'moll/vim-bbye'
 Plug 'tomtom/tcomment_vim'
+Plug 'kchmck/vim-coffee-script'
 " Add plugins to &runtimepath
 call plug#end()

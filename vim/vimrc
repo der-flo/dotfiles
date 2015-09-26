@@ -14,6 +14,9 @@ set nowrap " do not wrap lines
 " TODO: does not work yet inside tmux
 set title " show filename in window title
 
+set hidden " hide a buffer instead of closing it
+           " => switch buffers even with the actual unsaved
+
 " TODO: really write swap files?
 
 " tab: show invisible tabs
