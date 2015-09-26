@@ -16,3 +16,10 @@ let g:ctrlp_map = '<leader>t'
 nmap Q :Bdelete<CR>
 " TODO
 " nmap QQ :Bdelete!<CR>
+
+" faster navigation between splits
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
