@@ -5,6 +5,7 @@ source ~/.vim/syntastic.vim
 
 " Appearance
 set background=dark
+let g:PaperColor_Dark_Override = { 'background' : '#000000' }
 colorscheme PaperColor
 set colorcolumn=81 " show a limiting column after 80 characters
 set number " show line numbers
