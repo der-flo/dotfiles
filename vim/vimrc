@@ -7,8 +7,10 @@ source ~/.vim/syntastic.vim
 set background=dark
 let g:PaperColor_Dark_Override = { 'background' : '#000000' }
 colorscheme PaperColor
-set colorcolumn=81 " show a limiting column after 80 characters
+
+set colorcolumn=80 " show a limiting column at the last one of 80 characters
 set number " show line numbers
+set cursorline " highlight current line
 
 set nowrap " do not wrap lines
 
