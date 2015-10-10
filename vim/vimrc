@@ -50,3 +50,6 @@ let g:airline_powerline_fonts=1
 " Strip trailing whitespace when saving files
 " TODO Prio 2: "silent!" ?
 autocmd BufWritePre * :%s/\s\+$//e
+
+" show only most-recently-used files in the current working directory
+let g:ctrlp_mruf_relative = 1
