@@ -28,8 +28,6 @@ task :install do
     # TODO: Alfred overrides the file permanently
     handle_file('alfred/com.alfredapp.Alfred.plist',
                 'Library/Preferences/com.alfredapp.Alfred.plist')
-    handle_file('sublime/User',
-                'Library/Application Support/Sublime Text 3/Packages/User')
   end
 end
 
