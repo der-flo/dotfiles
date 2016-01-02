@@ -15,6 +15,7 @@ task :install do
   puts `vim +PlugUpdate +qall`
   puts `chmod +x ~/.rvm/hooks/after_cd_bundler`
 
+  # TODO: Mac-spezifisches aus "misc" raus?
   %w(git misc ruby vim).each do |dir|
     handle_files(Dir.glob("#{dir}/*"))
   end
