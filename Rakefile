@@ -4,6 +4,7 @@
 require 'rake'
 require 'erb'
 
+# TODO: https://github.com/asmeurer/prefsync
 # TODO: Error handling
 
 desc "install the dot files into user's home directory"
@@ -24,10 +25,14 @@ task :install do
 
   if mac?
     `brew install reattach-to-user-namespace git`
-    handle_file('alfred/appsupport', 'Library/Application Support/Alfred')
-    # TODO: Alfred overrides the file permanently
-    handle_file('alfred/com.alfredapp.Alfred.plist',
-                'Library/Preferences/com.alfredapp.Alfred.plist')
+    # TODO: Brauche ich diese Dateien überhaupt versioniert?
+    `prefsync ~/Library/Preferences/com.runningwithcrayons.Alfred-2.plist \
+              ~/dotfiles/alfred/com.runningwithcrayons.Alfred-2.plist`
+    `prefsync ~/Library/Preferences/com.runningwithcrayons.Alfred-Preferences.plist \
+              ~/dotfiles/alfred/com.runningwithcrayons.Alfred-Preferences.plist`
+
+    handle_file('alfred/Alfred.alfredpreferences',
+                'Library/Application Support/Alfred 2/Alfred.alfredpreferences')
     handle_file('sublime/User',
                 'Library/Application Support/Sublime Text 3/Packages/User')
   end
