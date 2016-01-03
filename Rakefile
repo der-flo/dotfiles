@@ -46,7 +46,7 @@ EMAIL = case HOSTNAME
         end
 
 def replace_file(file, dest_path)
-  system %Q{rm -rf "#{dest_path}"}
+  system %(rm -rf "#{dest_path}")
   link_file(file, dest_path)
 end
 
@@ -58,7 +58,7 @@ def link_file(file, dest_path)
     end
   else
     puts "linking #{file} to #{dest_path}"
-    system %Q{ln -s "$PWD/#{file}" "#{dest_path}"}
+    system %(ln -s "$PWD/#{file}" "#{dest_path}")
   end
 end
 
@@ -98,13 +98,12 @@ def handle_files(files)
 end
 
 def mac?
-  RUBY_PLATFORM.downcase.include?("darwin")
+  RUBY_PLATFORM.downcase.include?('darwin')
 end
-
 
 def install_prezto
   dir = File.join(ENV['ZDOTDIR'] || ENV['HOME'], '.zprezto')
-  unless File.exists?(dir)
+  unless File.exist?(dir)
     puts `git clone --recursive https://github.com/der-flo/prezto.git #{dir}`
   end
   puts `cd #{dir} && git pull --rebase && git submodule update --init --recursive`
