@@ -4,7 +4,6 @@
 require 'rake'
 require 'erb'
 
-# TODO: https://github.com/asmeurer/prefsync
 # TODO: Error handling
 
 desc "install the dot files into user's home directory"
@@ -12,10 +11,9 @@ task :install do
   install_prezto
 
   # puts `git submodule update --init --recursive`
-  puts `vim +PlugUpdate +qall`
+  puts `vim +PlugUpdate +qall >/dev/tty`
   puts `chmod +x ~/.rvm/hooks/after_cd_bundler`
 
-  # TODO: Mac-spezifisches aus "misc" raus?
   %w(git misc ruby vim).each do |dir|
     handle_files(Dir.glob("#{dir}/*"))
   end
@@ -26,22 +24,22 @@ task :install do
 
   if mac?
     `brew install reattach-to-user-namespace git`
+    handle_files(Dir.glob('mac_misc/*'))
+
+    # TODO: https://github.com/asmeurer/prefsync
+    prefsync 'mac_plist/com.googlecode.iterm2.plist'
     # TODO: Brauche ich diese Dateien überhaupt versioniert?
-    `prefsync ~/Library/Preferences/com.runningwithcrayons.Alfred-2.plist \
-              ~/dotfiles/alfred/com.runningwithcrayons.Alfred-2.plist`
-    `prefsync ~/Library/Preferences/com.runningwithcrayons.Alfred-Preferences.plist \
-              ~/dotfiles/alfred/com.runningwithcrayons.Alfred-Preferences.plist`
+    prefsync 'alfred/com.runningwithcrayons.Alfred-2.plist'
+    prefsync 'alfred/com.runningwithcrayons.Alfred-Preferences.plist'
 
     handle_file('alfred/Alfred.alfredpreferences',
                 'Library/Application Support/Alfred 2/Alfred.alfredpreferences')
-    handle_file('sublime/User',
-                'Library/Application Support/Sublime Text 3/Packages/User')
   end
 end
 
 HOSTNAME = `hostname -s`.chomp
 EMAIL = case HOSTNAME
-        when 'flo-mb' then 'mail@florian-duetsch.de'
+        when 'flo-mb', 'flo-mini' then 'mail@florian-duetsch.de'
         when 'flo', 'nix-wie-weg' then 'florian.duetsch@nix-wie-weg.de'
         end
 
@@ -107,4 +105,15 @@ def install_prezto
     puts `git clone --recursive https://github.com/der-flo/prezto.git #{dir}`
   end
   puts `cd #{dir} && git pull --rebase && git submodule update --init --recursive`
+end
+
+# https://github.com/asmeurer/prefsync
+def prefsync(file)
+  ps = 'cd prefsync && python -m prefsync'
+  dest = "~/Library/Preferences/#{File.basename(file)}"
+  # TODO: Pfad besser ermitteln
+  src = "~/dotfiles/#{file}"
+
+  # TODO: "Operation already in progress" abfangen?
+  `#{ps} #{dest} #{src}`
 end
