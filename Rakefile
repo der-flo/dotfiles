@@ -26,11 +26,16 @@ task :install do
   handle_file('bin/git-icdiff', 'bin/git-icdiff')
 
   if mac?
-    `brew install reattach-to-user-namespace git`
+
     handle_files(Dir.glob('mac_misc/*'))
 
     # TODO: https://github.com/asmeurer/prefsync
     prefsync 'mac_plist/com.googlecode.iterm2.plist'
+
+    # For tmux
+    # TODO: Still needed?
+    `brew install reattach-to-user-namespace`
+
     # TODO: Brauche ich diese Dateien überhaupt versioniert?
     prefsync 'alfred/com.runningwithcrayons.Alfred-2.plist'
     prefsync 'alfred/com.runningwithcrayons.Alfred-Preferences.plist'
