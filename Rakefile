@@ -19,6 +19,9 @@ task :install do
   end
   handle_files(Dir.glob('prezto/z*'))
 
+  # TODO: Eleganter möglich?
+  FileUtils.mkdir_p File.expand_path('~/bin')
+
   handle_file('bin/getswap', 'bin/getswap')
   handle_file('bin/git-icdiff', 'bin/git-icdiff')
 
