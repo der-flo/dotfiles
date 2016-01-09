@@ -6,7 +6,7 @@ require 'erb'
 
 # TODO: Error handling
 
-desc "install the dot files into user's home directory"
+desc "install the dotfiles into user's home directory"
 task :install do
   install_prezto
 
@@ -19,24 +19,21 @@ task :install do
   end
   handle_files(Dir.glob('prezto/z*'))
 
-  # TODO: Eleganter möglich?
-  FileUtils.mkdir_p File.expand_path('~/bin')
+  FileUtils.mkdir_p "#{Dir.home}/bin"
 
   handle_file('bin/getswap', 'bin/getswap')
   handle_file('bin/git-icdiff', 'bin/git-icdiff')
 
   if mac?
-
     handle_files(Dir.glob('mac_misc/*'))
 
-    # TODO: https://github.com/asmeurer/prefsync
     prefsync 'mac_plist/com.googlecode.iterm2.plist'
 
     # For tmux
     # TODO: Still needed?
     `brew install reattach-to-user-namespace`
 
-    # TODO: Brauche ich diese Dateien überhaupt versioniert?
+    # TODO: Do I need this files versioned?
     prefsync 'alfred/com.runningwithcrayons.Alfred-2.plist'
     prefsync 'alfred/com.runningwithcrayons.Alfred-Preferences.plist'
 
@@ -69,21 +66,15 @@ def link_file(file, dest_path)
 end
 
 def handle_file(file, dest_file = nil)
-  replace_all = false
   dest_file ||= ".#{file.split('/').last.sub('.erb', '')}"
-  dest_path = File.join(ENV['HOME'], dest_file)
+  dest_path = File.join(Dir.home, dest_file)
 
   if File.exist?(dest_path)
     if File.identical?(file, dest_path)
       puts "identical ~/#{dest_file}"
-    elsif replace_all
-      replace_file(file, dest_path)
     else
-      print "overwrite ~/#{dest_file}? [ynaq] "
+      print "overwrite ~/#{dest_file}? [ynq] "
       case $stdin.gets.chomp
-      when 'a'
-        replace_all = true
-        replace_file(file, dest_path)
       when 'y'
         replace_file(file, dest_path)
       when 'q'
@@ -98,9 +89,7 @@ def handle_file(file, dest_file = nil)
 end
 
 def handle_files(files)
-  files.each do |f|
-    handle_file(f)
-  end
+  files.each { |f| handle_file(f) }
 end
 
 def mac?
@@ -108,20 +97,21 @@ def mac?
 end
 
 def install_prezto
-  dir = File.join(ENV['ZDOTDIR'] || ENV['HOME'], '.zprezto')
+  dir = File.join(Dir.home, '.zprezto')
   unless File.exist?(dir)
     puts `git clone --recursive https://github.com/der-flo/prezto.git #{dir}`
   end
-  puts `cd #{dir} && git pull --rebase && git submodule update --init --recursive`
+  puts `cd #{dir} && \
+        git pull --rebase && \
+        git submodule update --init --recursive`
 end
 
 # https://github.com/asmeurer/prefsync
 def prefsync(file)
   ps = 'cd prefsync && python -m prefsync'
   dest = "~/Library/Preferences/#{File.basename(file)}"
-  # TODO: Pfad besser ermitteln
-  src = "~/dotfiles/#{file}"
+  src = File.expand_path(file)
 
-  # TODO: "Operation already in progress" abfangen?
-  `#{ps} #{dest} #{src}`
+  # TODO: Handle "Operation already in progress"?
+  puts `#{ps} #{dest} #{src}`
 end
