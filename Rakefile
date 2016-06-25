@@ -29,10 +29,6 @@ task :install do
 
     prefsync 'mac_plist/com.googlecode.iterm2.plist'
 
-    # For tmux
-    # TODO: Still needed?
-    `brew install reattach-to-user-namespace`
-
     # TODO: Do I need this files versioned?
     prefsync 'alfred/com.runningwithcrayons.Alfred-2.plist'
     prefsync 'alfred/com.runningwithcrayons.Alfred-Preferences.plist'
