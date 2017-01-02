@@ -15,6 +15,7 @@ task :install do
   %w(git misc ruby vim).each do |dir|
     handle_files(Dir.glob("#{dir}/*"))
   end
+  handle_files(Dir.glob('zsh/z*'))
 
   FileUtils.mkdir_p "#{Dir.home}/bin"
 
