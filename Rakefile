@@ -8,16 +8,13 @@ require 'erb'
 
 desc "install the dotfiles into user's home directory"
 task :install do
-  install_prezto
 
-  # puts `git submodule update --init --recursive`
   puts `vim +PlugUpdate +qall >/dev/tty`
   puts `chmod +x ~/.rvm/hooks/after_cd_bundler`
 
   %w(git misc ruby vim).each do |dir|
     handle_files(Dir.glob("#{dir}/*"))
   end
-  handle_files(Dir.glob('prezto/z*'))
 
   FileUtils.mkdir_p "#{Dir.home}/bin"
 
@@ -90,16 +87,6 @@ end
 
 def mac?
   RUBY_PLATFORM.downcase.include?('darwin')
-end
-
-def install_prezto
-  dir = File.join(Dir.home, '.zprezto')
-  unless File.exist?(dir)
-    puts `git clone --recursive https://github.com/der-flo/prezto.git #{dir}`
-  end
-  puts `cd #{dir} && \
-        git pull --rebase && \
-        git submodule update --init --recursive`
 end
 
 # https://github.com/asmeurer/prefsync
