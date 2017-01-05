@@ -1,11 +1,13 @@
+syntax on
+
 source ~/.vim/plugins.vim
 source ~/.vim/filetypes.vim
 source ~/.vim/key_mappings.vim
 source ~/.vim/syntastic.vim
 
 " Appearance
-set background=dark
-let g:PaperColor_Dark_Override = { 'background' : '#000000' }
+" set background=dark
+" let g:PaperColor_Dark_Override = { 'background' : '#000000' }
 colorscheme PaperColor
 
 set colorcolumn=80 " show a limiting column at the last one of 80 characters
@@ -44,9 +46,10 @@ set mouse=a " enable mouse in all modes
 set ttymouse=xterm2 " resize splits with mouse when inside tmux session
 
 set laststatus=2
-let g:airline#extensions#tabline#enabled=1
-let g:airline_powerline_fonts=1
-
+set ruler
+" let g:airline#extensions#tabline#enabled=1
+" let g:airline_powerline_fonts=1
+"
 " Strip trailing whitespace when saving files
 " TODO Prio 2: "silent!" ?
 autocmd BufWritePre * :%s/\s\+$//e

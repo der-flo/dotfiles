@@ -4,14 +4,14 @@ let mapleader = ' '
 " TODO: Vs. NERDTreeFind?
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>s :source $MYVIMRC<CR>
+
 nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>r :CtrlPMRU<CR>
+let g:ctrlp_map = '<Leader>t'
 
 " Fast navigation between buffers
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
-
-let g:ctrlp_map = '<leader>t'
 
 " TODO: Vs. "w" or "W"?
 nmap Q :Bdelete<CR>
