@@ -41,6 +41,11 @@ alias http_dir='ruby -run -e httpd . --port=8080'
 
 alias topswap='getswap | egrep -v "Swap used: 0" | sort -n -k 5'
 
+alias gcm='git commit --message'
+
+################################################################################
+# https://github.com/Nix-wie-weg/zsh-functions-and-aliases
+#
 # Git
 alias branch_current='git rev-parse --abbrev-ref HEAD'
 alias branch_oldest_ancestor='/usr/bin/diff -u <(git rev-list --first-parent master) <(git rev-list --first-parent HEAD) | sed -ne "s/^ //p" | head -1'
@@ -63,16 +68,24 @@ alias bbb='browse bitbucket_repo_url'
 alias bbbr='browse bitbucket_review_url'
 alias bred='browse redmine_url'
 
+################################################################################
+# Key bindings
+
+# TODO: Vim?
+# Emacs
+bindkey -e
+
+# Get delete key working
+bindkey "^[[3~" delete-char
+
+################################################################################
+
 # export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export NVM_DIR=~/.nvm
 . $(brew --prefix nvm)/nvm.sh
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# TODO: Vim?
-# Emacs keybindings
-bindkey -e
 
 autoload -U promptinit; promptinit
 prompt pure
