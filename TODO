@@ -1,33 +1,4 @@
 * Settings of iTerm2 and Alfred
 * README preconditions to code
-* Check all the following TODOs
-
-tmux config, see Evernote
-stuff from https://github.com/thoughtbot/dotfiles
-stuff from https://github.com/ryanb/dotfiles
-stuff from https://github.com/benhoskings/dot-files
-
-VIM
-* http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
-** update_bundles?
-* "set grepprg=ack\ -a"?
-* https://github.com/robgleeson/hammer.vim/issues/22 ?
-* https://github.com/carlhuda/janus/issues/222
-* http://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim
-
-TODO: Use stuff and add to inspirations
-https://github.com/sven-q/vimfiles/blob/master/vimrc
-
-http://www.vim.org/scripts/script.php?script_id=105
-
-ZSH!
-* TODOs in ZSHRC
-
-* http://friedcpu.wordpress.com/2007/07/24/zsh-the-last-shell-youll-ever-need/
-* http://zinformatik.de/tipps-tricks/interessante-programme/die-z-shell-zsh-eine-machtige-alternative-zur-bash/
-* https://github.com/robbyrussell/oh-my-zsh
-* http://beginrescueend.com/integration/zsh/
-* Navigation
-
-TODO inspirations: Hint to all the comments in the files
+* TODO inspirations: Hint to all the comments in the files
 
