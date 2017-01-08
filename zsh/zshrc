@@ -82,8 +82,9 @@ bindkey "^[[3~" delete-char
 
 # export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-export NVM_DIR=~/.nvm
-. $(brew --prefix nvm)/nvm.sh
+# TODO: Used?
+# export NVM_DIR=~/.nvm
+# . $(brew --prefix nvm)/nvm.sh
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
