@@ -47,8 +47,10 @@ set ttymouse=xterm2 " resize splits with mouse when inside tmux session
 
 set laststatus=2
 set ruler
-" let g:airline#extensions#tabline#enabled=1
-" let g:airline_powerline_fonts=1
+
+" Airline
+let g:airline#extensions#tabline#enabled=1
+let g:airline_powerline_fonts=1
 "
 " Strip trailing whitespace when saving files
 " TODO Prio 2: "silent!" ?
