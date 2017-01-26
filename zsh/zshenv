@@ -26,7 +26,7 @@ if [[ -f $access_key_id_file ]]; then
 fi
 
 secret_access_key_file=$HOME/.aws/secret_access_key
-if [[ -f $secrect_access_key_file ]]; then
+if [[ -f $secret_access_key_file ]]; then
   export AWS_SECRET_ACCESS_KEY=`cat $secret_access_key_file`
 fi
 
