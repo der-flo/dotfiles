@@ -91,6 +91,11 @@ bindkey "^[[3~" delete-char
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 autoload -U promptinit; promptinit
+# This feature combined with an immediate call of "git pull --rebase" triggers a
+# "Cannot rebase onto multiple branches" error because auf concurrent running
+# git fetches etc.
+# https://github.com/sindresorhus/pure/issues/162
+PURE_GIT_PULL=0
 prompt pure
 
 autoload -Uz compinit
