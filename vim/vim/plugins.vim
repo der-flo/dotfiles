@@ -12,11 +12,11 @@ Plug 'NLKNguyen/papercolor-theme', { 'tag': 'v0.7' }
 " Plug 'vim-ruby/vim-ruby'
 Plug 'vim-airline/vim-airline'
 Plug 'moll/vim-bbye'
-Plug 'tomtom/tcomment_vim'
+Plug 'tomtom/tcomment_vim' " gc
 " Plug 'kchmck/vim-coffee-script'
 
 Plug 'tpope/vim-endwise', { 'for': 'ruby' }
-Plug 'AndrewRadev/splitjoin.vim'
+Plug 'AndrewRadev/splitjoin.vim' " gS, gJ
 
 " Add plugins to &runtimepath
 call plug#end()
