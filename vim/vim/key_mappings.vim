@@ -13,9 +13,8 @@ let g:ctrlp_map = '<Leader>t'
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 
-" TODO: Vs. "w" or "W"?
-nmap Q :Bdelete<CR>
-nmap QQ :Bdelete!<CR>
+nmap <Leader>w :Bdelete<CR>
+nmap <Leader>Q :Bdelete!<CR>
 
 " faster navigation between splits
 map <C-h> <C-w>h
