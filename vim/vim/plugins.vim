@@ -14,8 +14,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'moll/vim-bbye'
 Plug 'tomtom/tcomment_vim' " gc
-" Plug 'kchmck/vim-coffee-script'
-
+Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-endwise', { 'for': 'ruby' }
 Plug 'AndrewRadev/splitjoin.vim' " gS, gJ
 
