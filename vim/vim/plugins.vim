@@ -11,6 +11,7 @@ Plug 'NLKNguyen/papercolor-theme', { 'tag': 'v0.7' }
 
 " Plug 'vim-ruby/vim-ruby'
 Plug 'vim-airline/vim-airline'
+Plug 'ryanoasis/vim-devicons'
 Plug 'moll/vim-bbye'
 Plug 'tomtom/tcomment_vim' " gc
 " Plug 'kchmck/vim-coffee-script'
