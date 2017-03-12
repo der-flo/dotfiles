@@ -5,7 +5,6 @@ require 'rake'
 require 'erb'
 
 # TODO: Error handling
-
 desc "install the dotfiles into user's home directory"
 task :install do
 
@@ -21,6 +20,9 @@ task :install do
 
   handle_file('bin/getswap', 'bin/getswap')
   handle_file('bin/git-icdiff', 'bin/git-icdiff')
+
+  handle_file('fish/fish', '.config/fish')
+  handle_file('fish/omf', '.config/omf')
 
   if mac?
     handle_files(Dir.glob('mac_misc/*'))
