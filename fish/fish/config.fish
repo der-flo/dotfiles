@@ -1,5 +1,7 @@
 fish_vi_key_bindings
 
+set PATH ~/bin $PATH
+
 function branch_current
   # TODO: split('-').first
   git rev-parse --abbrev-ref HEAD
