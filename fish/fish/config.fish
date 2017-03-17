@@ -27,10 +27,16 @@ set -g theme_display_vi yes
 set -g theme_color_scheme dark
 set -g theme_display_date no
 
-abbr -a gcp 'git checkout --patch'
-abbr -a gdi 'git diff'
-abbr -a gdc 'git diff --cached'
-abbr -a gcm 'git commit --message ""'
-abbr -a gap 'git add --patch'
-abbr -a gst 'git status'
+abbr -a gicp 'git checkout --patch'
+abbr -a gidi 'git diff'
+abbr -a gidc 'git diff --cached'
+abbr -a gicm 'git commit --message ""'
+abbr -a giap 'git add --patch'
+abbr -a gist 'git status'
+abbr -a gipr 'git pull --rebase --stat'
+abbr -a gico 'git checkout'
+abbr -a gibr 'git branch'
+abbr -a gispr 'git stash; and git pull --rebase --stat; and git stash pop'
+abbr -a gihi 'git hist'
 
+abbr -a be 'bundle exec'
