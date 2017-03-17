@@ -40,3 +40,10 @@ abbr -a gispr 'git stash; and git pull --rebase --stat; and git stash pop'
 abbr -a gihi 'git hist'
 
 abbr -a be 'bundle exec'
+abbr -a bo 'bundle open'
+abbr -a bi 'bundle install -j4'
+
+abbr -a ag 'ag --hidden'
+abbr -a agi 'ag --hidden --ignore-case'
+abbr -a todo_flo 'ag "TODO\sFlo"'
+abbr -a todo 'ag "TODO(?! Prio [23])"'
