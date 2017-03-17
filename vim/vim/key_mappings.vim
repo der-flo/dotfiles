@@ -23,6 +23,6 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " abbrevations
-iabbrev <buffer> -> →
-iabbrev <buffer> => ⇒
+iabbrev -> →
+iabbrev => ⇒
 autocmd FileType ruby iabbrev <buffer> pry! require 'pry'<CR>binding.pry
