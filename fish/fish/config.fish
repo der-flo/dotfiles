@@ -1,3 +1,4 @@
+fish_vi_key_bindings
 
 function branch_current
   # TODO: split('-').first
