@@ -24,6 +24,8 @@ task :install do
   handle_file('fish/fish', '.config/fish')
   handle_file('fish/omf', '.config/omf')
 
+  handle_file('atom', '.atom')
+
   if mac?
     handle_files(Dir.glob('mac_misc/*'))
 

@@ -1,0 +1,12 @@
+packages: [
+  "click-link"
+  "export-html"
+  "file-icons"
+  "git-diff-details"
+  "language-haskell"
+  "merge-conflicts"
+  "multi-cursor"
+  "package-sync"
+  "pdf-view"
+  "tree-view-git-status"
+]

@@ -1,0 +1,27 @@
+"*":
+  "base16-syntax":
+    scheme: "3024"
+  core:
+    disabledPackages: [
+      "metrics"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "atom-dark-ui"
+    ]
+  editor:
+    fontSize: 13
+    invisibles: {}
+  "exception-reporting":
+    userId: "e79ffb05-c079-c2d6-62c0-e113a8bb0a9c"
+  "export-html":
+    lineNumber: {}
+  "git-diff":
+    showIconsInEditorGutter: true
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
+  "pdf-view":
+    fitToWidthOnOpen: true
+  welcome:
+    showOnStartup: false
