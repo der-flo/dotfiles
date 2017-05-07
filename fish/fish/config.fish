@@ -11,6 +11,7 @@ end
 # function abbr_add; set -U fish_user_abbreviations $fish_user_abbreviations $argv; end
 # abbr_add "gci git commit -m '(branch_current):"
 
+source ~/.config/fish/nww_functions_and_aliases.fish
 
 # abbr_add "reload=source ~/.config/fish/config.fish"
 
