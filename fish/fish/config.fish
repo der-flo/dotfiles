@@ -2,25 +2,9 @@ fish_vi_key_bindings
 
 set PATH ~/bin $PATH
 
-function branch_current
-  # TODO: split('-').first
-  git rev-parse --abbrev-ref HEAD
-end
-# abbr -a gci "git commit -m '"(branch_current)":"
-
-# function abbr_add; set -U fish_user_abbreviations $fish_user_abbreviations $argv; end
-# abbr_add "gci git commit -m '(branch_current):"
-
 source ~/.config/fish/nww_functions_and_aliases.fish
 
 # abbr_add "reload=source ~/.config/fish/config.fish"
-
-# function gci_abbr
-#   echo -n "git commit -m '"
-#   branch_current
-# end
-
-# abbr -a gci "(gci_abbr)"
 
 set -g theme_nerd_fonts yes
 set -g theme_display_git yes
