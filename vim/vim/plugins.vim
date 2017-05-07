@@ -5,6 +5,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-syntastic/syntastic'
+Plug 'vim-scripts/AutoComplPop'
 
 " Overrides are not supported in master
 Plug 'NLKNguyen/papercolor-theme', { 'tag': 'v0.7' }
