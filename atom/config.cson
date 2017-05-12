@@ -23,5 +23,8 @@
     forceOverwrite: true
   "pdf-view":
     fitToWidthOnOpen: true
+  "remote-atom":
+    keep_alive: true
+    launch_at_startup: true
   welcome:
     showOnStartup: false

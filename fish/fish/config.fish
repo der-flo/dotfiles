@@ -1,6 +1,8 @@
 fish_vi_key_bindings
 
 set PATH ~/bin $PATH
+set -Ux EDITOR 'atom -w'
+set -Ux VISUAL 'atom -w'
 
 source ~/.config/fish/nww_functions_and_aliases.fish
 

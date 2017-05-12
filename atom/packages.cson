@@ -8,5 +8,6 @@ packages: [
   "multi-cursor"
   "package-sync"
   "pdf-view"
+  "remote-atom"
   "tree-view-git-status"
 ]
