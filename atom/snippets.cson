@@ -16,3 +16,24 @@
 # This file uses CoffeeScript Object Notation (CSON).
 # If you are unfamiliar with CSON, you can read more about it here:
 # https://github.com/bevry/cson#what-is-cson
+
+'*':
+  'single arrow':
+    'prefix': '->'
+    'body': '→'
+  'double arrow':
+    'prefix': '=>'
+    'body': '⇒'
+  dots:
+    prefix: '...'
+    body: '…'
+  cop:
+    prefix: 'cop'
+    body: '🤖'
+  shit:
+    prefix: 'shit'
+    body: '💩'
+'.source.ruby':
+  pry:
+    prefix: 'pry'
+    body: "require 'pry'; binding.pry"
