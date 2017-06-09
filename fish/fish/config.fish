@@ -1,4 +1,4 @@
-fish_vi_key_bindings
+fish_default_key_bindings
 
 set PATH ~/bin $PATH
 set -Ux EDITOR 'atom -w'
