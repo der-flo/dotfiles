@@ -1,3 +1,6 @@
+source /usr/local/share/chruby/chruby.fish
+source /usr/local/share/chruby/auto.fish
+
 fish_default_key_bindings
 
 set PATH ~/bin $PATH

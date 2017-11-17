@@ -9,7 +9,7 @@ desc "install the dotfiles into user's home directory"
 task :install do
 
   puts `vim +PlugUpdate +qall >/dev/tty`
-  puts `chmod +x ~/.rvm/hooks/after_cd_bundler`
+  puts `curl -L https://get.oh-my.fish | fish`
 
   %w(git misc ruby vim).each do |dir|
     handle_files(Dir.glob("#{dir}/*"))

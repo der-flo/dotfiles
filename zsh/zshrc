@@ -82,13 +82,13 @@ bindkey "^[[3~" delete-char
 
 ################################################################################
 
+source /usr/local/share/chruby/chruby.sh
+
 # export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # TODO: Used?
 # export NVM_DIR=~/.nvm
 # . $(brew --prefix nvm)/nvm.sh
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 autoload -U promptinit; promptinit
 # This feature combined with an immediate call of "git pull --rebase" triggers a
