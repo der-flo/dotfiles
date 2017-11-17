@@ -1,4 +1,5 @@
 packages: [
+  "atom-beautify"
   "busy-signal"
   "click-link"
   "export-html"
@@ -7,13 +8,17 @@ packages: [
   "intentions"
   "language-haml"
   "language-haskell"
+  "language-textile"
   "linter"
   "linter-rubocop"
   "linter-ui-default"
   "merge-conflicts"
   "multi-cursor"
+  "nuclide"
   "package-sync"
   "pdf-view"
   "remote-atom"
+  "teletype"
+  "textile-preview"
   "tree-view-git-status"
 ]

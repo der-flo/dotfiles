@@ -4,6 +4,9 @@
   core:
     disabledPackages: [
       "metrics"
+      "nuclide"
+      "teletype"
+      "textile-preview"
     ]
     telemetryConsent: "no"
     themes: [

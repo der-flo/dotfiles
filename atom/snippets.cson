@@ -19,13 +19,13 @@
 
 '*':
   'single arrow':
-    'prefix': '->'
+    'prefix': '->!'
     'body': '→'
   'double arrow':
-    'prefix': '=>'
+    'prefix': '=>!'
     'body': '⇒'
   dots:
-    prefix: '...'
+    prefix: 'dots!'
     body: '…'
   cop:
     prefix: 'cop'
