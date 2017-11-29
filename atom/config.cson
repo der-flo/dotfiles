@@ -10,11 +10,14 @@
     ]
     telemetryConsent: "no"
     themes: [
-      "atom-dark-ui"
+      "atom-light-ui"
+      "atom-light-syntax"
     ]
   editor:
     fontSize: 13
     invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
   "exception-reporting":
     userId: "e79ffb05-c079-c2d6-62c0-e113a8bb0a9c"
   "export-html":
