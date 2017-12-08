@@ -3,6 +3,7 @@ packages: [
   "atom-terminal-tab"
   "busy-signal"
   "click-link"
+  "custom-invisibles"
   "export-html"
   "file-icons"
   "git-diff-details"

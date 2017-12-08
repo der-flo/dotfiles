@@ -13,6 +13,8 @@
       "atom-light-ui"
       "atom-light-syntax"
     ]
+  "custom-invisibles":
+    eolActive: false
   editor:
     fontSize: 13
     invisibles: {}
@@ -22,6 +24,10 @@
     userId: "e79ffb05-c079-c2d6-62c0-e113a8bb0a9c"
   "export-html":
     lineNumber: {}
+  "fuzzy-finder":
+    ignoredNames: [
+      "vendor/bundle/**/*"
+    ]
   "git-diff":
     showIconsInEditorGutter: true
   "package-sync":
@@ -32,5 +38,11 @@
   "remote-atom":
     keep_alive: true
     launch_at_startup: true
+  "ruby-block":
+    highlightLineNumber: true
+  "spell-check":
+    locales: [
+      "de-DE"
+    ]
   welcome:
     showOnStartup: false
