@@ -29,6 +29,11 @@ task :install do
   if mac?
     handle_files(Dir.glob('mac_misc/*'))
 
+    handle_file('hammerspoon', '.hammerspoon')
+
+    # https://pqrs.org/osx/karabiner/document.html#configuration-file-path
+    handle_file('karabiner', '.config/karabiner')
+
     prefsync 'mac_plist/com.googlecode.iterm2.plist'
 
     # TODO: Do I need this files versioned?
