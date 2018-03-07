@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>de.danielbayerlein.rubygems</string>
+	<key>connections</key>
+	<dict>
+		<key>AAA624F8-E43F-4EE2-AE1A-8334D8F3ED13</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F266A4BA-A6F0-480A-B08C-B4390705433E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Daniel Bayerlein</string>
+	<key>description</key>
+	<string>Search gems</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>RubyGems</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>plusspaces</key>
+				<true/>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>F266A4BA-A6F0-480A-B08C-B4390705433E</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>gem</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Searching '{query}' gem…</string>
+				<key>script</key>
+				<string>$LOAD_PATH.unshift(File.dirname(__FILE__), 'vendor/json_pure')
+require 'open-uri'
+require 'json/pure'
+
+gem_name = '{query}'.gsub(' ', '+')
+response = open("https://rubygems.org/api/v1/search.json?query=#{gem_name}").read
+gems = JSON.parse(response)
+exit if gems.empty?
+
+
+def puts_item(g, index)
+  puts "  &lt;item uid='#{index * 10}' arg='#{g["project_uri"]}'&gt;"
+  puts "    &lt;title&gt;#{g['name']} - RubyGems.org (#{g['version']})&lt;/title&gt;"
+  puts "    &lt;subtitle&gt;#{g['info'].strip}&lt;/subtitle&gt;"
+  puts '    &lt;icon&gt;icon.png&lt;/icon&gt;'
+  puts '  &lt;/item&gt;'
+end
+
+def puts_min_item(index, offset, url, title)
+  puts "  &lt;item uid='#{index * 10 + offset}' arg='#{url}'&gt;"
+  puts "    &lt;title&gt;#{title}&lt;/title&gt;"
+  puts "    &lt;subtitle&gt;#{url}&lt;/subtitle&gt;"
+  puts '  &lt;/item&gt;'
+end
+
+puts '&lt;?xml version="1.0"?&gt;'
+puts '&lt;items&gt;'
+
+gems.each_with_index do |g, index|
+  puts_item(g, index)
+  puts_min_item(index, 1, g['source_code_uri'], "#{g['name']} - source code") if g['source_code_uri']
+  puts_min_item(index, 2, g['documentation_uri'], "#{g['name']} - docs") if g['documentation_uri']
+  puts_min_item(index, 3, g['homepage_uri'], "#{g['name']} - homepage") if g['homepage_uri']
+end
+
+puts '&lt;/items&gt;'
+</string>
+				<key>subtext</key>
+				<string>Search gems…</string>
+				<key>title</key>
+				<string>Search RubyGems.org for '{query}'</string>
+				<key>type</key>
+				<integer>2</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>AAA624F8-E43F-4EE2-AE1A-8334D8F3ED13</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>AAA624F8-E43F-4EE2-AE1A-8334D8F3ED13</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>F266A4BA-A6F0-480A-B08C-B4390705433E</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>https://github.com/danielbayerlein</string>
+</dict>
+</plist>

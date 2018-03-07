@@ -7,7 +7,6 @@ require 'erb'
 # TODO: Error handling
 desc "install the dotfiles into user's home directory"
 task :install do
-
   puts `vim +PlugUpdate +qall >/dev/tty`
   puts `curl -L https://get.oh-my.fish | fish`
 
@@ -32,14 +31,9 @@ task :install do
     # https://pqrs.org/osx/karabiner/document.html#configuration-file-path
     handle_file('karabiner', '.config/karabiner')
 
-    prefsync 'mac_plist/com.googlecode.iterm2.plist'
-
-    # TODO: Do I need this files versioned?
-    prefsync 'alfred/com.runningwithcrayons.Alfred-2.plist'
-    prefsync 'alfred/com.runningwithcrayons.Alfred-Preferences.plist'
-
-    handle_file('alfred/Alfred.alfredpreferences',
-                'Library/Application Support/Alfred 2/Alfred.alfredpreferences')
+    # TODO: Needed?
+    # handle_file('alfred/Alfred.alfredpreferences',
+    #             'Library/Application Support/Alfred 2/Alfred.alfredpreferences')
   end
 end
 
@@ -95,14 +89,4 @@ end
 
 def mac?
   RUBY_PLATFORM.downcase.include?('darwin')
-end
-
-# https://github.com/asmeurer/prefsync
-def prefsync(file)
-  ps = 'cd prefsync && python -m prefsync'
-  dest = "~/Library/Preferences/#{File.basename(file)}"
-  src = File.expand_path(file)
-
-  # TODO: Handle "Operation already in progress"?
-  puts `#{ps} #{dest} #{src}`
 end
