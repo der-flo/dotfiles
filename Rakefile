@@ -27,8 +27,6 @@ task :install do
   handle_file('atom', '.atom')
 
   if mac?
-    handle_files(Dir.glob('mac_misc/*'))
-
     handle_file('hammerspoon', '.hammerspoon')
 
     # https://pqrs.org/osx/karabiner/document.html#configuration-file-path
