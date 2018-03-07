@@ -7,6 +7,15 @@
       "nuclide"
       "teletype"
       "textile-preview"
+      "language-clojure"
+      "language-c"
+      "language-csharp"
+      "language-go"
+      "language-less"
+      "language-mustache"
+      "language-objective-c"
+      "language-perl"
+      "language-toml"
     ]
     telemetryConsent: "no"
     themes: [
