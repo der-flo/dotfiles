@@ -1,11 +1,8 @@
--- TODO
--- create window with profile "With TMUX"
-
 return function()
   if hs.application.find("com.googlecode.iterm2") then
     hs.osascript.applescript([[
       tell application "iTerm"
-        create window with profile "Default"
+        create window with profile "With TMUX"
         activate
       end tell
     ]])
