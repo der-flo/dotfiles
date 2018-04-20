@@ -20,9 +20,5 @@ ui = true
 [push]
 default = simple
 
-[diff]
-indentHeuristic = true
-
 [credential]
 helper = osxkeychain
-
