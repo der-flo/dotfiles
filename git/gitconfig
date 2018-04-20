@@ -11,6 +11,13 @@ safecrlf = true
 excludesfile = ~/.gitignore
 commentchar = >
 
+[pull]
+rebase = true
+
+[rebase]
+# https://stackoverflow.com/questions/30208928/can-git-pull-automatically-stash-and-pop-pending-changes/30209750#30209750
+autoStash = true
+
 [alias]
 hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 
