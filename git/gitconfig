@@ -25,7 +25,8 @@ hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 ui = true
 
 [push]
-default = simple
+# Remote branches get auto-created.
+default = current
 
 [credential]
 helper = osxkeychain
