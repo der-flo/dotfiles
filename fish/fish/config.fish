@@ -19,16 +19,16 @@ set -g theme_display_vi yes
 set -g theme_color_scheme dark
 set -g theme_display_date no
 
+abbr -a gic 'git checkout'
 abbr -a gicp 'git checkout --patch'
-abbr -a gidi 'git diff'
-abbr -a gidc 'git diff --cached'
 abbr -a gicm 'git commit --message ""'
+abbr -a gid 'git diff'
+abbr -a gidc 'git diff --cached'
 abbr -a giap 'git add --patch'
-abbr -a gist 'git status'
-abbr -a gipu 'git pull --stat'
+abbr -a gis 'git status'
+abbr -a gip 'git pull --stat'
 abbr -a gips 'git push'
-abbr -a gico 'git checkout'
-abbr -a gibr 'git branch'
+abbr -a gib 'git branch'
 abbr -a gihi 'git hist'
 
 abbr -a be 'bundle exec'
