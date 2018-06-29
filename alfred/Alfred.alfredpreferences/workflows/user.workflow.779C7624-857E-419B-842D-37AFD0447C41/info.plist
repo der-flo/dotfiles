@@ -65,49 +65,16 @@
 				<key>runningsubtext</key>
 				<string>Searching '{query}' gem…</string>
 				<key>script</key>
-				<string>$LOAD_PATH.unshift(File.dirname(__FILE__), 'vendor/json_pure')
-require 'open-uri'
-require 'json/pure'
-
-gem_name = '{query}'.gsub(' ', '+')
-response = open("https://rubygems.org/api/v1/search.json?query=#{gem_name}").read
-gems = JSON.parse(response)
-exit if gems.empty?
-
-
-def puts_item(g, index)
-  puts "  &lt;item uid='#{index * 10}' arg='#{g["project_uri"]}'&gt;"
-  puts "    &lt;title&gt;#{g['name']} - RubyGems.org (#{g['version']})&lt;/title&gt;"
-  puts "    &lt;subtitle&gt;#{g['info'].strip}&lt;/subtitle&gt;"
-  puts '    &lt;icon&gt;icon.png&lt;/icon&gt;'
-  puts '  &lt;/item&gt;'
-end
-
-def puts_min_item(index, offset, url, title)
-  puts "  &lt;item uid='#{index * 10 + offset}' arg='#{url}'&gt;"
-  puts "    &lt;title&gt;#{title}&lt;/title&gt;"
-  puts "    &lt;subtitle&gt;#{url}&lt;/subtitle&gt;"
-  puts '  &lt;/item&gt;'
-end
-
-puts '&lt;?xml version="1.0"?&gt;'
-puts '&lt;items&gt;'
-
-gems.each_with_index do |g, index|
-  puts_item(g, index)
-  puts_min_item(index, 1, g['source_code_uri'], "#{g['name']} - source code") if g['source_code_uri']
-  puts_min_item(index, 2, g['documentation_uri'], "#{g['name']} - docs") if g['documentation_uri']
-  puts_min_item(index, 3, g['homepage_uri'], "#{g['name']} - homepage") if g['homepage_uri']
-end
-
-puts '&lt;/items&gt;'
+				<string>source $HOME/.zshrc
+chruby 2.4.1
+ruby ./doit.rb '{query}'
 </string>
 				<key>subtext</key>
 				<string>Search gems…</string>
 				<key>title</key>
 				<string>Search RubyGems.org for '{query}'</string>
 				<key>type</key>
-				<integer>2</integer>
+				<integer>5</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
