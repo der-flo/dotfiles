@@ -2,6 +2,8 @@
   "base16-syntax":
     scheme: "3024"
   core:
+    closeDeletedFileTabs: true
+    destroyEmptyPanes: false
     disabledPackages: [
       "metrics"
       "nuclide"
@@ -16,6 +18,8 @@
       "language-objective-c"
       "language-perl"
       "language-toml"
+      "terminal-tab"
+      "autocomplete-ruby"
     ]
     telemetryConsent: "no"
     themes: [
@@ -26,7 +30,8 @@
     eolActive: false
   editor:
     fontSize: 13
-    invisibles: {}
+    invisibles:
+      eol: " "
     showIndentGuide: true
     showInvisibles: true
   "exception-reporting":
@@ -39,6 +44,26 @@
     ]
   "git-diff":
     showIconsInEditorGutter: true
+  "highlight-selected":
+    highlightBackground: true
+    lightTheme: true
+  "linter-ui-default":
+    panelHeight: 276
+  minimap:
+    absoluteMode: true
+    plugins:
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
+      "minimap-hide": true
+      "minimap-hideDecorationsZIndex": 0
   "package-sync":
     createOnChange: true
     forceOverwrite: true
@@ -53,5 +78,24 @@
     locales: [
       "de-DE"
     ]
+  "todo-show":
+    autoRefresh: false
+    findTheseTodos: [
+      "TODO Prio 2"
+      "TODO"
+      "FIXME"
+      "CHANGED"
+      "XXX"
+      "IDEA"
+      "HACK"
+      "NOTE"
+      "REVIEW"
+      "NB"
+      "BUG"
+      "QUESTION"
+      "COMBAK"
+      "TEMP"
+    ]
+    sortBy: "Type"
   welcome:
     showOnStartup: false

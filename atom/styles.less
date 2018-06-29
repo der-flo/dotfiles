@@ -13,9 +13,23 @@
 }
 
 atom-text-editor {
-
+  // https://github.com/googlefonts/spacemono/issues/3
+  font-variant-ligatures: no-common-ligatures;
 }
 
 atom-text-editor .cursor {
 
+}
+
+
+// https://github.com/klippx/operator-mono-atom
+atom-text-editor.editor {
+  .syntax--comment {
+    vertical-align: baseline;
+    font-family: 'Script12 BT';
+    font-size: 120%;
+    font-style: normal !important;
+    height: inherit;
+    line-height: 100%;
+  }
 }
