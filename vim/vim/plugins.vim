@@ -17,7 +17,6 @@ Plug 'janko-m/vim-test', { 'on': ['TestNearest', 'TestFile', 'TestSuite', 'TestL
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'tpope/vim-surround' " cs"' oder cs '"
-Plug 'mhinz/vim-grepper'
 Plug 'sbdchd/neoformat'
 Plug 'tpope/vim-commentary'
 call plug#end()

@@ -15,6 +15,8 @@ nnoremap <Leader>Q :Bdelete!<CR>
 " Fuzzy finding (FZF)
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>h :History<CR>
+command! Todos Ag! TODO(?! Prio [23])
 
 " vim-test
 nmap <silent> <Leader>tn :TestNearest<CR>
