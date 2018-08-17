@@ -1,20 +1,25 @@
-" Change the leader key to space
-let mapleader = ' '
+let mapleader = ' ' " Change the leader key to space
 
-" TODO: Vs. NERDTreeFind?
 nnoremap <Leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>N :NERDTreeFind<CR>
 nnoremap <Leader>s :source $MYVIMRC<CR>
-
-nnoremap <Leader>b :CtrlPBuffer<CR>
-nnoremap <Leader>r :CtrlPMRU<CR>
-let g:ctrlp_map = '<Leader>t'
 
 " Fast navigation between buffers
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 
-nmap <Leader>w :Bdelete<CR>
-nmap <Leader>Q :Bdelete!<CR>
+" Delete buffers without closing windows
+nnoremap <Leader>w :Bdelete<CR>
+nnoremap <Leader>Q :Bdelete!<CR>
+
+" Fuzzy finding (FZF)
+nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>b :Buffers<CR>
+
+" vim-test
+nmap <silent> <Leader>tn :TestNearest<CR>
+nmap <silent> <Leader>tf :TestFile<CR>
+nmap <silent> <Leader>tl :TestLast<CR>
 
 " faster navigation between splits
 map <C-h> <C-w>h

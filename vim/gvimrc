@@ -1,5 +1,6 @@
-set guioptions-=T " Remove toolbar
-set guioptions-=r " Remove right scrollbar
-set guioptions-=L " Remove left scrollbar
+set guioptions-=rL " Remove right and left scrollbar
 set lines=25 columns=85 " UI size
 set guifont=Bitstream\ Vera\ Sans\ Mono\ Nerd\ Font\ Complete\ Mono:h14 " Font and size
+
+" TODO: Get this working in the console
+let g:one_allow_italics=1

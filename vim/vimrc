@@ -1,39 +1,37 @@
-syntax on
+" :help <foobar> for explanations
 
 source ~/.vim/plugins.vim
 source ~/.vim/filetypes.vim
 source ~/.vim/key_mappings.vim
-source ~/.vim/syntastic.vim
 
 
 " enable true-color output
-set termguicolors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" TODO: Needed? Working?
+" set termguicolors
+" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-" theme
-set background=dark
-let g:PaperColor_Dark_Override = { 'background' : '#000000' }
-colorscheme PaperColor
+" TODO: Check out features intensively
+" https://github.com/rakr/vim-one
+set background=light
+colorscheme one
 
-set colorcolumn=80 " show a limiting column at the last one of 80 characters
-set number " show line numbers
-set cursorline " highlight current line
-
-set nowrap " do not wrap lines
+set colorcolumn=81
+set textwidth=80
+set number
+set cursorline
+set nowrap
+set fillchars+=vert:│ " nicer vertical line
+set backspace=indent,eol,start " backspace as expected
 
 " TODO: does not work yet inside tmux
-set title " show filename in window title
+set title
 
 set hidden " hide a buffer instead of closing it
            " => switch buffers even with the actual unsaved
-
-" TODO: really write swap files?
-
-" tab: show invisible tabs
-" trail: show trailing whitespace
-" precedes, extends: show whether lines are too long to be completely visible
-set list listchars=tab:»·,trail:·,precedes:<,extends:>
+set autoread
+set list
+set listchars=tab:▸·,trail:·,precedes:◅,extends:▻,nbsp:•
 
 " Indentation http://vim.wikia.com/wiki/Indenting_source_code
 set expandtab " expand tab key presses to spaces
@@ -41,39 +39,43 @@ set softtabstop=2 " tabstops are two spaces
 set shiftwidth=2 " width of autoindentation
 
 " Searching
-set hlsearch " highlight search results
-set incsearch " immediately start searching
-set ignorecase " ignore case when searching
-set smartcase " only ignore case when search string does not contain upper
-              " case characters
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
 
 " Mouse
-set mouse=a " enable mouse in all modes
-set ttymouse=xterm2 " resize splits with mouse when inside tmux session
+set mouse=a
+" TODO: Get it working again
+" set ttymouse=xterm2 " resize splits with mouse when inside tmux session
 
-set laststatus=2
-set ruler
+" ALE
+" TODO: Configure nicer appearence
+let g:ale_linters = { 'ruby': ['ruby', 'rubocop'] }
 
 " Airline
-let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
-"
-" Strip trailing whitespace when saving files
-" TODO Prio 2: "silent!" ?
-autocmd BufWritePre * :%s/\s\+$//e
+let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
+let g:airline_skip_empty_sections = 1
+" let g:airline#extensions#ale#enabled = 1 " TODO: nicer appearence for ALE
+set noshowmode " airline now shows the active mode
 
-" show only most-recently-used files in the current working directory
-let g:ctrlp_mruf_relative = 1
+" vim-gitgutter
+set updatetime=100 " show the git changes earlier
+
+let test#strategy = 'vimterminal'
+
 " NERDTree
+let g:NERDTreeMouseMode=2
+let g:NERDTreeAutoDeleteBuffer=1
+let g:NERDTreeQuitOnOpen=1
+
 " Open a NERDTree automatically when vim starts up if no files were specified
 autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-" Open a NERDTree automatically when vim got started with directory specified
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Close Vim if the only window left open is a NERDTree
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-let g:NERDTreeMouseMode=3
-let g:NERDTreeAutoDeleteBuffer=1
+" Strip trailing whitespace when saving files
+autocmd BufWritePre * :%s/\s\+$//e

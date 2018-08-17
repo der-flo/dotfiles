@@ -58,9 +58,7 @@
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
-				<string>/usr/local/bin/atom ~/Documents
-
-# cd ~/Documents &amp;&amp; /usr/local/bin/mvim
+				<string>cd ~/Documents &amp;&amp; /usr/local/bin/mvim
 </string>
 				<key>type</key>
 				<integer>0</integer>
@@ -118,7 +116,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>/usr/local/bin/subl "~/Seafile/Meine Bibliothek"</string>
+				<string>cd '/Users/fduetsch/Seafile/Meine Bibliothek' &amp;&amp; /usr/local/bin/mvim</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>

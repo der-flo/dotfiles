@@ -4,8 +4,8 @@ source /usr/local/share/chruby/auto.fish
 fish_default_key_bindings
 
 set PATH ~/bin $PATH
-set -Ux EDITOR 'atom -w'
-set -Ux VISUAL 'atom -w'
+set --export EDITOR vim
+set --export VISUAL vim
 
 source ~/.config/fish/nww_functions_and_aliases.fish
 

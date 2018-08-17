@@ -41,11 +41,11 @@ end)
 
 hs.hotkey.bind(hyper2, "g", function()
   hs.mjomatic.go({
-    "iiiaaaaa",
-    "iiiaaaaa",
+    "iivvvvvv",
+    "iivvvvvv",
     "",
     "i iTerm2",
-    "a Atom"
+    "v MacVim"
   })
 end)
 
