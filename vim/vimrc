@@ -25,10 +25,11 @@ set fillchars+=vert:│ " nicer vertical line
 set backspace=indent,eol,start " backspace as expected
 
 " TODO: does not work yet inside tmux
+" https://stackoverflow.com/questions/15123477/tmux-tabs-with-name-of-file-open-in-vim
 set title
 
 set hidden " hide a buffer instead of closing it
-           " => switch buffers even with the actual unsaved
+           " ⇒ switch buffers even with the actual unsaved
 set autoread
 set list
 set listchars=tab:▸·,trail:·,precedes:◅,extends:▻,nbsp:•
@@ -46,11 +47,10 @@ set smartcase
 
 " Mouse
 set mouse=a
-" TODO: Get it working again
-" set ttymouse=xterm2 " resize splits with mouse when inside tmux session
+set ttymouse=xterm2 " resize splits with mouse when inside tmux session
 
 " ALE
-" TODO: Configure nicer appearence
+" TODO: Configure nicer appearance
 let g:ale_linters = { 'ruby': ['ruby', 'rubocop'] }
 
 " Airline
