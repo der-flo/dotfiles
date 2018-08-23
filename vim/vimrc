@@ -59,6 +59,7 @@ let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 let g:airline_skip_empty_sections = 1
 " let g:airline#extensions#ale#enabled = 1 " TODO: nicer appearence for ALE
 set noshowmode " airline now shows the active mode
+autocmd WinLeave * :let w:airline_render_right=0
 
 " vim-gitgutter
 set updatetime=100 " show the git changes earlier
