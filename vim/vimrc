@@ -6,10 +6,11 @@ source ~/.vim/key_mappings.vim
 
 
 " enable true-color output
-" TODO: Needed? Working?
-" set termguicolors
-" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" https://gist.github.com/XVilka/8346728
+set termguicolors
+" see ":help xterm-true-color", our $TERM needs this
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " TODO: Check out features intensively
 " https://github.com/rakr/vim-one
