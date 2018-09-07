@@ -33,3 +33,6 @@ map <C-l> <C-w>l
 iabbrev -> →
 iabbrev => ⇒
 autocmd FileType ruby iabbrev <buffer> pry! require 'pry'<CR>binding.pry
+
+" grep
+nnoremap gr :grep <cword><CR>

@@ -4,7 +4,6 @@ source ~/.vim/plugins.vim
 source ~/.vim/filetypes.vim
 source ~/.vim/key_mappings.vim
 
-
 " enable true-color output
 " https://gist.github.com/XVilka/8346728
 set termguicolors
@@ -29,6 +28,7 @@ set backspace=indent,eol,start " backspace as expected
 " https://stackoverflow.com/questions/15123477/tmux-tabs-with-name-of-file-open-in-vim
 set title
 
+set grepprg=rg\ --vimgrep\ --smart-case " ripgrep has to be installed
 set hidden " hide a buffer instead of closing it
            " ⇒ switch buffers even with the actual unsaved
 set autoread
