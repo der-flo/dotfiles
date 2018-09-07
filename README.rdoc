@@ -7,7 +7,7 @@
 
 == Installation
 
-  brew install fish
+  brew install fish ripgrep
   chsh -s /usr/local/bin/fish
   git clone git://github.com/der-flo/dotfiles ~/dotfiles
   cd ~/dotfiles
