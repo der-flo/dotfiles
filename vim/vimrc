@@ -23,17 +23,17 @@ set cursorline
 set nowrap
 set fillchars+=vert:│ " nicer vertical line
 set backspace=indent,eol,start " backspace as expected
-
-" TODO: does not work yet inside tmux
-" https://stackoverflow.com/questions/15123477/tmux-tabs-with-name-of-file-open-in-vim
-set title
-
 set grepprg=rg\ --vimgrep\ --smart-case " ripgrep has to be installed
+set timeoutlen=3000 " Give me more time remembering my complex mappings ;-)
 set hidden " hide a buffer instead of closing it
            " ⇒ switch buffers even with the actual unsaved
 set autoread
 set list
 set listchars=tab:▸·,trail:·,precedes:◅,extends:▻,nbsp:•
+
+" TODO: does not work yet inside tmux
+" https://stackoverflow.com/questions/15123477/tmux-tabs-with-name-of-file-open-in-vim
+set title
 
 " Indentation http://vim.wikia.com/wiki/Indenting_source_code
 set expandtab " expand tab key presses to spaces
@@ -68,7 +68,6 @@ set updatetime=100 " show the git changes earlier
 let test#strategy = 'vimterminal'
 
 " NERDTree
-let g:NERDTreeMouseMode=2
 let g:NERDTreeAutoDeleteBuffer=1
 let g:NERDTreeQuitOnOpen=1
 
