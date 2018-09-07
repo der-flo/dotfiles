@@ -19,4 +19,5 @@ Plug 'vim-scripts/AutoComplPop'
 Plug 'tpope/vim-surround' " cs"' oder cs '"
 Plug 'sbdchd/neoformat'
 Plug 'tpope/vim-commentary'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()

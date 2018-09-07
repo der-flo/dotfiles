@@ -36,3 +36,6 @@ autocmd FileType ruby iabbrev <buffer> pry! require 'pry'<CR>binding.pry
 
 " grep
 nnoremap gr :grep <cword><CR>
+
+" CtrlP
+let g:ctrlp_map = '<Leader>g'
