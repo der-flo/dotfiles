@@ -10,8 +10,6 @@ Plug 'tpope/vim-endwise', { 'for': 'ruby' }
 Plug 'AndrewRadev/splitjoin.vim' " gS, gJ
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale', { 'for': 'ruby' }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-Plug 'junegunn/fzf.vim' " TODO: Check out features intensively
 Plug 'tweekmonster/startuptime.vim', { 'on': 'StartupTime' }
 Plug 'janko-m/vim-test', { 'on': ['TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit'] }
 Plug 'sheerun/vim-polyglot'

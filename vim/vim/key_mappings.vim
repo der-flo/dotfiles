@@ -12,11 +12,10 @@ nnoremap <C-P> :bprev<CR>
 nnoremap <Leader>w :Bdelete<CR>
 nnoremap <Leader>Q :Bdelete!<CR>
 
-" Fuzzy finding (FZF)
-nnoremap <Leader>f :Files<CR>
-nnoremap <Leader>b :Buffers<CR>
-nnoremap <Leader>h :History<CR>
-command! Todos Ag! TODO(?! Prio [23])
+" CtrlP
+let g:ctrlp_map = '<Leader>f'
+nnoremap <Leader>b :CtrlPBuffer<CR>
+nnoremap <Leader>m :CtrlPMRU<CR>
 
 " vim-test
 nmap <silent> <Leader>tn :TestNearest<CR>
@@ -37,5 +36,5 @@ autocmd FileType ruby iabbrev <buffer> pry! require 'pry'<CR>binding.pry
 " grep
 nnoremap gr :grep <cword><CR>
 
-" CtrlP
-let g:ctrlp_map = '<Leader>g'
+" Commands
+command! Todos grep --pcre2 'TODO(?! Prio [23])'
