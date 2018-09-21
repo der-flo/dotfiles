@@ -52,14 +52,19 @@ set mouse=a
 set ttymouse=xterm2 " resize splits with mouse when inside tmux session
 
 " ALE
-" TODO: Configure nicer appearance
-let g:ale_linters = { 'ruby': ['ruby', 'rubocop'] }
+let g:ale_sign_error = '☠'
+let g:ale_sign_warning = '🚽'
+let g:ale_echo_msg_error_str = '☠ '
+let g:ale_echo_msg_warning_str = '🚽 '
+let g:ale_echo_msg_format = '%severity% %code: %%s'
 
 " Airline
 let g:airline_powerline_fonts=1
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 let g:airline_skip_empty_sections = 1
-" let g:airline#extensions#ale#enabled = 1 " TODO: nicer appearence for ALE
+let g:airline#extensions#ale#error_symbol =  '☠  '
+let g:airline#extensions#ale#warning_symbol = '🚽 '
+
 set noshowmode " airline now shows the active mode
 autocmd WinLeave * :let w:airline_render_right=0
 
