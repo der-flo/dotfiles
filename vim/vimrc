@@ -30,6 +30,7 @@ set hidden " hide a buffer instead of closing it
 set autoread
 set list
 set listchars=tab:▸·,trail:·,precedes:◅,extends:▻,nbsp:•
+set nofoldenable
 
 " TODO: does not work yet inside tmux
 " https://stackoverflow.com/questions/15123477/tmux-tabs-with-name-of-file-open-in-vim
