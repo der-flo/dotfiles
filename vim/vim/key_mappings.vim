@@ -18,15 +18,15 @@ nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>m :CtrlPMRU<CR>
 
 " vim-test
-nmap <silent> <Leader>tn :TestNearest<CR>
-nmap <silent> <Leader>tf :TestFile<CR>
-nmap <silent> <Leader>tl :TestLast<CR>
+nnoremap <silent> <Leader>tn :TestNearest<CR>
+nnoremap <silent> <Leader>tf :TestFile<CR>
+nnoremap <silent> <Leader>tl :TestLast<CR>
 
 " faster navigation between splits
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
 
 " abbrevations
 iabbrev ->! →
@@ -38,3 +38,19 @@ nnoremap gr :grep <cword><CR>
 
 " Commands
 command! Todos grep --pcre2 'TODO(?! Prio [23])'
+
+" vim-unimpaired usability on german keyboard
+nmap < [
+nmap > ]
+omap < [
+omap > ]
+xmap < [
+xmap > ]
+
+" http://learnvimscriptthehardway.stevelosh.com/chapters/10.html
+inoremap jk <esc>
+inoremap <esc> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>

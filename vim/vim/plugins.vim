@@ -19,4 +19,5 @@ Plug 'tpope/vim-repeat'
 Plug 'sbdchd/neoformat'
 Plug 'tpope/vim-commentary'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-unimpaired' " TODO: Check out all features
 call plug#end()
