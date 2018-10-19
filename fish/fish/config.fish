@@ -1,7 +1,7 @@
 [ -f /usr/local/share/chruby/chruby.fish ]; and source /usr/local/share/chruby/chruby.fish
 [ -f /usr/local/share/chruby/auto.fish ]; and source /usr/local/share/chruby/auto.fish
 
-fish_default_key_bindings
+fish_vi_key_bindings
 
 set PATH ~/bin $PATH
 set --export EDITOR vim
