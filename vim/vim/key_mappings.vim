@@ -33,6 +33,8 @@ iabbrev ->! →
 iabbrev =>! ⇒
 autocmd FileType ruby iabbrev <buffer> pry! require 'pry'<CR>binding.pry
 
+" TODO: Rubocop abbrevation
+
 " grep
 nnoremap gr :grep <cword><CR>
 
@@ -40,17 +42,20 @@ nnoremap gr :grep <cword><CR>
 command! Todos grep --pcre2 'TODO(?! Prio [23])'
 
 " vim-unimpaired usability on german keyboard
-nmap < [
-nmap > ]
-omap < [
-omap > ]
-xmap < [
-xmap > ]
+" TODO: Merde, dann klappt das Einrücken nicht mehr!
+" nmap < [
+" nmap > ]
+" omap < [
+" omap > ]
+" xmap < [
+" xmap > ]
 
 " http://learnvimscriptthehardway.stevelosh.com/chapters/10.html
 inoremap jk <esc>
 inoremap <esc> <nop>
-inoremap <Up> <nop>
-inoremap <Down> <nop>
-inoremap <Left> <nop>
-inoremap <Right> <nop>
+
+" TODO: Ich kann im Autocompleter noch nicht ohne die Cursor-Tasten navigieren.
+" inoremap <Up> <nop>
+" inoremap <Down> <nop>
+" inoremap <Left> <nop>
+" inoremap <Right> <nop>
