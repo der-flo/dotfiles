@@ -30,3 +30,9 @@ default = current
 
 [credential]
 helper = osxkeychain
+
+[merge]
+tool = p4merge
+
+[mergetool "p4merge"]
+path = /Applications/p4merge.app/Contents/MacOS/p4merge
