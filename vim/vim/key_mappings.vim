@@ -51,8 +51,10 @@ command! Todos grep --pcre2 'TODO(?! Prio [23])'
 " xmap > ]
 
 " http://learnvimscriptthehardway.stevelosh.com/chapters/10.html
-inoremap jk <esc>
-inoremap <esc> <nop>
+" Das funktioniert im MacVim nicht zuverlässig genug.
+" imap ausprobieren
+" inoremap jk <esc>
+" inoremap <esc> <nop>
 
 " TODO: Ich kann im Autocompleter noch nicht ohne die Cursor-Tasten navigieren.
 " inoremap <Up> <nop>
