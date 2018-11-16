@@ -11,7 +11,7 @@ set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-" TODO: Check out features intensively
+" TODO Prio 2: Italics in terminal mode
 " https://github.com/rakr/vim-one
 colorscheme one
 set background=light
@@ -32,7 +32,7 @@ set list
 set listchars=tab:▸·,trail:·,precedes:◅,extends:▻,nbsp:•
 set nofoldenable
 
-" TODO: does not work yet inside tmux
+" TODO Prio 2: does not work yet inside tmux
 " https://stackoverflow.com/questions/15123477/tmux-tabs-with-name-of-file-open-in-vim
 set title
 
