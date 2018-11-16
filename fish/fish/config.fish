@@ -37,3 +37,6 @@ abbr -a bi 'bundle install -j4'
 
 abbr -a todo_flo 'rg "TODO\sFlo"'
 abbr -a todo 'rg --pcre2 "TODO(?! Prio [23])"'
+
+abbr -a txn 'tmux new-session'
+abbr -a http_dir 'ruby -run -e httpd . --port=8080'
