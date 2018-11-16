@@ -70,5 +70,35 @@ local windowHotkeys = {
 spoon.WindowHalfsAndThirds:bindHotkeys(windowHotkeys)
 
 --------------------------------------------------------------------------------
+-- Spoon
+hs.loadSpoon("Seal")
+spoon.Seal:loadPlugins({"apps", "calc", "useractions"})
+spoon.Seal.plugins.useractions.actions = {
+  ["LEO-Suche nach"] = {
+    url = "https://dict.leo.org/englisch-deutsch/${query}",
+    icon = "favicon",
+    keyword = "leo"
+  },
+  ["Planio-Ticket"] = {
+    url = "https://adigi.planio.de/issues/${query}",
+    icon = "favicon",
+    keyword = "#"
+  },
+  ["Planio-Zeitbuchung"] = {
+    fn = function(param)
+      local id, time = param:match("^(%d+) (.+)$")
+      local url = "https://adigi.planio.de/issues/" .. id ..
+                  "/time_entries/new?time_entry[hours]=" .. time
+      hs.execute(string.format("/usr/bin/open '%s'", url))
+    end,
+    icon = "favicon",
+    keyword = "#z"
+  }
+}
+hs.hotkey.bind(hyper2, "space", function()
+  spoon.Seal:toggle()
+end)
+
+--------------------------------------------------------------------------------
 -- hs.alert.show("Config loaded")
 hs.notify.new({title="Hammerspoon", informativeText="Config loaded"}):send()
