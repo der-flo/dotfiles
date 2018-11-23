@@ -22,7 +22,12 @@ hs.hotkey.bind(hyper, "i", require "toggle_ksheet")
 -- Karabiner Elements setzt aktuell leider "⌃-eject" außer Kraft.
 -- https://github.com/tekezo/Karabiner-Elements/issues/89
 hs.hotkey.bind(hyper, "s", hs.caffeinate.systemSleep)
+hs.hotkey.bind(hyper, "l", hs.caffeinate.lockScreen)
 
+require "seal_cfg"
+hs.hotkey.bind(hyper, "space", function()
+  spoon.Seal:toggle()
+end)
 --------------------------------------------------------------------------------
 -- Fenster-bezogene Kommandos
 
@@ -68,36 +73,6 @@ local windowHotkeys = {
 -- TODO: 40/60 interessant? 30/70? Auf welche Tasten?
 -- TODO: max + undo statt max_toggle?
 spoon.WindowHalfsAndThirds:bindHotkeys(windowHotkeys)
-
---------------------------------------------------------------------------------
--- Spoon
-hs.loadSpoon("Seal")
-spoon.Seal:loadPlugins({"apps", "calc", "useractions"})
-spoon.Seal.plugins.useractions.actions = {
-  ["LEO-Suche nach"] = {
-    url = "https://dict.leo.org/englisch-deutsch/${query}",
-    icon = "favicon",
-    keyword = "leo"
-  },
-  ["Planio-Ticket"] = {
-    url = "https://adigi.planio.de/issues/${query}",
-    icon = "favicon",
-    keyword = "#"
-  },
-  ["Planio-Zeitbuchung"] = {
-    fn = function(param)
-      local id, time = param:match("^(%d+) (.+)$")
-      local url = "https://adigi.planio.de/issues/" .. id ..
-                  "/time_entries/new?time_entry[hours]=" .. time
-      hs.execute(string.format("/usr/bin/open '%s'", url))
-    end,
-    icon = "favicon",
-    keyword = "#z"
-  }
-}
-hs.hotkey.bind(hyper2, "space", function()
-  spoon.Seal:toggle()
-end)
 
 --------------------------------------------------------------------------------
 -- hs.alert.show("Config loaded")

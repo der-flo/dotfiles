@@ -22,37 +22,37 @@
 		<key>1D4DC098-272C-4E37-B29E-6FF4A8191059</key>
 		<dict>
 			<key>enabled</key>
-			<true/>
+			<false/>
 			<key>keyword</key>
 			<string>#</string>
 			<key>plusSpaces</key>
 			<true/>
 			<key>text</key>
-			<string>Redmine-Ticket</string>
+			<string>Planio-Ticket</string>
 			<key>url</key>
-			<string>https://redmine.nwwo.de/search?q={query}</string>
+			<string>https://adigi.planio.de/issues/{query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
 		<key>24A39DBA-E226-480D-BC25-5C5FA253AD24</key>
 		<dict>
 			<key>enabled</key>
-			<true/>
+			<false/>
 			<key>keyword</key>
 			<string>wiki</string>
 			<key>plusSpaces</key>
 			<false/>
 			<key>text</key>
-			<string>Redmine-Wikisuche</string>
+			<string>Planio-Wikisuche</string>
 			<key>url</key>
-			<string>https://redmine.nwwo.de/search?q={query}&amp;scope=all&amp;all_words=1&amp;titles_only=1&amp;wiki_pages=1&amp;submit=OK</string>
+			<string>https://adigi.planio.de/search?q={query}&amp;scope=all&amp;all_words=1&amp;titles_only=1&amp;wiki_pages=1&amp;submit=OK</string>
 			<key>utf8</key>
 			<false/>
 		</dict>
 		<key>2EE3FBF8-28CC-4F93-B0F2-A33AF98F4680</key>
 		<dict>
 			<key>enabled</key>
-			<true/>
+			<false/>
 			<key>keyword</key>
 			<string>dd</string>
 			<key>plusSpaces</key>
@@ -67,7 +67,7 @@
 		<key>301F16B5-656C-44AD-9BF0-2F320C15AA94</key>
 		<dict>
 			<key>enabled</key>
-			<true/>
+			<false/>
 			<key>keyword</key>
 			<string>leo</string>
 			<key>plusSpaces</key>
@@ -112,7 +112,7 @@
 		<key>E96FDDCA-E695-49CD-931B-20C5D97ED5B9</key>
 		<dict>
 			<key>enabled</key>
-			<true/>
+			<false/>
 			<key>keyword</key>
 			<string>duden</string>
 			<key>plusSpaces</key>
@@ -127,13 +127,13 @@
 		<key>E9F4E433-A93B-48B4-8FC4-00AE70B2AA33</key>
 		<dict>
 			<key>enabled</key>
-			<true/>
+			<false/>
 			<key>keyword</key>
 			<string>#z</string>
 			<key>plusSpaces</key>
 			<false/>
 			<key>text</key>
-			<string>Redmine-Zeitbuchung</string>
+			<string>Planio-Zeitbuchung</string>
 			<key>url</key>
 			<string>http://www.nwwo.de/redmine/?q={query}</string>
 			<key>utf8</key>
