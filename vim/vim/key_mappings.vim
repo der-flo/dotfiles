@@ -39,7 +39,7 @@ autocmd FileType ruby iabbrev <buffer> pry! require 'pry'<CR>binding.pry
 nnoremap gr :grep <cword><CR>
 
 " Commands
-command! Todos grep --pcre2 'TODO(?! Prio [23])'
+command! Todos silent grep --pcre2 'TODO(?! Prio [23])'
 
 " vim-unimpaired usability on german keyboard
 " TODO: Merde, dann klappt das Einrücken nicht mehr!
