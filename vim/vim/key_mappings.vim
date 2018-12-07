@@ -14,7 +14,7 @@ nnoremap <Leader>Q :Bdelete!<CR>
 
 " CtrlP
 let g:ctrlp_map = '<Leader>f'
-nnoremap <Leader>b :CtrlPBuffer<CR>
+nnoremap <Leader>bb :CtrlPBuffer<CR>
 nnoremap <Leader>m :CtrlPMRU<CR>
 
 " vim-test
@@ -47,6 +47,10 @@ nnoremap <Leader>gt :Todos<CR>
 
 " Silent variant of :grep, no need to press enter
 command! -nargs=+ Grep silent grep <args>
+
+" https://stackoverflow.com/questions/4545275/vim-close-all-buffers-but-this-one
+command! BufOnly silent! execute "%bd|e#|bd#"
+nnoremap <Leader>bo :BufOnly<CR>
 
 " vim-unimpaired usability on german keyboard
 " TODO: Merde, dann klappt das Einrücken nicht mehr!
