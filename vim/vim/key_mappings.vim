@@ -35,11 +35,18 @@ autocmd FileType ruby iabbrev <buffer> pry! require 'pry'<CR>binding.pry
 
 " TODO: Rubocop abbrevation
 
-" grep
-nnoremap gr :grep <cword><CR>
+" grep for word under cursor
+nnoremap <Leader>gw :silent grep -F <cword><CR>
 
-" Commands
+" grep for selection
+vnoremap <Leader>gs "ay:grep -F "<C-r>a"<CR>
+
+" grep for TODOs
 command! Todos silent grep --pcre2 'TODO(?! Prio [23])'
+nnoremap <Leader>gt :Todos<CR>
+
+" Silent variant of :grep, no need to press enter
+command! -nargs=+ Grep silent grep <args>
 
 " vim-unimpaired usability on german keyboard
 " TODO: Merde, dann klappt das Einrücken nicht mehr!
