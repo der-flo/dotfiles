@@ -1,6 +1,6 @@
 -- TODO Prio 2: Dash, Chat starten
 -- TODO Prio 2: http://devdocs.io/#q={query} benötigt?
--- TODO: Rubygems
+-- TODO Prio 2: Volles Rubygems-Menü mit Suchergebnissen
 
 function startVimInPath(path)
   -- https://github.com/Hammerspoon/hammerspoon/issues/841
@@ -28,6 +28,11 @@ spoon.Seal.plugins.useractions.actions = {
     url = "https://www.duden.de/suchen/dudenonline/${query}",
     icon = "favicon",
     keyword = "duden"
+  },
+  ["Rubygems-Suche nach"] = {
+    url = "https://rubygems.org/search?query=${query}",
+    icon = "favicon",
+    keyword = "gem"
   },
   ["Planio-Ticket"] = {
     url = "https://adigi.planio.de/issues/${query}",
