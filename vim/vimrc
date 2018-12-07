@@ -73,8 +73,6 @@ autocmd WinLeave * :let w:airline_render_right=0
 " vim-gitgutter
 set updatetime=100 " show the git changes earlier
 
-let test#strategy = 'vimterminal'
-
 " NERDTree
 let g:NERDTreeAutoDeleteBuffer=1
 let g:NERDTreeQuitOnOpen=1
@@ -95,3 +93,16 @@ let g:ctrlp_mruf_relative = 1
 " werden würde und wenn man einen erfolgreichen Grep nicht mit Enter bestätigen
 " müsste.
 autocmd QuickFixCmdPost *grep* cwindow
+
+" vim-test
+function! VimtestOwnStrategy(cmd)
+  botright new
+  call term_start(['/bin/sh', '-c', a:cmd], {'curwin':1})
+
+  " Do not focus test window, stay in last file
+  call feedkeys("\<C-w>\<C-p>")
+endfunction
+let g:test#custom_strategies = {
+  \ 'own': function('VimtestOwnStrategy')
+  \ }
+let g:test#strategy = 'own'
