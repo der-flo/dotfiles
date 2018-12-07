@@ -19,7 +19,6 @@ set background=light
 set colorcolumn=81
 set textwidth=80
 set number
-set cursorline
 set nowrap
 set fillchars+=vert:│ " nicer vertical line
 set backspace=indent,eol,start " backspace as expected
@@ -93,6 +92,24 @@ let g:ctrlp_mruf_relative = 1
 " werden würde und wenn man einen erfolgreichen Grep nicht mit Enter bestätigen
 " müsste.
 autocmd QuickFixCmdPost *grep* cwindow
+
+" https://stackoverflow.com/questions/7614546/vim-cursorline-color-change-in-insert-mode
+" Ggf. noch besser: https://stackoverflow.com/questions/7614546/vim-cursorline-color-change-in-insert-mode/35170848#35170848
+" TODO: Farben von https://github.com/rakr/vim-one/blob/master/autoload/airline/themes/one.vim
+" TODO: Auch für Konsolen-Vim
+autocmd InsertEnter * highlight CursorLine guibg=#f0f0ff
+autocmd InsertLeave * highlight CursorLine guibg=#f0f0f0
+
+" cursorline
+set cursorline
+
+" ... just in active buffer
+" https://stackoverflow.com/questions/12017331/how-can-i-make-vim-highlight-the-current-line-on-only-the-active-buffer
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
 
 " vim-test
 function! VimtestOwnStrategy(cmd)
