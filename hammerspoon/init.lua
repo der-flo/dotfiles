@@ -2,6 +2,11 @@
 -- TODO: https://github.com/trishume/dotfiles/blob/master/hammerspoon/hammerspoon.symlink/init.lua
 -- TODO: https://github.com/tombruijn/dotfiles/tree/master/hammerspoon
 
+-- Debugging:
+-- * https://github.com/Hammerspoon/hammerspoon/issues/1268
+-- * hs.logger.d(data)
+-- * hs.showError(body)
+
 hs.loadSpoon("ReloadConfiguration")
 spoon.ReloadConfiguration:start()
 
