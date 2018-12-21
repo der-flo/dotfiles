@@ -89,8 +89,7 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_mruf_relative = 1
 
 " Noch besser wäre es, wenn nicht automatisch zum ersten Ergebnis gesprungen
-" werden würde und wenn man einen erfolgreichen Grep nicht mit Enter bestätigen
-" müsste.
+" werden würde.
 autocmd QuickFixCmdPost *grep* cwindow
 
 " https://stackoverflow.com/questions/7614546/vim-cursorline-color-change-in-insert-mode
