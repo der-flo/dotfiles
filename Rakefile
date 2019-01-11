@@ -31,10 +31,7 @@ task :install do
     # https://pqrs.org/osx/karabiner/document.html#configuration-file-path
     handle_file('karabiner', '.config/karabiner')
 
-    # TODO: Needed
-    # handle_file('alfred/Alfred.alfredpreferences',
-    #             'Library/Application Support/Alfred 2/Alfred.alfredpreferences')
-    # TODO: iTerm, Alfred konfigurieren
+    # TODO: iTerm konfigurieren
   end
 end
 
