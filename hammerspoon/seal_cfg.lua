@@ -17,6 +17,7 @@ end
 
 hs.loadSpoon("Seal")
 spoon.Seal:loadPlugins({"apps", "calc", "useractions", "rubygems"})
+-- TODO: Google search, maybe as default action?
 spoon.Seal.plugins.useractions.actions = {
   ["LEO-Suche nach"] = {
     url = "https://dict.leo.org/englisch-deutsch/${query}",

@@ -1,3 +1,5 @@
+-- TODO: Good enough?
+
 local obj = {}
 obj.__index = obj
 obj.__name = 'seal_rubygems'
