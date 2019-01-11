@@ -1,5 +1,6 @@
 -- TODO Prio 2: Dash, Chat starten
 -- TODO Prio 2: http://devdocs.io/#q={query} benötigt?
+-- TODO: Google search as default action?
 
 function startVimInPath(path)
   -- https://github.com/Hammerspoon/hammerspoon/issues/841
@@ -17,8 +18,12 @@ end
 
 hs.loadSpoon("Seal")
 spoon.Seal:loadPlugins({"apps", "calc", "useractions", "rubygems"})
--- TODO: Google search, maybe as default action?
 spoon.Seal.plugins.useractions.actions = {
+  ["Google-Suche nach"] = {
+    url = "https://www.google.com/search?q=${query}",
+    icon = "favicon",
+    keyword = "g"
+  },
   ["LEO-Suche nach"] = {
     url = "https://dict.leo.org/englisch-deutsch/${query}",
     icon = "favicon",
