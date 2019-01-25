@@ -17,7 +17,7 @@ local hyper = {"⌘", "⌥", "⌃"}
 
 -- Präfix für alle Fenster-bezogenen Kommandos
 -- Per Karabiner auf rechtes ⌥ gebunden
-local hyper2 = {"⌘", "⌥", "⌃", "⇧"}
+local hyper2 = {"⌘", "⌃", "⇧"}
 
 --------------------------------------------------------------------------------
 hs.hotkey.bind(hyper, "c", require "new_chrome_window")

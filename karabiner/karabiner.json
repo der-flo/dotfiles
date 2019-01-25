@@ -35,7 +35,7 @@
                         ]
                     },
                     {
-                        "description": "Right option (⌥) to ⌘⌥⌃⇧",
+                        "description": "Right option (⌥) to ⌘⌃⇧",
                         "manipulators": [
                             {
                                 "from": {
@@ -46,7 +46,6 @@
                                         "key_code": "left_shift",
                                         "modifiers": [
                                             "left_control",
-                                            "left_option",
                                             "left_command"
                                         ]
                                     }
