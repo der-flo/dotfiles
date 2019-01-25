@@ -6,6 +6,7 @@ fish_vi_key_bindings
 set PATH ~/bin $PATH
 set --export EDITOR vim
 set --export VISUAL vim
+set --export RIPGREP_CONFIG_PATH $HOME/.ripgreprc
 
 source ~/.config/fish/nww_functions_and_aliases.fish
 
