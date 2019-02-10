@@ -41,6 +41,8 @@ set expandtab " expand tab key presses to spaces
 set softtabstop=2 " tabstops are two spaces
 set shiftwidth=2 " width of autoindentation
 
+" TODO: shiftround?
+
 " Searching
 set hlsearch
 set incsearch
@@ -76,6 +78,16 @@ set updatetime=100 " show the git changes earlier
 let g:NERDTreeAutoDeleteBuffer=1
 let g:NERDTreeQuitOnOpen=1
 let g:NERDTreeHijackNetrw=0 " NERDTree annoys me when using 'vim .'
+
+" Better indentation in NERDTree
+" https://github.com/ryanoasis/vim-devicons/issues/248
+" https://github.com/scrooloose/nerdtree/issues/848
+let g:WebDevIconsNerdTreeBeforeGlyphPadding = ""
+let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
+let g:DevIconsEnableFoldersOpenClose = 1
+" Disable arrow icons at the left side of folders for NERDTree.
+let g:NERDTreeDirArrowExpandable = "\u00a0"
+let g:NERDTreeDirArrowCollapsible = "\u00a0"
 
 " Close Vim if the only window left open is a NERDTree
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
