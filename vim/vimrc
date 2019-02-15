@@ -69,7 +69,10 @@ let g:airline#extensions#ale#warning_symbol = '🚽 '
 let g:airline#extensions#tabline#enabled = 1
 
 set noshowmode " airline now shows the active mode
-autocmd WinLeave * :let w:airline_render_right=0
+augroup airline
+  autocmd!
+  autocmd WinLeave * :let w:airline_render_right=0
+augroup END
 
 " vim-gitgutter
 set updatetime=100 " show the git changes earlier
@@ -89,11 +92,15 @@ let g:DevIconsEnableFoldersOpenClose = 1
 let g:NERDTreeDirArrowExpandable = "\u00a0"
 let g:NERDTreeDirArrowCollapsible = "\u00a0"
 
-" Close Vim if the only window left open is a NERDTree
-autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+augroup nerdtree
+  autocmd!
 
-" Strip trailing whitespace when saving files
-autocmd BufWritePre * :%s/\s\+$//e
+  " Close Vim if the only window left open is a NERDTree
+  autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+  " Strip trailing whitespace when saving files
+  autocmd BufWritePre * :%s/\s\+$//e
+augroup END
 
 " CtrlP
 let g:ctrlp_user_command = 'rg %s --files --follow --color=never --glob ""'
@@ -101,14 +108,20 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_mruf_relative = 1
 
 " Open quickfix window after grep, open with full-width
-autocmd QuickFixCmdPost *grep* botright cwindow
+augroup grep
+  autocmd!
+  autocmd QuickFixCmdPost *grep* botright cwindow
+augroup END
 
 " https://stackoverflow.com/questions/7614546/vim-cursorline-color-change-in-insert-mode
 " Ggf. noch besser: https://stackoverflow.com/questions/7614546/vim-cursorline-color-change-in-insert-mode/35170848#35170848
 " TODO: Farben von https://github.com/rakr/vim-one/blob/master/autoload/airline/themes/one.vim
 " TODO: Auch für Konsolen-Vim
-autocmd InsertEnter * highlight CursorLine guibg=#f0f0ff
-autocmd InsertLeave * highlight CursorLine guibg=#f0f0f0
+augroup cursorline_color
+  autocmd!
+  autocmd InsertEnter * highlight CursorLine guibg=#f0f0ff
+  autocmd InsertLeave * highlight CursorLine guibg=#f0f0f0
+augroup END
 
 " cursorline
 set cursorline
@@ -116,9 +129,9 @@ set cursorline
 " ... just in active buffer
 " https://stackoverflow.com/questions/12017331/how-can-i-make-vim-highlight-the-current-line-on-only-the-active-buffer
 augroup CursorLine
-  au!
-  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-  au WinLeave * setlocal nocursorline
+  autocmd!
+  autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  autocmd WinLeave * setlocal nocursorline
 augroup END
 
 " vim-test

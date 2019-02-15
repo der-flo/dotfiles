@@ -31,7 +31,11 @@ noremap <C-l> <C-w>l
 " abbrevations
 iabbrev ->! →
 iabbrev =>! ⇒
-autocmd FileType ruby iabbrev <buffer> pry! require 'pry'<CR>binding.pry
+
+augroup abbrevations
+  autocmd!
+  autocmd FileType ruby iabbrev <buffer> pry! require 'pry'<CR>binding.pry
+augroup END
 
 " TODO: Rubocop abbrevation
 
