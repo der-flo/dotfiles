@@ -69,7 +69,7 @@ let g:airline#extensions#ale#warning_symbol = '🚽 '
 let g:airline#extensions#tabline#enabled = 1
 
 set noshowmode " airline now shows the active mode
-augroup airline
+augroup airline_changes
   autocmd!
   autocmd WinLeave * :let w:airline_render_right=0
 augroup END
