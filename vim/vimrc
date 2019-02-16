@@ -3,6 +3,7 @@
 source ~/.vim/plugins.vim
 source ~/.vim/filetypes.vim
 source ~/.vim/key_mappings.vim
+source ~/.vim/color_scheme.vim
 
 " enable true-color output
 " https://gist.github.com/XVilka/8346728
@@ -10,11 +11,6 @@ set termguicolors
 " see ":help xterm-true-color", our $TERM needs this
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-
-" TODO Prio 2: Italics in terminal mode
-" https://github.com/rakr/vim-one
-colorscheme one
-set background=light
 
 set colorcolumn=81
 set textwidth=80
@@ -111,16 +107,6 @@ let g:ctrlp_mruf_relative = 1
 augroup grep
   autocmd!
   autocmd QuickFixCmdPost *grep* botright cwindow
-augroup END
-
-" https://stackoverflow.com/questions/7614546/vim-cursorline-color-change-in-insert-mode
-" Ggf. noch besser: https://stackoverflow.com/questions/7614546/vim-cursorline-color-change-in-insert-mode/35170848#35170848
-" TODO: Farben von https://github.com/rakr/vim-one/blob/master/autoload/airline/themes/one.vim
-" TODO: Auch für Konsolen-Vim
-augroup cursorline_color
-  autocmd!
-  autocmd InsertEnter * highlight CursorLine guibg=#f0f0ff
-  autocmd InsertLeave * highlight CursorLine guibg=#f0f0f0
 augroup END
 
 " cursorline
