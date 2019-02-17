@@ -17,6 +17,16 @@ nnoremap <C-P> :bprev<CR>
 let g:ctrlp_map = '<Leader>f'
 nnoremap <Leader>bb :CtrlPBuffer<CR>
 nnoremap <Leader>m :CtrlPMRU<CR>
+nnoremap <leader>tt :CtrlPtjump<CR>
+vnoremap <leader>tt :CtrlPtjumpVisual<CR>
+" TODO: Eine Tag-Suche mit leerem Begriff von vorne wäre cool.
+"       CtrlPTag ?
+" TODO: ? nmap <leader>gu :pop<cr>
+
+" TODO: https://github.com/majutsushi/tagbar/wiki#ruby
+"       benötigt?
+nnoremap <leader>tb :TagbarToggle<CR>
+
 " https://stackoverflow.com/questions/4545275/vim-close-all-buffers-but-this-one
 command! BufOnly silent! execute "%bd|e#|bd#"
 nnoremap <Leader>bo :BufOnly<CR>

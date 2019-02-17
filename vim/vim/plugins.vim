@@ -19,5 +19,8 @@ Plug 'tpope/vim-repeat'
 Plug 'sbdchd/neoformat'
 Plug 'tpope/vim-commentary'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'tpope/vim-unimpaired' " TODO: Check out all features
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'majutsushi/tagbar'
 call plug#end()
