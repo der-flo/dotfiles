@@ -9,13 +9,19 @@ nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 
 " Delete buffers without closing windows
-nnoremap <Leader>w :Bdelete<CR>
-nnoremap <Leader>Q :Bdelete!<CR>
+" TODO: Test whether really sensible
+" nnoremap <Leader>w :Bdelete<CR>
+" nnoremap <Leader>Q :Bdelete!<CR>
 
 " CtrlP
 let g:ctrlp_map = '<Leader>f'
 nnoremap <Leader>bb :CtrlPBuffer<CR>
 nnoremap <Leader>m :CtrlPMRU<CR>
+" https://stackoverflow.com/questions/4545275/vim-close-all-buffers-but-this-one
+command! BufOnly silent! execute "%bd|e#|bd#"
+nnoremap <Leader>bo :BufOnly<CR>
+
+nnoremap <Leader>bc :bufdo :Bdelete<CR>
 
 " vim-test
 nnoremap <silent> <Leader>tn :TestNearest<CR>
@@ -51,10 +57,6 @@ nnoremap <Leader>gt :Todos<CR>
 
 " Silent variant of :grep, no need to press enter, no jump to first match
 command! -nargs=+ Grep silent grep! <args>
-
-" https://stackoverflow.com/questions/4545275/vim-close-all-buffers-but-this-one
-command! BufOnly silent! execute "%bd|e#|bd#"
-nnoremap <Leader>bo :BufOnly<CR>
 
 " vim-unimpaired usability on german keyboard
 " TODO: Merde, dann klappt das Einrücken nicht mehr!
