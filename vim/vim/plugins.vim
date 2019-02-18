@@ -6,7 +6,8 @@ Plug 'rakr/vim-one'
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'moll/vim-bbye'
-Plug 'cohama/lexima.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-endwise', { 'for': 'ruby' }
 Plug 'AndrewRadev/splitjoin.vim' " gS, gJ
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale', { 'for': 'ruby' }
