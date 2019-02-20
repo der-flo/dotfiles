@@ -12,7 +12,6 @@ set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-set colorcolumn=81
 set textwidth=80
 set number
 set nowrap
@@ -134,3 +133,13 @@ let g:test#custom_strategies = {
   \ 'own': function('VimtestOwnStrategy')
   \ }
 let g:test#strategy = 'own'
+
+" Show marker after 80 characters, but not for every buffer and file type.
+set colorcolumn=81
+augroup ColorColumn
+  autocmd!
+  autocmd TerminalOpen *
+    \ if &buftype == 'terminal'
+    \|  setlocal colorcolumn=
+    \|endif
+augroup END
