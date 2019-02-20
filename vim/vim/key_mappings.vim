@@ -9,9 +9,9 @@ nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 
 " Delete buffers without closing windows
-" TODO: Test whether really sensible
-" nnoremap <Leader>w :Bdelete<CR>
-" nnoremap <Leader>Q :Bdelete!<CR>
+" TODO Prio 2: Test whether really sensible
+nnoremap <Leader>w :Bdelete<CR>
+nnoremap <Leader>Q :Bdelete!<CR>
 
 " CtrlP
 let g:ctrlp_map = '<Leader>f'
