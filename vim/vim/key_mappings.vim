@@ -17,10 +17,9 @@ nnoremap <C-P> :bprev<CR>
 let g:ctrlp_map = '<Leader>f'
 nnoremap <Leader>bb :CtrlPBuffer<CR>
 nnoremap <Leader>m :CtrlPMRU<CR>
-nnoremap <leader>tt :CtrlPtjump<CR>
-vnoremap <leader>tt :CtrlPtjumpVisual<CR>
-" TODO: Eine Tag-Suche mit leerem Begriff von vorne wäre cool.
-"       CtrlPTag ?
+nnoremap <leader>tj :CtrlPtjump<CR>
+vnoremap <leader>tj :CtrlPtjumpVisual<CR>
+nnoremap <leader>tt :CtrlPTag<CR>
 " TODO: ? nmap <leader>gu :pop<cr>
 
 " TODO: https://github.com/majutsushi/tagbar/wiki#ruby
