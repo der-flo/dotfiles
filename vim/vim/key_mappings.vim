@@ -15,8 +15,9 @@ nnoremap <Leader>Q :Bdelete!<CR>
 
 " CtrlP
 let g:ctrlp_map = '<Leader>f'
-nnoremap <Leader>bb :CtrlPBuffer<CR>
+nnoremap <Leader><Leader> :CtrlPBuffer<CR>
 nnoremap <Leader>m :CtrlPMRU<CR>
+" TODO: "t" - tag vs. test
 nnoremap <leader>tj :CtrlPtjump<CR>
 vnoremap <leader>tj :CtrlPtjumpVisual<CR>
 nnoremap <leader>tt :CtrlPTag<CR>
