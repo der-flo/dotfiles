@@ -13,12 +13,6 @@
   cd ~/dotfiles
   rake install
 
-== More
-
-Configured font in terminal:
-[Bitsteam Vera Sans Mono Nerd Font Complete Mono](https://github.com/ryanoasis/nerd-fonts#patched-fonts)
-in size 13pt.
-
 == Inspirations
 
 Inspired by or shamelessly copied from
