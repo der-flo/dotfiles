@@ -48,6 +48,11 @@ set smartcase
 set mouse=a
 set ttymouse=xterm2 " resize splits with mouse when inside tmux session
 
+augroup StripTrailingWhitespaceWhenSavingFiles
+  autocmd!
+  autocmd BufWritePre * :%s/\s\+$//e
+augroup END
+
 " ALE
 let g:ale_sign_error = '☠'
 let g:ale_sign_warning = '🚽'
@@ -93,9 +98,6 @@ augroup nerdtree
 
   " Close Vim if the only window left open is a NERDTree
   autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-  " Strip trailing whitespace when saving files
-  autocmd BufWritePre * :%s/\s\+$//e
 augroup END
 
 " CtrlP
