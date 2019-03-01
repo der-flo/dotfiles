@@ -28,8 +28,10 @@ nnoremap <leader>tt :CtrlPTag<CR>
 nnoremap <leader>tb :TagbarToggle<CR>
 
 " https://stackoverflow.com/questions/4545275/vim-close-all-buffers-but-this-one
-command! BufOnly silent! execute "%bd|e#|bd#"
-nnoremap <Leader>bo :BufOnly<CR>
+" see ftplugin/qf.vim - this command kills quickfix buffers.
+" I need a better solution if I really need this command.
+" command! BufOnly silent! execute "%bd|e#|bd#"
+" nnoremap <Leader>bo :BufOnly<CR>
 
 nnoremap <Leader>bc :bufdo :Bdelete<CR>
 
