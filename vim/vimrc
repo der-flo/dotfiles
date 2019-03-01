@@ -143,3 +143,9 @@ augroup ColorColumn
     \|  setlocal colorcolumn=
     \|endif
 augroup END
+
+" Don't enable gutentags for all directories containing a ".git" marker.
+" Only start the CPU meltdown in project directories containing a configuration
+" file.
+let g:gutentags_project_root = ['.gutctags']
+let g:gutentags_add_default_project_roots = 0
