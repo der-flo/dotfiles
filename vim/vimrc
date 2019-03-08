@@ -23,9 +23,11 @@ set hidden " hide a buffer instead of closing it
            " ⇒ switch buffers even with the actual unsaved
 set autoread
 set list
-set listchars=tab:▸·,trail:·,precedes:◅,extends:▻,nbsp:•
 set nofoldenable
 set scrolloff=5
+
+" http://vimcasts.org/episodes/show-invisibles/
+set listchars=tab:▸·,trail:·,precedes:◅,extends:▻,nbsp:•
 
 " TODO Prio 2: does not work yet inside tmux
 " https://stackoverflow.com/questions/15123477/tmux-tabs-with-name-of-file-open-in-vim
