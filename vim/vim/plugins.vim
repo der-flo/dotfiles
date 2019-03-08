@@ -4,7 +4,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'rakr/vim-one'
 Plug 'vim-airline/vim-airline'
-Plug 'ryanoasis/vim-devicons'
 Plug 'moll/vim-bbye'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-endwise', { 'for': 'ruby' }
@@ -24,4 +23,7 @@ Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'tpope/vim-unimpaired' " TODO: Check out all features
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
+
+" They broke NERDTree: https://github.com/ryanoasis/vim-devicons/pull/246
+Plug 'ryanoasis/vim-devicons', { 'commit': '9d28434' }
 call plug#end()
