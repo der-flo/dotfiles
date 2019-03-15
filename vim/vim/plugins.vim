@@ -13,7 +13,6 @@ Plug 'w0rp/ale', { 'for': 'ruby' }
 Plug 'tweekmonster/startuptime.vim', { 'on': 'StartupTime' }
 Plug 'janko-m/vim-test', { 'on': ['TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit'] }
 Plug 'sheerun/vim-polyglot'
-Plug 'vim-scripts/AutoComplPop'
 Plug 'tpope/vim-surround' " cs"' oder cs '"
 Plug 'tpope/vim-repeat'
 Plug 'sbdchd/neoformat'
@@ -23,6 +22,10 @@ Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'tpope/vim-unimpaired' " TODO: Check out all features
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
+
+" TODO: This plugin is awesome, but slows down typing insanely on bigger
+"       projects. Maybe also because of a big ctags file?
+" Plug 'vim-scripts/AutoComplPop'
 
 " They broke NERDTree: https://github.com/ryanoasis/vim-devicons/pull/246
 Plug 'ryanoasis/vim-devicons', { 'commit': '9d28434' }
