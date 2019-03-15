@@ -25,6 +25,7 @@ set autoread
 set list
 set nofoldenable
 set scrolloff=5
+set noswapfile
 
 " http://vimcasts.org/episodes/show-invisibles/
 set listchars=tab:▸·,trail:·,precedes:◅,extends:▻,nbsp:•
