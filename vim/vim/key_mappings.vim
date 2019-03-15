@@ -90,3 +90,9 @@ command! -nargs=+ Grep silent grep! <args>
 " inoremap <Down> <nop>
 " inoremap <Left> <nop>
 " inoremap <Right> <nop>
+
+" Simpler indentation
+nmap <Tab> >>
+nmap <S-Tab> <<
+vmap <Tab> >gv
+vmap <S-Tab> <gv
