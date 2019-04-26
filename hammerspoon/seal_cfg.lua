@@ -8,7 +8,7 @@ function startVimInPath(path)
 end
 
 function runTrack(command)
-  local output = hs.execute("zsh -c 'source $HOME/.zshrc && chruby 2.4.1 && " ..
+  local output = hs.execute("zsh -c 'source $HOME/.zshrc && chruby 2.6.3 && " ..
                             "track " .. command .. "'")
   hs.notify.new({
     title = "track",
