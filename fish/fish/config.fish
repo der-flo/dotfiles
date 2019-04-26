@@ -31,6 +31,7 @@ abbr -a gip 'git pull --stat'
 abbr -a gips 'git push'
 abbr -a gib 'git branch'
 abbr -a gihi 'git hist'
+abbr -a gidob 'git push origin --delete'
 
 abbr -a be 'bundle exec'
 abbr -a bo 'bundle open'
