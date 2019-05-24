@@ -64,8 +64,14 @@ nnoremap <Leader>gw :silent grep! -F <cword><CR>
 vnoremap <Leader>gs "ay:grep! -F "<C-r>a"<CR>
 
 " grep for TODOs
-command! Todos silent grep! --pcre2 'TODO(?! Prio [23])'
-nnoremap <Leader>gt :Todos<CR>
+" TODO: Funzt wegen Pipe noch nicht. \\| oder <bar> auch nicht.
+" command! Todos silent grep! --pcre2 'TODO(?! (\#\d+|Prio [23])'
+" command! Todos silent grep! --pcre2 'TODO(?! Prio [23])(?! \#\d+)'
+" nnoremap <Leader>gtt :Todos<CR>
+command! TodosAll silent grep! TODO
+nnoremap <Leader>gta :TodosAll<CR>
+command! TodosFlo silent grep! 'TODO\sFlo'
+nnoremap <Leader>gtf :TodosFlo<CR>
 
 " Silent variant of :grep, no need to press enter, no jump to first match
 command! -nargs=+ Grep silent grep! <args>

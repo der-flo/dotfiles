@@ -1,33 +1,15 @@
-# TODO: https://github.com/nviennot/irb-config
+# # TODO: https://github.com/nviennot/irb-config
 
-# Based on https://github.com/danielbayerlein/dotfiles/blob/master/.pryrc
+# require 'awesome_print'
+# Pry.config.print = proc { |output, value| output.puts value.ai(:indent => 2) }
 
-require 'awesome_print'
-Pry.config.print = proc { |output, value| output.puts value.ai(:indent => 2) }
+# # require 'hirb'
+# # Hirb.enable
+# # old_print = Pry.config.print
+# # Pry.config.print = proc do |output, value|
+# #   Hirb::View.view_or_page_output(value) || old_print.call(output, value)
+# # end
 
-# require 'hirb'
-# Hirb.enable
-# old_print = Pry.config.print
-# Pry.config.print = proc do |output, value|
-#   Hirb::View.view_or_page_output(value) || old_print.call(output, value)
-# end
+# # require_without_bundler 'pry-debugger'
 
-# require_without_bundler 'pry-debugger'
-
-rails = File.join(Dir.getwd, 'config', 'environment.rb')
-if File.exist?(rails) && ENV['SKIP_RAILS'].nil?
-  require rails
-  case Rails.version.to_i
-  when 2
-    require 'console_app'
-    require 'console_with_helpers'
-  when 3
-    require 'rails/console/app'
-    require 'rails/console/helpers'
-    extend Rails::ConsoleMethods if Rails.version.to_f >= 3.2
-  else
-    warn "[WARN] cannot load Rails console commands"
-  end
-end
-
-Pry.config.theme = 'tomorrow-night'
+# Pry.config.theme = 'tomorrow-night'
