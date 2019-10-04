@@ -27,6 +27,5 @@ Plug 'majutsushi/tagbar'
 "       projects. Maybe also because of a big ctags file?
 " Plug 'vim-scripts/AutoComplPop'
 
-" They broke NERDTree: https://github.com/ryanoasis/vim-devicons/pull/246
-Plug 'ryanoasis/vim-devicons', { 'commit': '9d28434' }
+Plug 'ryanoasis/vim-devicons', { 'tag': 'v0.11.0' }
 call plug#end()
