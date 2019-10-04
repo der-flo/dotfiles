@@ -102,3 +102,10 @@ nmap <Tab> >>
 nmap <S-Tab> <<
 vmap <Tab> >gv
 vmap <S-Tab> <gv
+
+
+" TODO: Is https://github.com/vim/vim/issues/4738 fixed and the plugin not
+"   needed anymore?
+let g:netrw_nogx = 1
+nmap gx <Plug>(openbrowser-open)
+vmap gx <Plug>(openbrowser-open)

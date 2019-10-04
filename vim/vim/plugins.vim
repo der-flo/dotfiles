@@ -28,4 +28,6 @@ Plug 'majutsushi/tagbar'
 " Plug 'vim-scripts/AutoComplPop'
 
 Plug 'ryanoasis/vim-devicons', { 'tag': 'v0.11.0' }
+Plug 'tyru/open-browser.vim'
+
 call plug#end()
