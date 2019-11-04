@@ -22,7 +22,6 @@ set -g theme_display_date no
 
 abbr -a gic 'git checkout'
 abbr -a gicp 'git checkout --patch'
-abbr -a gicm 'git commit --message ""'
 abbr -a gid 'git diff'
 abbr -a gidc 'git diff --cached'
 abbr -a giap 'git add --patch'
@@ -32,6 +31,15 @@ abbr -a gips 'git push'
 abbr -a gib 'git branch'
 abbr -a gihi 'git hist'
 abbr -a gidob 'git push origin --delete'
+
+# abbr -a gicm 'git commit --message ""'
+function gicm
+  set branch (git symbolic-ref --short HEAD | cut -d '-' -f 1)
+  set statement "git commit --message \"#$branch: \""
+  set cpos (math (string length $statement) - 1)
+  commandline $statement
+  commandline -C $cpos
+end
 
 abbr -a be 'bundle exec'
 abbr -a bo 'bundle open'
