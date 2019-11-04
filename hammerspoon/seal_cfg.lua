@@ -1,10 +1,9 @@
 -- TODO Prio 2: Dash, Chat starten
--- TODO Prio 2: http://devdocs.io/#q={query} benötigt?
 -- TODO: Google search as default action?
 
 function startVimInPath(path)
   -- https://github.com/Hammerspoon/hammerspoon/issues/841
-  os.execute("sh -c 'cd " .. path .. " && /usr/local/bin/mvim'")
+  os.execute("/usr/local/bin/fish -c 'cd " .. path .. " && mvim'")
 end
 
 function runTrack(command)
@@ -22,6 +21,11 @@ spoon.Seal.plugins.useractions.actions = {
     url = "https://www.google.com/search?q=${query}",
     icon = "favicon",
     keyword = "g"
+  },
+  ["DevDocs-Suche nach"] = {
+    url = "http://devdocs.io/#q=${query}",
+    icon = "favicon",
+    keyword = "dd"
   },
   ["LEO-Suche nach"] = {
     url = "https://dict.leo.org/englisch-deutsch/${query}",
@@ -59,11 +63,15 @@ spoon.Seal.plugins.useractions.actions = {
     icon = "favicon",
     keyword = "docs"
   },
-  ["Start editor under ~/Seafile/Meine Bibliothek"] = {
-    fn = function(param) startVimInPath("~/Seafile/Meine\\ Bibliothek") end,
+  -- TODO: Diese Actions sind doppelt im Ergebnis, wenn man nach "seafiles"
+  --       sucht.
+  ["Start editor under ~/Documents/Seafiles/Meine Bibliothek"] = {
+    fn = function(param) startVimInPath("~/Documents/Seafiles/Meine\\ Bibliothek") end,
     icon = "favicon",
     keyword = "seafiles"
   },
+  -- TODO: Diese Actions sind doppelt im Ergebnis, wenn man nach "dotfiles"
+  --       sucht.
   ["Start editor under ~/dotfiles"] = {
     fn = function(param) startVimInPath("~/dotfiles") end,
     icon = "favicon",
