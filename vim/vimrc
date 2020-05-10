@@ -26,6 +26,8 @@ set list
 set nofoldenable
 set scrolloff=5
 set noswapfile
+set wildmenu
+set history=100
 
 " http://vimcasts.org/episodes/show-invisibles/
 set listchars=tab:▸·,trail:·,precedes:◅,extends:▻,nbsp:•

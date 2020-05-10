@@ -57,6 +57,7 @@ augroup END
 
 " TODO: Rubocop abbrevation
 
+" TODO: Better grep http://learnvimscriptthehardway.stevelosh.com/chapters/32.html
 " grep for word under cursor
 nnoremap <Leader>gw :silent grep! -F <cword><CR>
 
@@ -78,6 +79,7 @@ command! -nargs=+ Grep silent grep! <args>
 
 " vim-unimpaired usability on german keyboard
 " TODO: Merde, dann klappt das Einrücken nicht mehr!
+" Ö, Ä?
 " nmap < [
 " nmap > ]
 " omap < [
@@ -103,6 +105,9 @@ nmap <S-Tab> <<
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
+" cycle through command history but with filtering
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
 
 " TODO: Is https://github.com/vim/vim/issues/4738 fixed and the plugin not
 "   needed anymore?
