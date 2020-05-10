@@ -20,7 +20,12 @@ local hyper = {"⌘", "⌥", "⌃"}
 local hyper2 = {"⌘", "⌃", "⇧"}
 
 --------------------------------------------------------------------------------
-hs.hotkey.bind(hyper, "c", require "new_chrome_window")
+local isPrivateHost = hs.fnutils.find(hs.host.names(), function(name)
+  return name:find("^flo%-mini") ~= nil
+end) ~= nil
+
+local new_browser_window = isPrivateHost and "new_safari_window" or "new_chrome_window"
+hs.hotkey.bind(hyper, "c", require(new_browser_window))
 hs.hotkey.bind(hyper, "t", require "new_iterm_window")
 hs.hotkey.bind(hyper, "i", require "toggle_ksheet")
 
