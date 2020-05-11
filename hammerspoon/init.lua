@@ -26,7 +26,10 @@ end) ~= nil
 
 local new_browser_window = isPrivateHost and "new_safari_window" or "new_chrome_window"
 hs.hotkey.bind(hyper, "c", require(new_browser_window))
-hs.hotkey.bind(hyper, "t", require "new_iterm_window")
+
+local new_terminal_window = isPrivateHost and "new_item_window" or "new_terminal_window"
+hs.hotkey.bind(hyper, "t", require(new_terminal_window))
+
 hs.hotkey.bind(hyper, "i", require "toggle_ksheet")
 
 -- Karabiner Elements setzt aktuell leider "⌃-eject" außer Kraft.
