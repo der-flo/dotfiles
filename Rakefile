@@ -7,9 +7,18 @@ require 'erb'
 # TODO: Error handling
 desc "install the dotfiles into user's home directory"
 task :install do
+  # TODO: Das klappt nicht immer, weil
+  # 1. die Config nicht mit dem alten System-Vim harmoniert
+  # 2. die Plugins am Anfang noch nicht installiert sind und so
+  #    viele Funktionen etc. noch nicht verfügbar sind.
   puts `vim +PlugUpdate +qall >/dev/tty`
+
   puts `curl -L https://get.oh-my.fish | fish`
 
+  handle_files(Dir.glob("vim/*"))
+  handle_files(Dir.glob("git/*"))
+  handle_file('misc/tmux.conf')
+  handle_file('misc/ripgreprc')
   %w(git misc ruby vim).each do |dir|
     handle_files(Dir.glob("#{dir}/*"))
   end
@@ -19,12 +28,8 @@ task :install do
 
   handle_file('bin/getswap', 'bin/getswap')
   handle_file('bin/git-icdiff', 'bin/git-icdiff')
-
   handle_file('fish/fish', '.config/fish')
   handle_file('fish/omf', '.config/omf')
-
-  handle_file('atom', '.atom')
-
   if mac?
     handle_file('hammerspoon', '.hammerspoon')
 
@@ -35,6 +40,7 @@ task :install do
   end
 end
 
+# TODO
 HOSTNAME = `hostname -s`.chomp
 EMAIL = case HOSTNAME
         when 'flo-mb', 'flo-mini' then 'mail@florian-duetsch.de'
