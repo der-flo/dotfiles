@@ -1,12 +1,20 @@
+# frozen_string_literal: true
+
 # Parts borrowed from Ryan Bates:
 # https://github.com/ryanb/dotfiles/blob/master/Rakefile
 
 require 'rake'
 require 'erb'
 
+# TODO: Sync current state with Brewfile automatically?
+desc 'install software via homebrew'
+task :homebrew do
+  system 'brew bundle'
+end
+
 # TODO: Error handling
 desc "install the dotfiles into user's home directory"
-task :install do
+task install: [:homebrew] do
   # TODO: Das klappt nicht immer, weil
   # 1. die Config nicht mit dem alten System-Vim harmoniert
   # 2. die Plugins am Anfang noch nicht installiert sind und so

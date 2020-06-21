@@ -4,8 +4,7 @@
 git clone git://github.com/der-flo/dotfiles ~/dotfiles
 cd ~/dotfiles
 
-# TODO: https://github.com/Homebrew/homebrew-bundle
-./install_homebrew_software.sh
+rake homebrew
 
 echo /usr/local/bin/fish | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
