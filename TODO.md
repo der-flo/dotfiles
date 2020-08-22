@@ -10,6 +10,10 @@
 * Hammerspoon
 * https://github.com/thoughtbot/dotfiles
 * https://github.com/skwp/dotfiles
+* Install xcode command line tools
+* Install Homebrew
+* chruby: Rubies installieren
+  ruby-install ruby 2.6.6
 
 # Prio 1
 
