@@ -1,10 +1,7 @@
 -- TODO Prio 2: Dash, Chat starten
 -- TODO: Google search as default action?
 
-function startVimInPath(path)
-  -- https://github.com/Hammerspoon/hammerspoon/issues/841
-  os.execute("/usr/local/bin/fish -c 'cd " .. path .. " && mvim'")
-end
+open_macvim = require "open_macvim"
 
 function runTrack(command)
   local output = hs.execute("/usr/local/bin/track " .. command)
@@ -59,21 +56,21 @@ spoon.Seal.plugins.useractions.actions = {
     keyword = "#z"
   },
   ["Start editor under ~/Documents"] = {
-    fn = function(param) startVimInPath("~/Documents") end,
+    fn = function(param) open_macvim.dir("~/Documents") end,
     icon = "favicon",
     keyword = "docs"
   },
   -- TODO: Diese Actions sind doppelt im Ergebnis, wenn man nach "seafiles"
   --       sucht.
   ["Start editor under ~/Documents/Seafiles/Meine Bibliothek"] = {
-    fn = function(param) startVimInPath("~/Documents/Seafiles/Meine\\ Bibliothek") end,
+    fn = function(param) open_macvim.dir("~/Documents/Seafiles/Meine\\ Bibliothek") end,
     icon = "favicon",
     keyword = "seafiles"
   },
   -- TODO: Diese Actions sind doppelt im Ergebnis, wenn man nach "dotfiles"
   --       sucht.
   ["Start editor under ~/dotfiles"] = {
-    fn = function(param) startVimInPath("~/dotfiles") end,
+    fn = function(param) open_macvim.dir("~/dotfiles") end,
     icon = "favicon",
     keyword = "dotfiles"
   },
