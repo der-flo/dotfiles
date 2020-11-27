@@ -45,6 +45,12 @@ spoon.Seal.plugins.useractions.actions = {
     icon = "favicon",
     keyword = "wiki"
   },
+  ["Planio-Suche"] = {
+    url = "https://adigi.planio.de/search?q=${query}" ..
+          "&scope=all&all_words=1&submit=OK",
+    icon = "favicon",
+    keyword = "ps"
+  },
   ["Planio-Zeitbuchung"] = {
     fn = function(param)
       local id, time = param:match("^(%d+) (.+)$")
@@ -62,10 +68,10 @@ spoon.Seal.plugins.useractions.actions = {
   },
   -- TODO: Diese Actions sind doppelt im Ergebnis, wenn man nach "seafiles"
   --       sucht.
-  ["Start editor under ~/Documents/Seafiles/Meine Bibliothek"] = {
-    fn = function(param) open_macvim.dir("~/Documents/Seafiles/Meine\\ Bibliothek") end,
+  ["Start editor under ~/Cloud"] = {
+    fn = function(param) openEditor("~/Cloud") end,
     icon = "favicon",
-    keyword = "seafiles"
+    keyword = "cloud"
   },
   -- TODO: Diese Actions sind doppelt im Ergebnis, wenn man nach "dotfiles"
   --       sucht.
