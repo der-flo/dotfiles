@@ -33,13 +33,13 @@ hs.hotkey.bind(hyper, "t", require(new_terminal_window))
 hs.hotkey.bind(hyper, "i", require "toggle_ksheet")
 
 -- TODO: Diese 3 Funktionen testen und robuster machen
-local open_macvim = require "open_macvim"
+local openEditor = require "open_editor"
 local finder = require "finder"
 hs.hotkey.bind(hyper, "d", function()
-  open_macvim.dir(finder.opened_dir())
+  openEditor(finder.opened_dir())
 end)
 hs.hotkey.bind(hyper, "f", function()
-  open_macvim.file(finder.selected_path())
+  openEditor(finder.selected_path())
 end)
 hs.hotkey.bind(hyper, "h", require "open_finder_location_in_terminal")
 

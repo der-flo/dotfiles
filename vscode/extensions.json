@@ -1,0 +1,11 @@
+{
+    "extensions": [
+        "golf1052.code-sync",
+        "idleberg.textile",
+        "michaelnewton.textile-preview",
+        "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-vscode-remote.remote-containers"
+    ]
+}

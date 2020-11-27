@@ -1,7 +1,7 @@
 -- TODO Prio 2: Dash, Chat starten
 -- TODO: Google search as default action?
 
-open_macvim = require "open_macvim"
+local openEditor = require "open_editor"
 
 function runTrack(command)
   local output = hs.execute("/usr/local/bin/track " .. command)
@@ -56,7 +56,7 @@ spoon.Seal.plugins.useractions.actions = {
     keyword = "#z"
   },
   ["Start editor under ~/Documents"] = {
-    fn = function(param) open_macvim.dir("~/Documents") end,
+    fn = function(param) openEditor("~/Documents") end,
     icon = "favicon",
     keyword = "docs"
   },
@@ -70,7 +70,7 @@ spoon.Seal.plugins.useractions.actions = {
   -- TODO: Diese Actions sind doppelt im Ergebnis, wenn man nach "dotfiles"
   --       sucht.
   ["Start editor under ~/dotfiles"] = {
-    fn = function(param) open_macvim.dir("~/dotfiles") end,
+    fn = function(param) openEditor("~/dotfiles") end,
     icon = "favicon",
     keyword = "dotfiles"
   },
