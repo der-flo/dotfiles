@@ -3,9 +3,12 @@
     "window.zoomLevel": 0,
     "editor.fontSize": 16,
     "editor.tabSize": 2,
-    "editor.wordWrap": "wordWrapColumn",
     "editor.fontFamily": "OperatorMono Nerd Font Mono, Menlo, Monaco, 'Courier New', monospace",
     "editor.rulers": [
         80
-    ]
+    ],
+    "editor.tabCompletion": "on",
+    "[textile]": {
+        "editor.wordWrap": "bounded"
+    }
 }
