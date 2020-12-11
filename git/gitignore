@@ -4,3 +4,8 @@
 *.swp
 tags
 .gutctags
+
+# RubyMine / IntelliJ IDEA
+.generators
+.rakeTasks
+.idea/
