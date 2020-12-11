@@ -58,13 +58,6 @@ augroup StripTrailingWhitespaceWhenSavingFiles
   autocmd BufWritePre * :%s/\s\+$//e
 augroup END
 
-" ALE
-let g:ale_sign_error = '☠'
-let g:ale_sign_warning = '🚽'
-let g:ale_echo_msg_error_str = '☠ '
-let g:ale_echo_msg_warning_str = '🚽 '
-let g:ale_echo_msg_format = '%severity% %code: %%s'
-
 " Airline
 let g:airline_powerline_fonts=1
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
@@ -79,9 +72,6 @@ augroup airline_changes
   autocmd!
   autocmd WinLeave * :let w:airline_render_right=0
 augroup END
-
-" vim-gitgutter
-set updatetime=100 " show the git changes earlier
 
 " NERDTree
 let g:NERDTreeAutoDeleteBuffer=1
@@ -109,7 +99,6 @@ augroup END
 let g:ctrlp_user_command = 'rg %s --files --follow --color=never --glob ""'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_mruf_relative = 1
-let g:ctrlp_tjump_only_silent = 1
 
 " Open quickfix window after grep, open with full-width
 augroup grep
@@ -128,19 +117,6 @@ augroup CursorLine
   autocmd WinLeave * setlocal nocursorline
 augroup END
 
-" vim-test
-function! VimtestOwnStrategy(cmd)
-  botright new
-  call term_start(['/bin/sh', '-c', a:cmd], {'curwin':1})
-
-  " Do not focus test window, stay in last file
-  call feedkeys("\<C-w>\<C-p>")
-endfunction
-let g:test#custom_strategies = {
-  \ 'own': function('VimtestOwnStrategy')
-  \ }
-let g:test#strategy = 'own'
-
 " Show marker after 80 characters, but not for every buffer and file type.
 set colorcolumn=81
 augroup ColorColumn
@@ -150,11 +126,5 @@ augroup ColorColumn
     \|  setlocal colorcolumn=
     \|endif
 augroup END
-
-" Don't enable gutentags for all directories containing a ".git" marker.
-" Only start the CPU meltdown in project directories containing a configuration
-" file.
-let g:gutentags_project_root = ['.gutctags']
-let g:gutentags_add_default_project_roots = 0
 
 let g:vim_markdown_new_list_item_indent = 2

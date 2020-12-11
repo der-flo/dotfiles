@@ -17,15 +17,7 @@ nnoremap <Leader>Q :Bdelete!<CR>
 let g:ctrlp_map = '<Leader>f'
 nnoremap <Leader><Leader> :CtrlPBuffer<CR>
 nnoremap <Leader>m :CtrlPMRU<CR>
-" TODO: "t" - tag vs. test
-nnoremap <leader>tj :CtrlPtjump<CR>
-vnoremap <leader>tj :CtrlPtjumpVisual<CR>
-nnoremap <leader>tt :CtrlPTag<CR>
 " TODO: ? nmap <leader>gu :pop<cr>
-
-" TODO: https://github.com/majutsushi/tagbar/wiki#ruby
-"       benötigt?
-nnoremap <leader>tb :TagbarToggle<CR>
 
 " https://stackoverflow.com/questions/4545275/vim-close-all-buffers-but-this-one
 " see ftplugin/qf.vim - this command kills quickfix buffers.
@@ -34,11 +26,6 @@ nnoremap <leader>tb :TagbarToggle<CR>
 " nnoremap <Leader>bo :BufOnly<CR>
 
 nnoremap <Leader>bc :bufdo :Bdelete<CR>
-
-" vim-test
-nnoremap <silent> <Leader>tn :TestNearest<CR>
-nnoremap <silent> <Leader>tf :TestFile<CR>
-nnoremap <silent> <Leader>tl :TestLast<CR>
 
 " faster navigation between splits
 noremap <C-h> <C-w>h
