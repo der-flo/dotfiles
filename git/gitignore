@@ -2,8 +2,6 @@
 .settings/
 .project
 *.swp
-tags
-.gutctags
 
 # RubyMine / IntelliJ IDEA
 .generators
