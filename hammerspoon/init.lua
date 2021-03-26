@@ -42,6 +42,9 @@ hs.hotkey.bind(hyper, "f", function()
   openEditor(finder.selected_path())
 end)
 hs.hotkey.bind(hyper, "h", require "open_finder_location_in_terminal")
+hs.hotkey.bind(hyper, "v", function()
+  openEditor("--new-window")
+end)
 
 -- Karabiner Elements setzt aktuell leider "⌃-eject" außer Kraft.
 -- https://github.com/tekezo/Karabiner-Elements/issues/89

@@ -80,6 +80,11 @@ spoon.Seal.plugins.useractions.actions = {
     icon = "favicon",
     keyword = "dotfiles"
   },
+  ["Start editor under ~/Konzeption"] = {
+    fn = function(param) openEditor("~/Konzeption") end,
+    icon = "favicon",
+    keyword = "konzeption"
+  },
   ["track start"] = {
     fn = function(param) runTrack("start " .. param) end,
     keyword = "ts"
@@ -89,4 +94,3 @@ spoon.Seal.plugins.useractions.actions = {
     keyword = "track"
   }
 }
-
