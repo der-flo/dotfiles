@@ -1,6 +1,7 @@
 {
     "extensions": [
         "golf1052.code-sync",
+        "hashicorp.terraform",
         "idleberg.textile",
         "michaelnewton.textile-preview",
         "ms-azuretools.vscode-docker",
