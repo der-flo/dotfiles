@@ -19,6 +19,11 @@
 
 * PATH is wrong; additions are appended instead of prepended
   * https://github.com/JeanMertz/chruby-fish/issues/31#issuecomment-493423728
+* Test setup with a macOS VM
+  * https://github.com/bacongravy/macinbox/issues/64
+  * https://www.wikigain.com/how-to-install-macos-big-sur-on-virtualbox-on-windows-pc/
+  * https://techspite.com/how-to-install-macos-big-sur-on-virtualbox-on-windows/
+  * https://www.youtube.com/watch?v=fCayqqP37mc
 
 # Prio 2
 
