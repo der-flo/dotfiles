@@ -14,6 +14,7 @@
 * Install Homebrew
 * chruby: Rubies installieren
   ruby-install ruby 2.6.6
+* Remove Vim config or shrink extremely; I don't need Vim anymore?
 
 # Prio 1
 
