@@ -1,9 +1,18 @@
 [ -f /usr/local/share/chruby/chruby.fish ]; and source /usr/local/share/chruby/chruby.fish
 [ -f /usr/local/share/chruby/auto.fish ]; and source /usr/local/share/chruby/auto.fish
+[ -f ~/soft/miniconda3/etc/fish/conf.d/conda.fish ]; and source ~/soft/miniconda3/etc/fish/conf.d/conda.fish
 
 fish_vi_key_bindings
 
-set PATH ~/bin $PATH
+# TODO: fine? See `TODO.md`
+# set PATH ~/bin $PATH
+# https://github.com/fish-shell/fish-shell/issues/527#issuecomment-432508378
+set -g fish_user_paths ~/bin $fish_user_paths
+set -g fish_user_paths /Applications/MacVim.app/Contents/bin $fish_user_paths
+set -g fish_user_paths /usr/local/opt/mysql-client/bin $fish_user_paths
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/terraform@0.12/bin" $fish_user_paths
+
 set --export EDITOR code --wait --new-window
 set --export VISUAL code --wait --new-window
 set --export RIPGREP_CONFIG_PATH $HOME/.ripgreprc

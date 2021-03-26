@@ -18,6 +18,7 @@
 
 # Prio 1
 
+* How to handle `fish/fish/functions/fish_prompt.fish`?
 * PATH is wrong; additions are appended instead of prepended
   * https://github.com/JeanMertz/chruby-fish/issues/31#issuecomment-493423728
 * Test setup with a macOS VM
