@@ -4,7 +4,10 @@ brew 'awscli'
 brew 'chruby'
 brew 'chruby-fish'
 brew 'coreutils'
+
+# min. 3.2.0 gegen https://github.com/fish-shell/fish-shell/pull/7365
 brew 'fish'
+
 brew 'git'
 brew 'gnupg'
 brew 'iperf'
