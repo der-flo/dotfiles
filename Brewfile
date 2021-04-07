@@ -30,8 +30,6 @@ brew 'wget'
 # brew tap caskroom/cask
 # brew tap caskroom/versions
 
-brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
-
 # Previously but not actually used software installed with Homebrew:
 #   cowsay, dos2unix, fswatch, graphviz, htop-osx,
 #   jemalloc, memcached, ntfs-3g, s3cmd, terminal-notifier, unison
@@ -42,3 +40,24 @@ brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
 
 # brew tap caskroom/fonts
 # brew cask install font-bitstreamverasansmono-nerd-font-mono
+
+# TODO: Existing installations mergeable?
+
+cask 'bitbar'
+cask 'bitwarden'
+cask 'cyberduck'
+# cask 'dash'
+cask 'docker'
+cask 'gimp'
+cask 'google-chrome'
+cask 'hammerspoon'
+cask 'karabiner-elements'
+# cask 'macvim'
+cask 'mysqlworkbench'
+cask 'p4v' # P4Merge
+cask 'sequel-pro'
+cask 'signal'
+cask 'sourcetree'
+cask 'spotify'
+cask 'veracrypt'
+cask 'wireshark'

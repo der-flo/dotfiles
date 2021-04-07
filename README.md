@@ -1,45 +1,48 @@
 # My dotfiles
 
+## Usage on macOS
+
+TODO: Migrate everything into the Rakefile
+
+Install `git` and prerequisites for [Homebrew](https://brew.sh/):
+
+```
+xcode-select --install
+```
+
+Install Homebrew:
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Clone my dotfiles:
 ```
 git clone git://github.com/der-flo/dotfiles ~/dotfiles
 cd ~/dotfiles
+```
 
+Install software via Homebrew:
+```
 rake homebrew
+```
 
+Setup [fish shell](https://fishshell.com):
+```
 echo /usr/local/bin/fish | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
 curl -L https://get.oh-my.fish | fish
+```
 
+Setup dotfiles itself etc.:
+```
 rake install
 ```
 
 ## Install software by hand
 
-* Adium
-  * [Patch](https://news.softpedia.com/news/how-to-fix-broken-auto-scrolling-in-adium-on-macos-catalina-527933.shtml) it
-* BitBar
-* Bitwarden
-* Cyberduck
-* Dash
-* Docker Desktop
 * FUSE for macOS
-* GIMP
-* Google Chrome
-* Hammerspoon
-* Homebrew
-* Karabiner-Elements
-* MacVim
-* MySQL Workbench
 * Octotree
-* P4Merge
-* Seafile Client
-* Sequel Pro
-* Signal
-* SourceTree
-* Spotify
 * Tampermonkey for Chrome
-* VeraCrypt
-* Wireshark
 
 ## Generate SSH keypairs
 
@@ -134,7 +137,7 @@ So Chrome is actually the way to go for me.
 
 ## More actually not used software
 
-* See [install_homebrew_software.sh](install_homebrew_software.sh)
+* See [Brewfile](Brewfile)
 * SuperDuper
 * TeamViewer
 * Google Hangouts Chat App
@@ -156,4 +159,3 @@ Inspired by or shamelessly copied from
 ## TODO: Prerequisites
 
 * A terminal with support for 256 colors (<tt>TERM=xterm-256color</tt>)
-

@@ -9,25 +9,30 @@ require 'erb'
 # TODO: Sync current state with Brewfile automatically?
 desc 'install software via homebrew'
 task :homebrew do
+  # TODO: Abort on error
+  # TODO: Ausgaben durchreichen
   system 'brew bundle'
 end
 
-# TODO: Error handling
-desc "install the dotfiles into user's home directory"
-task install: [:homebrew] do
+# TODO: DRY with README
+# TODO: "Would you like to remove the existing installation?"
+desc 'install Oh my Fish!'
+task :install_oh_my_fish do
+  system 'curl -L https://get.oh-my.fish | fish'
+end
+
+desc 'install VIM plugins'
+task :install_vim_plugins do
   # TODO: Das klappt nicht immer, weil
   # 1. die Config nicht mit dem alten System-Vim harmoniert
   # 2. die Plugins am Anfang noch nicht installiert sind und so
   #    viele Funktionen etc. noch nicht verfügbar sind.
-  puts `vim +PlugUpdate +qall >/dev/tty`
+  system 'vim +PlugUpdate +qall >/dev/tty'
+end
 
-  puts `curl -L https://get.oh-my.fish | fish`
-
-  handle_files(Dir.glob("vim/*"))
-  handle_files(Dir.glob("git/*"))
-  handle_file('misc/tmux.conf')
-  handle_file('misc/ripgreprc')
-  %w(git misc ruby vim).each do |dir|
+desc 'link dotfiles'
+task :link_files do
+  %w[git misc ruby vim].each do |dir|
     handle_files(Dir.glob("#{dir}/*"))
   end
   handle_files(Dir.glob('zsh/z*'))
@@ -46,6 +51,11 @@ task install: [:homebrew] do
 
     # TODO: iTerm konfigurieren
   end
+end
+
+# TODO: Error handling
+desc 'install software and link dotfiles'
+task default: %i[homebrew install_oh_my_fish install_vim_plugins link_files] do
 end
 
 # TODO

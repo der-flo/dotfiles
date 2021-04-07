@@ -10,6 +10,10 @@
 * Hammerspoon
 * https://github.com/thoughtbot/dotfiles
 * https://github.com/skwp/dotfiles
+* https://github.com/mcasper/dotfiles
+* https://dotfiles.github.io
+* https://github.com/ryanoasis/vim-devicons/issues/224#issuecomment-712633448
+* https://github.com/vim/vim/issues/4738#issuecomment-714609892
 * Install xcode command line tools
 * Install Homebrew
 * chruby: Rubies installieren
@@ -41,6 +45,10 @@
 * Add RubyMine config to repo?
 * Add Terminal config or document it?
 * Add more documentation; verify it with a VM?
+  * https://github.com/bacongravy/macinbox
+  * `sudo macinbox --box-format virtualbox -d 32 --no-hidpi --no-fullscreen`
+  * `vagrant init macinbox`
+  * `vagrant up`
 * Bitwarden: Browser plugin?
 * Tmux config
 * Dash
