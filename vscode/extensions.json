@@ -5,9 +5,12 @@
         "idleberg.textile",
         "michaelnewton.textile-preview",
         "ms-azuretools.vscode-docker",
+        "MS-CEINTL.vscode-language-pack-de",
         "ms-python.python",
         "ms-toolsai.jupyter",
         "ms-vscode-remote.remote-containers",
+        "ms-vsliveshare.vsliveshare",
+        "tomoki1207.pdf"
         "skyapps.fish-vscode"
     ]
 }

@@ -1,11 +1,9 @@
 {
     "workbench.colorTheme": "Default Light+",
-    "window.zoomLevel": 0,
-    "editor.fontSize": 16,
     "editor.tabSize": 2,
     "editor.fontFamily": "OperatorMono Nerd Font Mono, Menlo, Monaco, 'Courier New', monospace",
     "editor.rulers": [
-        80
+        120
     ],
     "editor.tabCompletion": "on",
     "[textile]": {
@@ -28,5 +26,7 @@
     },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "editor.wordWrapColumn": 120,
+    "editor.fontSize": 13
 }
