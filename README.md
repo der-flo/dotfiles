@@ -142,6 +142,17 @@ Inspired by or shamelessly copied from
 * https://github.com/ryanb/dotfiles
 * https://github.com/skwp/dotfiles
 
+## Testing
+
+It "should be possible" to create a fresh macOS installation with VirtualBox and to test the dotfiles within this clean
+environment. Maybe these links help:
+
+* https://github.com/bacongravy/macinbox/issues/64
+* https://www.wikigain.com/how-to-install-macos-big-sur-on-virtualbox-on-windows-pc/
+* https://techspite.com/how-to-install-macos-big-sur-on-virtualbox-on-windows/
+* https://www.youtube.com/watch?v=fCayqqP37mc
+* https://github.com/bacongravy/macinbox
+
 ---
 
 ## TODO: Prerequisites

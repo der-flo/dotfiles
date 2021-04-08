@@ -24,11 +24,6 @@
 * How to handle `fish/fish/functions/fish_prompt.fish`?
 * PATH is wrong; additions are appended instead of prepended
   * https://github.com/JeanMertz/chruby-fish/issues/31#issuecomment-493423728
-* Test setup with a macOS VM
-  * https://github.com/bacongravy/macinbox/issues/64
-  * https://www.wikigain.com/how-to-install-macos-big-sur-on-virtualbox-on-windows-pc/
-  * https://techspite.com/how-to-install-macos-big-sur-on-virtualbox-on-windows/
-  * https://www.youtube.com/watch?v=fCayqqP37mc
 
 # Prio 2
 
@@ -43,11 +38,6 @@
 
 * Add RubyMine config to repo?
 * Add Terminal config or document it?
-* Add more documentation; verify it with a VM?
-  * https://github.com/bacongravy/macinbox
-  * `sudo macinbox --box-format virtualbox -d 32 --no-hidpi --no-fullscreen`
-  * `vagrant init macinbox`
-  * `vagrant up`
 * Bitwarden: Browser plugin?
 * Tmux config
 * Dash
