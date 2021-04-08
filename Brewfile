@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+# https://github.com/Homebrew/homebrew-bundle
 
 brew 'awscli'
 brew 'chruby'
@@ -34,13 +35,6 @@ brew 'wget'
 #   cowsay, dos2unix, fswatch, graphviz, htop-osx,
 #   jemalloc, memcached, ntfs-3g, s3cmd, terminal-notifier, unison
 
-# brew cask install karabiner-elements
-# brew cask install hammerspoon
-# brew cask install iterm2
-
-# brew tap caskroom/fonts
-# brew cask install font-bitstreamverasansmono-nerd-font-mono
-
 # TODO: Existing installations mergeable?
 
 cask 'bitbar'
@@ -51,6 +45,7 @@ cask 'docker'
 cask 'gimp'
 cask 'google-chrome'
 cask 'hammerspoon'
+# cask 'iterm2'
 cask 'karabiner-elements'
 # cask 'macvim'
 cask 'mysqlworkbench'
