@@ -93,11 +93,10 @@ desc 'install software and link dotfiles'
 task default: %i[homebrew setup_fish install_vim_plugins link_files] do
 end
 
-# TODO
 HOSTNAME = `hostname -s`.chomp
 EMAIL = case HOSTNAME
-        when 'flo-mb', 'flo-mini' then 'mail@florian-duetsch.de'
-        when 'flo', 'nix-wie-weg' then 'florian.duetsch@nix-wie-weg.de'
+        when 'flo-mini' then 'mail@florian-duetsch.de'
+        when 'flo' then 'florian.duetsch@adigi.ai'
         end
 
 def replace_file(file, dest_path)
