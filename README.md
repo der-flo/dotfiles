@@ -2,40 +2,28 @@
 
 ## Usage on macOS
 
-TODO: Migrate everything into the Rakefile
+### No `git` executable yet available?
 
-Install `git` and prerequisites for [Homebrew](https://brew.sh/):
+Install [Homebrew](https://brew.sh/), which installs Xcode Command Line Tools, which contains `git`:
 
 ```
-xcode-select --install
+cd /tmp
+curl -L https://github.com/der-flo/dotfiles/archive/refs/heads/master.zip --output master.zip
+unzip master.zip
+cd dotfiles-master
+rake install_homebrew
+cd ..
+rm -rf dotfiles-master master.zip
 ```
 
-Install Homebrew:
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
+### Main installation
 
-Clone my dotfiles:
+Clone dotfiles, install software and link dotfiles:
+
 ```
 git clone git://github.com/der-flo/dotfiles ~/dotfiles
 cd ~/dotfiles
-```
-
-Install software via Homebrew:
-```
-rake homebrew
-```
-
-Setup [fish shell](https://fishshell.com):
-```
-echo /usr/local/bin/fish | sudo tee -a /etc/shells
-chsh -s /usr/local/bin/fish
-curl -L https://get.oh-my.fish | fish
-```
-
-Setup dotfiles itself etc.:
-```
-rake install
+rake
 ```
 
 ## Install software by hand

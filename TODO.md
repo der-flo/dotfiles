@@ -1,7 +1,6 @@
 # Prio ?
 
 * Settings of iTerm2
-* README preconditions to code
 * TODO inspirations: Hint to all the comments in the files
 * Dash configuration?
 * Fish configuration

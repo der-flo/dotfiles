@@ -6,18 +6,53 @@
 require 'rake'
 require 'erb'
 
+# TODO: Gemfile - inline?
+require 'tty-command'
+require 'tty-logger'
+
+LOGGER = TTY::Logger.new
+CMD = TTY::Command.new
+
+desc 'install homebrew'
+task :install_homebrew do
+  if File.exist?('/usr/local/bin/brew')
+    LOGGER.info 'homebrew already installed'
+  else
+    LOGGER.info 'installing homebrew…'
+
+    # TODO: Handle errors
+    CMD.run '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+
+    LOGGER.success 'homebrew installed'
+  end
+end
+
 # TODO: Sync current state with Brewfile automatically?
 desc 'install software via homebrew'
-task :homebrew do
+task homebrew: :install_homebrew do
   # TODO: Abort on error
   # TODO: Ausgaben durchreichen
   system 'brew bundle'
 end
 
-# TODO: DRY with README
-# TODO: "Would you like to remove the existing installation?"
-desc 'install Oh my Fish!'
-task :install_oh_my_fish do
+desc 'setup fish shell'
+task :setup_fish do
+  fish_path = '/usr/local/bin/fish'
+  if IO.read('/etc/shells').lines.include? "#{fish_path}\n"
+    LOGGER.info 'fish already in /etc/shells'
+  else
+    CMD.run "echo #{fish_path} | sudo tee -a /etc/shells"
+    LOGGER.success 'added fish to /etc/shells'
+  end
+
+  if `dscl . -read ~/ UserShell`.split(' ')[1] == fish_path
+    LOGGER.info 'user shell is already fish'
+  else
+    CMD.run "chsh -s #{fish_path}"
+    LOGGER.success 'changed user shell to fish'
+  end
+
+  # TODO: "Would you like to remove the existing installation?"
   system 'curl -L https://get.oh-my.fish | fish'
 end
 
@@ -55,7 +90,7 @@ end
 
 # TODO: Error handling
 desc 'install software and link dotfiles'
-task default: %i[homebrew install_oh_my_fish install_vim_plugins link_files] do
+task default: %i[homebrew setup_fish install_vim_plugins link_files] do
 end
 
 # TODO
