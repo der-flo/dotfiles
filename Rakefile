@@ -32,7 +32,7 @@ desc 'install software via homebrew'
 task homebrew: :install_homebrew do
   # TODO: Abort on error
   # TODO: Ausgaben durchreichen
-  system 'brew bundle'
+  CMD.run 'brew bundle'
 end
 
 desc 'setup fish shell'
@@ -52,8 +52,12 @@ task :setup_fish do
     LOGGER.success 'changed user shell to fish'
   end
 
-  # TODO: "Would you like to remove the existing installation?"
-  system 'curl -L https://get.oh-my.fish | fish'
+  if CMD.run!("fish -c 'omf doctor'").success?
+    LOGGER.info 'oh-my-fish is already installed'
+  else
+    system 'curl -L https://get.oh-my.fish | fish'
+    LOGGER.success 'installed oh-my-fish'
+  end
 end
 
 desc 'install VIM plugins'
