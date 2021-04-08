@@ -130,13 +130,10 @@ So Chrome is actually the way to go for me.
 * TeamViewer
 * Google Hangouts Chat App
 * iTerm
-* Atom, VS Code
 * DBeaver, HeidiSQL
 * Xcode
 
 ## Inspirations
-
-Inspired by or shamelessly copied from
 
 * https://github.com/hoffi/dotfiles
 * https://github.com/ryanb/dotfiles
