@@ -3,12 +3,17 @@
 # Parts borrowed from Ryan Bates:
 # https://github.com/ryanb/dotfiles/blob/master/Rakefile
 
-require 'rake'
-require 'erb'
+require 'bundler/inline'
+gemfile do
+  source 'https://rubygems.org'
+  gem 'rake'
 
-# TODO: Gemfile - inline?
-require 'tty-command'
-require 'tty-logger'
+  # https://ttytoolkit.org
+  gem 'tty-command', '~> 0.10.1'
+  gem 'tty-logger', '~> 0.6.0'
+end
+
+require 'erb'
 
 LOGGER = TTY::Logger.new
 CMD = TTY::Command.new
