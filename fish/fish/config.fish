@@ -17,7 +17,7 @@ set --export EDITOR code --wait --new-window
 set --export VISUAL code --wait --new-window
 set --export RIPGREP_CONFIG_PATH $HOME/.ripgreprc
 
-source ~/.config/fish/nww_functions_and_aliases.fish
+source ~/.config/fish/adigi_functions_and_aliases.fish
 
 # abbr_add "reload=source ~/.config/fish/config.fish"
 

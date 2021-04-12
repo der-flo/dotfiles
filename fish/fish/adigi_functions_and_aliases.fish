@@ -1,5 +1,6 @@
-# https://github.com/Nix-wie-weg/zsh-functions-and-aliases
-# https://github.com/hoffi/dotfiles/blob/fish/fish/nww_functions.fish
+# Based on the existing work:
+# * https://github.com/Nix-wie-weg/zsh-functions-and-aliases
+# * https://github.com/hoffi/dotfiles/blob/fish/fish/config.fish
 
 function browse
   open (eval $argv)
