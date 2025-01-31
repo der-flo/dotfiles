@@ -101,6 +101,13 @@ local windowHotkeys = {
 -- TODO: max + undo statt max_toggle?
 spoon.WindowHalfsAndThirds:bindHotkeys(windowHotkeys)
 
+hs.loadSpoon("WindowScreenLeftAndRight")
+spoon.WindowScreenLeftAndRight:bindHotkeys({
+  screen_left = { hyper2, "q" },
+  screen_right= { hyper2, "e" },
+})
+
+
 --------------------------------------------------------------------------------
 -- hs.alert.show("Config loaded")
 hs.notify.new({title="Hammerspoon", informativeText="Config loaded"}):send()
