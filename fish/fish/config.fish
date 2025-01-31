@@ -17,6 +17,7 @@ set -g fish_user_paths ~/.cargo/bin $fish_user_paths
 set --export EDITOR code --wait --new-window
 set --export VISUAL code --wait --new-window
 set --export RIPGREP_CONFIG_PATH $HOME/.ripgreprc
+set --export OPENAI_API_KEY (cat ~/.openai_api_key)
 
 source ~/.config/fish/adigi_functions_and_aliases.fish
 
