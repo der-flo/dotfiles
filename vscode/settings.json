@@ -28,5 +28,24 @@
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "editor.wordWrapColumn": 120,
-    "editor.fontSize": 13
+    "editor.fontSize": 14,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "editor.multiCursorModifier": "ctrlCmd",
+    "workbench.tree.indent": 24,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "terminal.integrated.fontSize": 16,
+    "editor.minimap.enabled": false,
+    "todo-tree.tree.expanded": true,
+    "todo-tree.tree.showCountsInTree": true,
+    "editor.accessibilitySupport": "off",
+    "files.autoSave": "onFocusChange",
+    "errorLens.fontSize": "11",
+    "errorLens.fontStyleItalic": true,
+    "errorLens.fontWeight": "bold",
+    "errorLens.gutterIconsEnabled": true,
+    "errorLens.gutterIconSet": "emoji"
 }
