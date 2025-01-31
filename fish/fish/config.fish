@@ -9,7 +9,10 @@ set -g fish_user_paths ~/bin $fish_user_paths
 set -g fish_user_paths /Applications/MacVim.app/Contents/bin $fish_user_paths
 set -g fish_user_paths /usr/local/opt/mysql-client/bin $fish_user_paths
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/terraform@0.12/bin" $fish_user_paths
+
+set -g fish_user_paths ~/.cabal/bin ~/.ghcup/bin $fish_user_paths
+set -g fish_user_paths ~/.cargo/bin $fish_user_paths
+
 
 set --export EDITOR code --wait --new-window
 set --export VISUAL code --wait --new-window
@@ -38,7 +41,9 @@ abbr -a gips 'git push'
 abbr -a gib 'git branch'
 abbr -a gihi 'git hist'
 abbr -a gidob 'git push origin --delete'
+abbr -a girc 'git rebase --continue'
 
+# Alternative: https://gist.github.com/svenwin/218621544eedb9db03b7f66f64848351
 # abbr -a gicm 'git commit --message ""'
 function gicm
   set branch (git symbolic-ref --short HEAD | cut -d '-' -f 1)
@@ -57,4 +62,6 @@ abbr -a todo 'rg --pcre2 "TODO(?! Prio [23])"'
 
 abbr -a txn 'tmux new-session'
 abbr -a http_dir 'ruby -run -e httpd . --port=8080'
+
+abbr -a tf 'terraform'
 mise activate fish | source
