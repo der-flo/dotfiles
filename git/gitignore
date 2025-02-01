@@ -1,9 +1,0 @@
-.DS_Store
-.settings/
-.project
-*.swp
-
-# RubyMine / IntelliJ IDEA
-.generators
-.rakeTasks
-.idea/

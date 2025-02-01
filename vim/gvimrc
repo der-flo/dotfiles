@@ -1,3 +1,0 @@
-set guioptions-=rL " Remove right and left scrollbar
-set lines=25 columns=85 " UI size
-set guifont=OperatorMonoNerdFontCompleteM-Book:h16
