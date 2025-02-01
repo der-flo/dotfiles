@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# TODO: Also configure for work machine, see `.chezmoiignore`
+
+# https://apple.stackexchange.com/questions/287760/set-the-hostname-computer-name-for-macos
+
+sudo scutil --set HostName {{ .fqdn }}
+sudo scutil --set LocalHostName {{ .hostname }}
+sudo scutil --set ComputerName {{ .hostname }}
+dscacheutil -flushcache

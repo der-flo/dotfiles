@@ -1,0 +1,88 @@
+# https://alacritty.org/config-alacritty.html
+
+[general]
+live_config_reload = true
+
+[terminal]
+shell = "/opt/homebrew/bin/tmux"
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+decorations = "Full"                       # Transparent
+dimensions = { columns = 120, lines = 25 }
+dynamic_padding = false
+opacity = 0.7
+blur = true
+
+[window.padding]
+# x = 20
+# y = 25
+
+# TODO: No scrolling because of tmux?
+[scrolling]
+history = 0
+
+# See `fc-list | grep Blex`
+[font]
+size = 14.0
+
+[font.bold]
+family = "BlexMono Nerd Font Mono"
+style = "Heavy"
+
+[font.bold_italic]
+family = "BlexMono Nerd Font Mono"
+style = "Heavy Italic"
+
+[font.italic]
+family = "BlexMono Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "BlexMono Nerd Font Mono"
+style = "Regular"
+
+
+###########################################################################################
+# Source: https://github.com/alacritty/alacritty-theme/blob/master/themes/github_light.toml
+# github Alacritty Colors
+
+# Default colors
+[colors.primary]
+# Not white because of other white windows around
+# background = '#ffffff'
+background = '#eeeeee'
+
+foreground = '#24292f'
+
+# Normal colors
+[colors.normal]
+black = '#24292e'
+red = '#d73a49'
+green = '#28a745'
+yellow = '#dbab09'
+blue = '#0366d6'
+magenta = '#5a32a3'
+cyan = '#0598bc'
+white = '#6a737d'
+
+# Bright colors
+[colors.bright]
+black = '#959da5'
+red = '#cb2431'
+green = '#22863a'
+yellow = '#b08800'
+blue = '#005cc5'
+magenta = '#5a32a3'
+cyan = '#3192aa'
+white = '#d1d5da'
+
+[[colors.indexed_colors]]
+index = 16
+color = '#d18616'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#cb2431'

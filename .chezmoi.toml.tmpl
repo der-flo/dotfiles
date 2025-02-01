@@ -1,0 +1,29 @@
+# https://www.chezmoi.io/user-guide/setup/#re-create-your-config-file
+# https://www.chezmoi.io/reference/templates/init-functions/promptStringOnce/
+# https://pkg.go.dev/text/template
+# http://masterminds.github.io/sprig/
+#
+#
+# Test with `chezmoi execute-template --init < .chezmoi.toml.tmpl`
+# Re-init with: `chezmoi init`
+
+{{ $isHome := promptBoolOnce . "isHome" "Is this computer at home" -}}
+{{ $fqdn := promptStringOnce . "fqdn" "Fully qualified name of host" -}}
+
+mode = "symlink"
+
+[data]
+isHome = {{ $isHome }}
+fqdn = "{{ $fqdn }}"
+hostname = "{{ $fqdn | splitList "." | first }}"
+
+{{- if $isHome }}
+email = "mail@florian-duetsch.de"
+{{- else }}
+email = "florian.duetsch@adigi.ai"
+{{- end }}
+
+# TODO: Doesn't work yet
+[merge]
+command = "/Applications/p4merge.app/Contents/MacOS/p4merge"
+args = ["{{ "{{" }} .Source {{ "}}" }}", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Source {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]

@@ -1,0 +1,58 @@
+{
+  "profiles": [
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "Caps Lock to ⌃-b",
+            "manipulators": [
+              {
+                "from": { "key_code": "caps_lock" },
+                "to": [
+                  {
+                    "key_code": "b",
+                    "modifiers": ["left_control"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Right option (⌥) to ⌘⌃⇧",
+            "manipulators": [
+              {
+                "from": { "key_code": "right_option" },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": ["left_control", "left_command"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Right command (⌘) to ⌘⌥⌃",
+            "manipulators": [
+              {
+                "from": { "key_code": "right_command" },
+                "to": [
+                  {
+                    "key_code": "left_control",
+                    "modifiers": ["left_option", "left_command"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      },
+      "name": "Default profile",
+      "selected": true,
+      "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+    }
+  ]
+}

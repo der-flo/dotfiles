@@ -1,0 +1,6 @@
+# TODO: Also configure for work machine, see `.chezmoiignore`
+
+Host git-codecommit.*.amazonaws.com
+  User APKAVFYCA3DKWK6NTIE6
+  # TODO: Nötig?
+  IdentityFile ~/.ssh/id_rsa

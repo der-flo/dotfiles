@@ -1,0 +1,60 @@
+# git config --list --show-origin
+# All options: `git help --config`, https://git-scm.com/docs/git-config
+
+[include]
+path = .gitconfig.local
+
+[user]
+name = Florian Dütsch
+
+[core]
+excludesfile = ~/.gitignore
+commentChar = > # Be able to use ticket numbers with a `#` as the beginning of a commit message
+
+[alias]
+hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+
+[pull]
+rebase = true
+
+[rebase]
+autoStash = true
+
+[difftool "sourcetree"]
+cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+path =
+
+[mergetool "sourcetree"]
+cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+trustExitCode = true
+
+[filter "lfs"]
+clean = git-lfs clean -- %f
+smudge = git-lfs smudge -- %f
+process = git-lfs filter-process
+required = true
+
+########################################################################################################################
+; TODO: Old configuration - needed?
+; [core]
+; autocrlf = input
+; safecrlf = true
+
+; [color]
+; ui = true
+
+; [push]
+; # Remote branches get auto-created.
+; default = current
+
+; [credential]
+; helper = osxkeychain # Set by default via /Library/Developer/CommandLineTools/usr/share/git-core/gitconfig
+
+; [merge]
+; tool = p4merge
+
+; [mergetool "p4merge"]
+; path = /Applications/p4merge.app/Contents/MacOS/p4merge
+
+; [init]
+; 	defaultBranch = main # Set by default via /Library/Developer/CommandLineTools/usr/share/git-core/gitconfig
