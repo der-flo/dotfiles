@@ -2,6 +2,8 @@
 
 # TODO: Also configure for work machine, see `.chezmoiignore`
 
+echo "configuring TimeMachine…"
+
 sudo tmutil addexclusion -p /Applications
 sudo tmutil addexclusion -p /Library
 sudo tmutil addexclusion -p /System
@@ -9,7 +11,6 @@ sudo tmutil addexclusion -p /Users/Shared
 sudo tmutil addexclusion -p /Volumes
 sudo tmutil addexclusion -p /bin
 sudo tmutil addexclusion -p /cores
-sudo tmutil addexclusion -p /dev
 sudo tmutil addexclusion -p /etc
 sudo tmutil addexclusion -p /home
 sudo tmutil addexclusion -p /opt
@@ -32,3 +33,5 @@ sudo tmutil addexclusion -p /Users/der_flo/Music
 sudo tmutil addexclusion -p /Users/der_flo/tmp
 
 sudo tmutil enable
+
+echo "…configured TimeMachine"
