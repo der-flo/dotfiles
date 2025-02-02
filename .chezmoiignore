@@ -3,12 +3,11 @@ Brewfile
 Brewfile.lock.json
 LICENSE
 
-
 # Alternatives: https://www.chezmoi.io/user-guide/manage-machine-to-machine-differences/
-{{- if .isHome }}
-run_onchange_configure_time_machine.sh
-run_onchange_misc_configuration.sh
-run_onchange_other_software.sh
-run_onchange_set_hostname.sh.tmpl
-dot_ssh/config
+{{- if not .isHome }}
+configure_time_machine.sh
+misc_configuration.sh
+other_software.sh
+set_hostname.sh.tmpl
+.ssh/config
 {{- end }}

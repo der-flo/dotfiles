@@ -24,4 +24,4 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 #   HOMEBREW_NO_AUTO_UPDATE. Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
 
 # Brewfile hash: {{ include "Brewfile" | sha256sum }}
-brew bundle install --cleanup --verbose --file=~/.local/share/chezmoi/Brewfile
+brew bundle install --cleanup --verbose --force --file=~/.local/share/chezmoi/Brewfile

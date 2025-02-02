@@ -1,7 +1,6 @@
 # https://github.com/Homebrew/homebrew-bundle
 # https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f
 
-tap 'homebrew/cask-fonts'
 tap 'hashicorp/tap'
 
 brew 'chezmoi'
@@ -36,6 +35,7 @@ cask 'spotify'
 cask 'signal'
 cask 'visual-studio-code'
 cask 'vlc'
+cask 'zed'
 
 # https://github.com/mas-cli/mas
 # TODO: Ist das alles aus dem App Store?
@@ -65,7 +65,6 @@ if `chezmoi data --format=json | jq .chezmoi.config.data.isHome`.chomp == 'true'
   cask 'sonos'
   cask 'webstorm'
   cask 'wezterm'
-  cask 'zed'
 
   # TODO: Do I need VS Code at home?
   vscode "rust-lang.rust-analyzer"
@@ -76,6 +75,7 @@ else
 
   brew 'awscli'
   brew 'iperf'
+  brew 'telnet'
   brew 'wget'
   # brew 'git'
   # brew 'gnupg'
@@ -88,8 +88,6 @@ else
   cask 'gimp'
   cask 'google-chrome'
   cask 'mysqlworkbench'
-  cask 'sequel-pro'
-  brew 'telnet'
   cask 'veracrypt'
   cask 'wireshark'
 
