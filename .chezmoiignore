@@ -2,6 +2,7 @@
 Brewfile
 Brewfile.lock.json
 LICENSE
+README.md
 
 # Alternatives: https://www.chezmoi.io/user-guide/manage-machine-to-machine-differences/
 {{- if not .isHome }}
