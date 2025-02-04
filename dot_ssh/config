@@ -1,6 +1,21 @@
 # TODO: Also configure for work machine, see `.chezmoiignore`
 
+Host *
+  # PubkeyAuthentication yes
+  # HostKeyAlgorithms ssh-ed25519-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,ssh-rsa
+  AddKeysToAgent yes
+  UseKeychain yes
+
+Host bitbucket.org
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/id_ed25519
+
 Host git-codecommit.*.amazonaws.com
-  User APKAVFYCA3DKWK6NTIE6
+  # TODO: work
+  User APKAVFYCA3DK7D6YA2VK
+
+  # TODO: home
+  # User APKAVFYCA3DKWK6NTIE6
+
   # TODO: Nötig?
   IdentityFile ~/.ssh/id_rsa
