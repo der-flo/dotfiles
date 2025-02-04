@@ -1,60 +1,61 @@
 {
-  "editor.accessibilitySupport": "off",
-  "editor.fontFamily": "'VictorMono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontLigatures": true,
-  "editor.tabSize": 2,
-  "editor.tabCompletion": "on",
-  "editor.minimap.enabled": false,
-  "editor.inlayHints.fontSize": 12,
-  "editor.inlayHints.enabled": "onUnlessPressed",
-  "editor.fontVariations": false,
-  "editor.rulers": [120],
-  "editor.multiCursorModifier": "ctrlCmd",
-  "editor.tokenColorCustomizations": {
-    "[Default Light+]": {
-      "textMateRules": [
-        {
-          "scope": ["punctuation.definition.comment", "comment"],
-          "settings": {
-            "fontStyle": "italic"
-          }
+    "editor.accessibilitySupport": "off",
+    "editor.fontFamily": "'VictorMono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.tabSize": 2,
+    "editor.tabCompletion": "on",
+    "editor.minimap.enabled": false,
+    "editor.inlayHints.fontSize": 12,
+    "editor.inlayHints.enabled": "onUnlessPressed",
+    "editor.fontVariations": false,
+    "editor.rulers": [
+        120
+    ],
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.tokenColorCustomizations": {
+        "[Default Light+]": {
+            "textMateRules": [
+                {
+                    "scope": [
+                        "punctuation.definition.comment",
+                        "comment"
+                    ],
+                    "settings": {
+                        "fontStyle": "italic"
+                    }
+                }
+            ]
         }
-      ]
-    }
-  },
-  "editor.wordWrapColumn": 120,
-  "editor.fontSize": 15,
-
-  "[textile]": {
-    "editor.wordWrap": "bounded"
-  },
-
-  "errorLens.fontSize": "11",
-  "errorLens.fontStyleItalic": true,
-  "errorLens.fontWeight": "bold",
-  "errorLens.gutterIconsEnabled": true,
-  "errorLens.gutterIconSet": "emoji",
-
-  "explorer.confirmDragAndDrop": false,
-  "files.autoSave": "onFocusChange",
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
-  "workbench.tree.indent": 24,
-  "workbench.colorTheme": "Default Light+",
-  "rust-analyzer.check.command": "clippy",
-  "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer",
-    "editor.formatOnSave": true
-  },
-  "terminal.integrated.fontSize": 14,
-
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  },
-  "[python]": {
-    "editor.formatOnType": true
-  },
-  "todo-tree.tree.expanded": true,
-  "todo-tree.tree.showCountsInTree": true
+    },
+    "editor.wordWrapColumn": 120,
+    "editor.fontSize": 15,
+    "[textile]": {
+        "editor.wordWrap": "bounded"
+    },
+    "errorLens.fontSize": "11",
+    "errorLens.fontStyleItalic": true,
+    "errorLens.fontWeight": "bold",
+    "errorLens.gutterIconsEnabled": true,
+    "errorLens.gutterIconSet": "emoji",
+    "explorer.confirmDragAndDrop": false,
+    "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "workbench.tree.indent": 24,
+    "workbench.colorTheme": "Default Light+",
+    "rust-analyzer.check.command": "clippy",
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true
+    },
+    "terminal.integrated.fontSize": 14,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "todo-tree.tree.expanded": true,
+    "todo-tree.tree.showCountsInTree": true
 }
