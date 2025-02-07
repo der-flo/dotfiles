@@ -49,9 +49,8 @@ source ~/.config/fish/adigi_functions_and_aliases.fish
 
 [ -f ~/.openai_api_key ]; and set --export OPENAI_API_KEY (cat ~/.openai_api_key)
 
-# TODO: zed
-set --export EDITOR code --wait --new-window
-set --export VISUAL code --wait --new-window
+set --export EDITOR zed --wait --new
+set --export VISUAL zed --wait --new
 
 ########################################################################################################################
 # TODO: Old configuration - needed?
