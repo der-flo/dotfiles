@@ -40,6 +40,9 @@ abbr -a http_dir 'ruby -run -e httpd . --port=8080'
 
 abbr -a tf 'terraform'
 
+abbr -a cmd 'chezmoi diff'
+abbr -a cma 'chezmoi apply'
+
 # abbr_add "reload=source ~/.config/fish/config.fish"
 
 source ~/.config/fish/adigi_functions_and_aliases.fish
