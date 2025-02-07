@@ -38,8 +38,14 @@ cask 'vlc'
 cask 'zed'
 
 # https://github.com/mas-cli/mas
-# TODO: Ist das alles aus dem App Store?
-mas 'trello', id: 1278508951
+# TODO Home: Ist das alles aus dem App Store?
+mas 'Numbers', id: 409203825
+# mas 'GarageBand', id: 682658836
+# mas 'iMovie', id: 408981434
+mas 'Xcode', id: 497799835
+mas 'Pages', id: 409201541
+mas 'Keynote', id: 409183694
+mas 'Trello', id: 1278508951
 mas 'JSON Peep for Safari 1.3.2', id: 1458969831
 
 ############################
@@ -66,7 +72,7 @@ if `chezmoi data --format=json | jq .chezmoi.config.data.isHome`.chomp == 'true'
   cask 'webstorm'
   cask 'wezterm'
 
-  # TODO: Do I need VS Code at home?
+  # TODO Home: Do I need VS Code at home?
   vscode "rust-lang.rust-analyzer"
 else
   # Previously but not currently used software installed with Homebrew:
@@ -90,6 +96,10 @@ else
   cask 'mysqlworkbench'
   cask 'veracrypt'
   cask 'wireshark'
+
+  mas 'Microsoft Remote Desktop', id: 1295203466
+  mas 'The Unarchiver', id: 425424353
+  mas 'Telefon', id: 406825478
 
   # TODO: Everything needed for work environment?
   vscode "dbaeumer.vscode-eslint"
