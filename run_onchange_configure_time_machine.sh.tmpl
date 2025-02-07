@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# TODO: Also configure for work machine, see `.chezmoiignore`
-
 echo "configuring TimeMachine…"
 
 sudo tmutil addexclusion -p /Applications
@@ -20,17 +18,26 @@ sudo tmutil addexclusion -p /tmp
 sudo tmutil addexclusion -p /usr
 sudo tmutil addexclusion -p /var
 
+sudo tmutil addexclusion -p {{ .chezmoi.homeDir }}/Applications
+sudo tmutil addexclusion -p {{ .chezmoi.homeDir }}/Downloads
+sudo tmutil addexclusion -p {{ .chezmoi.homeDir }}/Library/Caches
+sudo tmutil addexclusion -p {{ .chezmoi.homeDir }}/Movies
+sudo tmutil addexclusion -p {{ .chezmoi.homeDir }}/Music
+sudo tmutil addexclusion -p {{ .chezmoi.homeDir }}/tmp
+
+{{- if .isHome }}
 sudo tmutil addexclusion -p /Users/der_flo/.bundle
 sudo tmutil addexclusion -p /Users/der_flo/.cache
 sudo tmutil addexclusion -p /Users/der_flo/.cargo
 sudo tmutil addexclusion -p /Users/der_flo/.rustup
 sudo tmutil addexclusion -p /Users/der_flo/.vscode
 sudo tmutil addexclusion -p /Users/der_flo/Applications
-sudo tmutil addexclusion -p /Users/der_flo/Downloads
 sudo tmutil addexclusion -p /Users/der_flo/Library
-sudo tmutil addexclusion -p /Users/der_flo/Movies
-sudo tmutil addexclusion -p /Users/der_flo/Music
-sudo tmutil addexclusion -p /Users/der_flo/tmp
+{{- else }}
+sudo tmutil addexclusion -p /Users/florian.duetsch/Library/Containers/com.docker.docker
+sudo tmutil addexclusion -p '/Users/florian.duetsch/VirtualBox VMs'
+sudo tmutil addexclusion -p /Users/florian.duetsch/src
+{{- end }}
 
 sudo tmutil enable
 

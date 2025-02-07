@@ -1,4 +1,4 @@
-# TODO: Also configure for work machine, see `.chezmoiignore`
+Include config.local
 
 Host *
   # PubkeyAuthentication yes
@@ -11,11 +11,5 @@ Host bitbucket.org
   IdentityFile ~/.ssh/id_ed25519
 
 Host git-codecommit.*.amazonaws.com
-  # TODO: work
-  User APKAVFYCA3DK7D6YA2VK
-
-  # TODO: home
-  # User APKAVFYCA3DKWK6NTIE6
-
   # TODO: Nötig?
   IdentityFile ~/.ssh/id_rsa

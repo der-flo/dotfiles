@@ -5,10 +5,3 @@ LICENSE
 README.md
 
 # Alternatives: https://www.chezmoi.io/user-guide/manage-machine-to-machine-differences/
-{{- if not .isHome }}
-configure_time_machine.sh
-misc_configuration.sh
-other_software.sh
-set_hostname.sh.tmpl
-.ssh/config
-{{- end }}
