@@ -12,6 +12,7 @@ brew 'mas'
 brew 'mise'
 brew "mysql-client" # For gem 'mysql2'
 brew 'pass'
+brew 'pinentry-mac'
 brew 'pwgen'
 brew 'ripgrep'
 # brew 'ruby-build' # Needed or included in mise?
