@@ -83,6 +83,7 @@ else
   #   jemalloc, memcached, ntfs-3g, s3cmd, terminal-notifier, unison
 
   brew 'awscli'
+  brew 'fswatch'
   brew 'iperf'
   brew 'telnet'
   brew 'wget'
