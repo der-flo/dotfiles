@@ -92,7 +92,9 @@ else
   # brew 'mysql-connector-c'
   # brew 'reattach-to-user-namespace'
 
+  # TODO: Replace with https://github.com/matryer/xbar ?
   cask 'bitbar'
+
   cask 'bitwarden'
   cask 'cyberduck'
   cask 'gimp'
