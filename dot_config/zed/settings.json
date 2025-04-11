@@ -21,6 +21,7 @@
   "tab_size": 2,
   "scroll_beyond_last_line": "off",
   "preferred_line_length": 120,
+  "wrap_guides": [120],
   "experimental.theme_overrides": {
     "syntax": {
       "comment": {

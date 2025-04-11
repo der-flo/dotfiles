@@ -1,0 +1,50 @@
+# https://ghostty.org/docs/config/reference
+# https://ghostty.org/docs/config/keybind
+# ghostty +list-keybinds
+
+# TODO: Oder den Default-Font?
+# font-family = BlexMono Nerd Font Mono
+
+# I prefer this for non-retina displays
+font-thicken = true
+
+window-padding-x = 10
+window-padding-y = 6
+cursor-style = block
+shell-integration-features = no-cursor
+background-opacity = 0.6
+background-blur = true
+unfocused-split-opacity = 0.8
+unfocused-split-fill = #000000
+window-inherit-working-directory = true
+
+keybind = global:super+escape=toggle_quick_terminal
+quick-terminal-position = center
+
+# Maybe via Hammerspoon? https://github.com/ghostty-org/ghostty/discussions/2353
+# Ghostty has to be started in order to work
+keybind = global:ctrl+option+super+t=new_window
+quit-after-last-window-closed = false
+
+# Some of my old tmux keybindings
+keybind = ctrl+b>j=goto_split:down
+keybind = ctrl+b>k=goto_split:up
+keybind = ctrl+b>h=goto_split:left
+keybind = ctrl+b>l=goto_split:right
+keybind = ctrl+b>option+7=new_split:right
+keybind = ctrl+b>-=new_split:down
+keybind = ctrl+b>c=new_tab
+keybind = ctrl+b>n=next_tab
+
+# TODO: Check out these options
+# title
+# command = /opt/homebrew/bin/tmux
+# macos-titlebar-style = hidden
+# clipboard-trim-trailing-spaces
+# copy-on-select
+#
+# TODO: https://ghostty.org/docs/features/shell-integration
+# shell-integration
+#
+# TODO: ghostty +list-themes
+# theme =

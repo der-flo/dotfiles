@@ -1,3 +1,4 @@
+-- TODO: Skip Alacritty in favor of Ghostty?
 return function()
   os.execute("/opt/homebrew/bin/alacritty msg create-window || open /Applications/Alacritty.app")
 
