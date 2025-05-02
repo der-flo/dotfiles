@@ -17,6 +17,9 @@ hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 [pull]
 rebase = true
 
+[push]
+autoSetupRemote = true
+
 [rebase]
 autoStash = true
 
