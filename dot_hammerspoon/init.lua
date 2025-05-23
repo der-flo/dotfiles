@@ -79,6 +79,20 @@ require "seal_cfg"
 hs.hotkey.bind(hyper, "space", "toggle Seal", function()
   spoon.Seal:toggle()
 end)
+-- Standardprogramme schnell anspringen, zwischen ihnen wechseln
+hs.hotkey.bind(hyper, "1", "launch or focus terminal", function()
+  hs.application.launchOrFocus("Ghostty")
+end)
+hs.hotkey.bind(hyper, "2", "launch or focus RubyMine", function()
+  hs.application.launchOrFocus("RubyMine")
+end)
+hs.hotkey.bind(hyper, "3", "launch or focus Zed", function()
+  hs.application.launchOrFocus("Zed")
+end)
+hs.hotkey.bind(hyper, "4", "launch or focus Chrome", function()
+  hs.application.launchOrFocus("Google Chrome")
+end)
+
 --------------------------------------------------------------------------------
 -- Fenster-bezogene Kommandos
 
