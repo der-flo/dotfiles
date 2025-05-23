@@ -42,6 +42,12 @@ keybind = ctrl+b>-=new_split:down
 keybind = ctrl+b>c=new_tab
 keybind = ctrl+b>n=next_tab
 
+# Wirkt i. d. R. nicht, weil immer vererbt wird. Man müsste das Vererben beim Keybinding deaktivieren, das klappt
+# aktuell aber noch nicht.
+# https://github.com/ghostty-org/ghostty/discussions/3175
+# working-directory = home
+# window-inherit-working-directory
+
 # TODO: Check out these options
 # title
 # command = /opt/homebrew/bin/tmux
