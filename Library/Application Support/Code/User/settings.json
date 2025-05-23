@@ -1,6 +1,6 @@
 {
     "editor.accessibilitySupport": "off",
-    "editor.fontFamily": "'VictorMono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'BlexMono Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.tabSize": 2,
     "editor.tabCompletion": "on",
