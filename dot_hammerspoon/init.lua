@@ -23,9 +23,6 @@
 -- * hs.logger.d(data)
 -- * hs.showError(body)
 
-hs.loadSpoon("ReloadConfiguration")
-spoon.ReloadConfiguration:start()
-
 --------------------------------------------------------------------------------
 -- Präfix für die meisten bzw. restlichen Hammerspoon-Kommandos
 -- Per Karabiner auf rechtes ⌘ gebunden
@@ -36,6 +33,11 @@ local hyper = { "⌘", "⌥", "⌃" }
 local hyper2 = { "⌘", "⌃", "⇧" }
 
 --------------------------------------------------------------------------------
+
+hs.loadSpoon("ReloadConfiguration")
+spoon.ReloadConfiguration:bindHotkeys({ reloadConfiguration = { hyper, "r" } })
+spoon.ReloadConfiguration:start()
+
 -- TODO: Replace with chezmoi tricks?
 local isPrivateHost = hs.fnutils.find(hs.host.names(), function(name)
   return name:find("^flo%-air") ~= nil
