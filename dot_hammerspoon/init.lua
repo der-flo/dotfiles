@@ -44,18 +44,19 @@ local isPrivateHost = hs.fnutils.find(hs.host.names(), function(name)
 end) ~= nil
 
 local new_browser_window = isPrivateHost and "new_safari_window" or "new_chrome_window"
-hs.hotkey.bind(hyper, "c", require(new_browser_window))
+hs.hotkey.bind(hyper, "c", "open new browser window", require(new_browser_window))
 
 -- TODO: configured directly in Ghostty
 -- hs.hotkey.bind(hyper, "t", require "new_alacritty_window")
 
 -- TODO: Used?
-hs.hotkey.bind(hyper, "i", require "toggle_ksheet")
+hs.hotkey.bind(hyper, "i", "toogle KSheet", require "toggle_ksheet")
+hs.hotkey.showHotkeys(hyper, "o")
 
 -- TODO: Diese 3 Funktionen testen und robuster machen
 local openEditor = require "open_editor"
 local finder = require "finder"
-hs.hotkey.bind(hyper, "d", function()
+hs.hotkey.bind(hyper, "d", "open editor in opened dir", function()
   openEditor(finder.opened_dir())
 end)
 hs.hotkey.bind(hyper, "f", function()
@@ -64,18 +65,18 @@ hs.hotkey.bind(hyper, "f", function()
 
   finder.open()
 end)
-hs.hotkey.bind(hyper, "h", require "open_finder_location_in_terminal")
-hs.hotkey.bind(hyper, "v", function()
+hs.hotkey.bind(hyper, "h", "open finder location in terminal", require "open_finder_location_in_terminal")
+hs.hotkey.bind(hyper, "v", "open new editor window", function()
   openEditor("--new-window")
 end)
 
 -- Karabiner Elements setzt aktuell leider "⌃-eject" außer Kraft.
 -- https://github.com/tekezo/Karabiner-Elements/issues/89
-hs.hotkey.bind(hyper, "s", hs.caffeinate.systemSleep)
-hs.hotkey.bind(hyper, "l", hs.caffeinate.lockScreen)
+hs.hotkey.bind(hyper, "s", "sleep", hs.caffeinate.systemSleep)
+hs.hotkey.bind(hyper, "l", "lock computer", hs.caffeinate.lockScreen)
 
 require "seal_cfg"
-hs.hotkey.bind(hyper, "space", function()
+hs.hotkey.bind(hyper, "space", "toggle Seal", function()
   spoon.Seal:toggle()
 end)
 --------------------------------------------------------------------------------
@@ -85,7 +86,7 @@ end)
 hs.window.animationDuration = 0
 
 -- TODO: Used?
-hs.hotkey.bind(hyper2, "f", function()
+hs.hotkey.bind(hyper2, "f", "arrange coding windows", function()
   hs.mjomatic.go({
     "iiiCCCCC",
     "iiiCCCCC",
@@ -95,7 +96,7 @@ hs.hotkey.bind(hyper2, "f", function()
   })
 end)
 
-hs.hotkey.bind(hyper2, "g", function()
+hs.hotkey.bind(hyper2, "g", "arrange coding windows (2)", function()
   hs.mjomatic.go({
     "iivvvvvv",
     "iivvvvvv",
@@ -114,13 +115,13 @@ hs.loadSpoon("WindowHalfsAndThirds")
 -- https://github.com/miromannino/miro-windows-manager
 -- http://www.hammerspoon.org/Spoons/
 local windowHotkeys = {
-  left_half = { hyper2, "a" },
-  right_half = { hyper2, "d" },
-  undo = { hyper2, "r" },
-  center = { hyper2, "s" },
-  max_toggle = { hyper2, "w" },
-  larger = { hyper2, "+" },
-  smaller = { hyper2, "-" }
+  left_half = { hyper2, "a", message = "window left half" },
+  right_half = { hyper2, "d", message = "window right half" },
+  undo = { hyper2, "r", message = "window undo" },
+  center = { hyper2, "s", message = "window center" },
+  max_toggle = { hyper2, "w", message = "window max-toggle" },
+  larger = { hyper2, "+", message = "window larger" },
+  smaller = { hyper2, "-", message = "window smaller" }
 }
 -- TODO: 40/60 interessant? 30/70? Auf welche Tasten?
 -- TODO: max + undo statt max_toggle?
@@ -129,8 +130,8 @@ spoon.WindowHalfsAndThirds:bindHotkeys(windowHotkeys)
 -- http://www.hammerspoon.org/Spoons/WindowScreenLeftAndRight.html
 hs.loadSpoon("WindowScreenLeftAndRight")
 local moveHotkeys = {
-  screen_left = { hyper2, "q" },
-  screen_right = { hyper2, "e" },
+  screen_left = { hyper2, "q", message = "move window to left screen" },
+  screen_right = { hyper2, "e", message = "move window to right screen" },
 }
 spoon.WindowScreenLeftAndRight:bindHotkeys(moveHotkeys)
 
