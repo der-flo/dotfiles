@@ -12,7 +12,7 @@
 // https://github.com/zed-industries/zed/blob/main/assets/themes/one/one.json
 {
   "ui_font_size": 16,
-  "buffer_font_size": 13,
+  "buffer_font_size": null,
   "theme": {
     "mode": "system",
     "light": "One Light",
@@ -39,6 +39,17 @@
     "HTML": {
       "prettier": {
         "allowed": false
+      }
+    },
+    "Ruby": {
+      "language_servers": ["ruby-lsp", "!solargraph", "rubocop"]
+    }
+  },
+  "lsp": {
+    "solargraph": {
+      "initialization_options": {
+        "diagnostics": true,
+        "formatting": true
       }
     }
   }

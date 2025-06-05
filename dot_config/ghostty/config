@@ -5,6 +5,8 @@
 # TODO: Oder den Default-Font? Oder den Jetbrains-Font?
 #   echo -e "\e[3mDas ist kursiver Text!\e[0m"
 #   Auch VS-Code, Zed, RubyMine
+
+# Zed: "Zed Plex Mono" und "ui_font_size=16" ist sehr schön.
 font-family = BlexMono Nerd Font Mono
 # font-family = VictorMono Nerd Font
 
@@ -18,9 +20,9 @@ window-padding-x = 10
 window-padding-y = 6
 cursor-style = block
 shell-integration-features = no-cursor
-background-opacity = 0.6
+background-opacity = 0.8
 background-blur = true
-unfocused-split-opacity = 0.8
+unfocused-split-opacity = 0.9
 unfocused-split-fill = #000000
 window-inherit-working-directory = true
 
