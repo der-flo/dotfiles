@@ -53,14 +53,17 @@ mas 'JSON Peep for Safari 1.3.2', id: 1458969831
 
 ############################
 # Specific for home computer
-if `chezmoi data --format=json | jq .chezmoi.config.data.isHome`.chomp == 'true'
+if `/opt/homebrew/bin/chezmoi data --format=json | jq .chezmoi.config.data.isHome`.chomp == 'true'
   brew 'borgbackup'
   brew 'ffmpeg' # For 'photo_archive_index'
   brew 'gtk4' # For crate 'relm4'
   brew 'imagemagick' # For 'photo_archive_index'
+  brew 'iperf3'
+  brew 'nomad'
   brew 'pkg-config' # For crate 'relm4'
   brew 'rclone'
   brew 'rustup-init'
+  brew 'swaks'
 
   cask 'adobe-creative-cloud'
   cask 'audacity'
@@ -71,13 +74,23 @@ if `chezmoi data --format=json | jq .chezmoi.config.data.isHome`.chomp == 'true'
   cask 'izotope-product-portal'
   cask 'mixing-station'
   cask 'moneymoney'
+  cask 'musescore'
   cask 'reaper'
+  cask 'rustrover'
   cask 'sonos'
+  cask 'utm'
   cask 'webstorm'
   cask 'wezterm'
 
   # TODO Home: Do I need VS Code at home?
   vscode "rust-lang.rust-analyzer"
+
+  # Currently not used
+  # tap 'pulumi/tap'
+  # brew 'ansible'
+  # brew 'pulumi'
+  # cask 'mactex-no-gui'
+  # cask 'tuxguitar'
 else
   # Previously but not currently used software installed with Homebrew:
   #   cowsay, dos2unix, fswatch, graphviz, htop-osx,
