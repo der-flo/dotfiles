@@ -12,7 +12,8 @@
 // https://github.com/zed-industries/zed/blob/main/assets/themes/one/one.json
 {
   "ui_font_size": 16,
-  "buffer_font_size": null,
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_size": 13,
   "theme": {
     "mode": "system",
     "light": "One Light",

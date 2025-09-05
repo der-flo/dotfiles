@@ -1,6 +1,6 @@
 {
     "editor.accessibilitySupport": "off",
-    "editor.fontFamily": "'BlexMono Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.tabSize": 2,
     "editor.tabCompletion": "on",
@@ -57,5 +57,6 @@
         "editor.formatOnType": true
     },
     "todo-tree.tree.expanded": true,
-    "todo-tree.tree.showCountsInTree": true
+    "todo-tree.tree.showCountsInTree": true,
+    "editor.fontWeight": "400"
 }

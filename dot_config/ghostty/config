@@ -2,19 +2,20 @@
 # https://ghostty.org/docs/config/keybind
 # ghostty +list-keybinds
 
-# TODO: Oder den Default-Font? Oder den Jetbrains-Font?
+# TODO: Oder den Default-Font? Oder den Jetbrains-Font? "Jetbrains Mono"
 #   echo -e "\e[3mDas ist kursiver Text!\e[0m"
 #   Auch VS-Code, Zed, RubyMine
 
-# Zed: "Zed Plex Mono" und "ui_font_size=16" ist sehr schön.
-font-family = BlexMono Nerd Font Mono
+# ghostty +list-fonts
+font-family = JetBrainsMono Nerd Font Mono
 # font-family = VictorMono Nerd Font
+# BlexMono Nerd Font Mono
 
 window-inherit-font-size = false
 font-size = 20
 
 # I prefer this for non-retina displays
-font-thicken = true
+# font-thicken = true
 
 window-padding-x = 10
 window-padding-y = 6
