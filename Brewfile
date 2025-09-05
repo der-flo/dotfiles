@@ -117,7 +117,7 @@ else
   cask 'veracrypt'
   cask 'wireshark'
 
-  mas 'Microsoft Remote Desktop', id: 1295203466
+  mas 'Windows App', id: 1295203466
   mas 'The Unarchiver', id: 425424353
   mas 'Telefon', id: 406825478
 
