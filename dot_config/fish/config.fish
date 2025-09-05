@@ -54,6 +54,33 @@ set --export EDITOR zed --wait --new
 set --export VISUAL zed --wait --new
 
 ########################################################################################################################
+# Setup miniconda
+
+# https://github.com/IlanCosman/tide/issues/143
+# https://github.com/IlanCosman/tide/issues/355
+# if status is-interactive
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+# if test -f /usr/local/Caskroom/miniconda/base/bin/conda
+#     eval /usr/local/Caskroom/miniconda/base/bin/conda "shell.fish" "hook" $argv | source
+# else
+#     if test -f "/usr/local/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
+#         . "/usr/local/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
+#     else
+#         set -x PATH "/usr/local/Caskroom/miniconda/base/bin" $PATH
+#     end
+# end
+# <<< conda initialize <<<
+# end
+
+# Much faster then the code above
+# https://github.com/conda/conda/issues/11648#issuecomment-2821897579
+if test -f /usr/local/Caskroom/miniconda/base/bin/conda
+    set -x PATH /usr/local/Caskroom/miniconda/base/bin $PATH
+    . /usr/local/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish
+end
+
+########################################################################################################################
 # TODO: Old configuration - needed?
 
 # [ -f ~/soft/miniconda3/etc/fish/conf.d/conda.fish ]; and source ~/soft/miniconda3/etc/fish/conf.d/conda.fish
