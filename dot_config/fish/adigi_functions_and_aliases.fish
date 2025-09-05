@@ -3,7 +3,7 @@
 # * https://github.com/hoffi/dotfiles/blob/fish/fish/config.fish
 
 function browse
-  open (eval $argv)
+    open (eval $argv)
 end
 
 alias branch_current='git rev-parse --abbrev-ref HEAD'

@@ -21,11 +21,11 @@ abbr -a girc 'git rebase --continue'
 # Alternative: https://gist.github.com/svenwin/218621544eedb9db03b7f66f64848351
 # abbr -a gicm 'git commit --message ""'
 function gicm
-  set branch (git symbolic-ref --short HEAD | cut -d '-' -f 1)
-  set statement "git commit --message \"#$branch: \""
-  set cpos (math (string length $statement) - 1)
-  commandline $statement
-  commandline -C $cpos
+    set branch (git symbolic-ref --short HEAD | cut -d '-' -f 1)
+    set statement "git commit --message \"#$branch: \""
+    set cpos (math (string length $statement) - 1)
+    commandline $statement
+    commandline -C $cpos
 end
 
 abbr -a be 'bundle exec'
@@ -38,7 +38,7 @@ abbr -a todo 'rg --pcre2 "TODO(?! Prio [23])"'
 abbr -a txn 'tmux new-session'
 abbr -a http_dir 'ruby -run -e httpd . --port=8080'
 
-abbr -a tf 'terraform'
+abbr -a tf terraform
 
 abbr -a cmc 'chezmoi cd'
 abbr -a cmd 'chezmoi diff'
