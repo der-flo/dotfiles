@@ -2,14 +2,17 @@
 # https://ghostty.org/docs/config/keybind
 # ghostty +list-keybinds
 
+# TODO: https://ghostty.org/docs/install/release-notes/1-2-0
+# * https://ghostty.org/docs/install/release-notes/1-2-0#ssh-improvements-(work-in-progress)
+# * https://ghostty.org/docs/install/release-notes/1-2-0#terminal-background-images
+# * https://ghostty.org/docs/install/release-notes/1-2-0#macos:-apple-shortcuts
+
 # TODO: Oder den Default-Font? Oder den Jetbrains-Font? "Jetbrains Mono"
 #   echo -e "\e[3mDas ist kursiver Text!\e[0m"
 #   Auch VS-Code, Zed, RubyMine
 
 # ghostty +list-fonts
-font-family = JetBrainsMono Nerd Font Mono
-# font-family = VictorMono Nerd Font
-# BlexMono Nerd Font Mono
+font-family = BlexMono Nerd Font Mono
 
 window-inherit-font-size = false
 font-size = 20
@@ -27,8 +30,15 @@ unfocused-split-opacity = 0.9
 unfocused-split-fill = #000000
 window-inherit-working-directory = true
 
-keybind = global:super+escape=toggle_quick_terminal
+quick-terminal-screen = macos-menu-bar
 quick-terminal-position = center
+
+# TODO: https://github.com/ghostty-org/ghostty/discussions/8419
+# https://ghostty.org/docs/install/pre
+auto-update-channel = tip
+quick-terminal-size = 80%,80%
+
+keybind = global:super+escape=toggle_quick_terminal
 
 # Maybe via Hammerspoon? https://github.com/ghostty-org/ghostty/discussions/2353
 # Ghostty has to be started in order to work
