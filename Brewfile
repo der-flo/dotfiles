@@ -21,6 +21,16 @@ brew 'watch'
 brew 'zstd' # For gem 'mysql2'
 brew 'hashicorp/tap/terraform'
 
+# Nice source of helpers:
+# https://draptik.github.io/2023-10-digital-craftsmanship-nordoberpfalz-modern-linux-cli-tools
+brew 'bat'
+brew 'fd'
+brew 'lazydocker'
+brew 'lsd' # https://github.com/eza-community/eza ?
+brew 'ncdu'
+brew 'thefuck'
+brew 'tldr'
+
 # https://github.com/Homebrew/homebrew-cask/blob/master/USAGE.md
 cask 'alacritty'
 cask 'docker'
@@ -113,6 +123,7 @@ else
   cask 'bitwarden'
   cask 'cyberduck'
   cask 'gimp'
+  cask 'miniconda'
   cask 'mysqlworkbench'
   cask 'veracrypt'
   cask 'wireshark'

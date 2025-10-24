@@ -97,3 +97,5 @@ end
 
 # set -g fish_user_paths ~/.cabal/bin ~/.ghcup/bin $fish_user_paths
 # set -g fish_user_paths ~/.cargo/bin $fish_user_paths
+
+thefuck --alias | source
