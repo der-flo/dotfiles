@@ -99,3 +99,6 @@ end
 # set -g fish_user_paths ~/.cargo/bin $fish_user_paths
 
 thefuck --alias | source
+
+# uv
+fish_add_path "/Users/florian.duetsch/.local/bin"

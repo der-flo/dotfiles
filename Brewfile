@@ -111,6 +111,7 @@ else
   brew 'fswatch'
   brew 'iperf'
   brew 'telnet'
+  brew 'uv'
   brew 'wget'
   # brew 'git'
   # brew 'gnupg'
