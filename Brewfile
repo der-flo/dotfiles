@@ -33,7 +33,7 @@ brew 'tldr'
 
 # https://github.com/Homebrew/homebrew-cask/blob/master/USAGE.md
 cask 'alacritty'
-cask 'docker'
+cask 'docker-desktop'
 cask 'font-blex-mono-nerd-font'
 cask 'font-ibm-plex-mono'
 cask 'font-jetbrains-mono-nerd-font'
@@ -127,7 +127,7 @@ else
   cask 'miniconda'
   cask 'mysqlworkbench'
   cask 'veracrypt'
-  cask 'wireshark'
+  cask 'wireshark-app'
 
   mas 'Windows App', id: 1295203466
   mas 'The Unarchiver', id: 425424353
