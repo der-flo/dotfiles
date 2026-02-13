@@ -35,7 +35,7 @@ quick-terminal-position = center
 
 # TODO: https://github.com/ghostty-org/ghostty/discussions/8419
 # https://ghostty.org/docs/install/pre
-auto-update-channel = tip
+# auto-update-channel = tip
 quick-terminal-size = 80%,80%
 
 keybind = global:super+escape=toggle_quick_terminal
