@@ -1,6 +1,6 @@
 {
     "editor.accessibilitySupport": "off",
-    "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'BlexMono Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.tabSize": 2,
     "editor.tabCompletion": "on",
@@ -28,7 +28,7 @@
         }
     },
     "editor.wordWrapColumn": 120,
-    "editor.fontSize": 15,
+    "editor.fontSize": 14,
     "[textile]": {
         "editor.wordWrap": "bounded"
     },
@@ -58,5 +58,6 @@
     },
     "todo-tree.tree.expanded": true,
     "todo-tree.tree.showCountsInTree": true,
-    "editor.fontWeight": "400"
+    "editor.fontWeight": "400",
+    "editor.lineHeight": 16,
 }
