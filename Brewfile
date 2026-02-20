@@ -108,6 +108,7 @@ else
 
   brew 'awscli'
   brew 'fswatch'
+  brew 'git-lfs'
   brew 'iperf'
   brew 'telnet'
   brew 'uv'
