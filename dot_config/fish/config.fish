@@ -98,7 +98,9 @@ end
 # set -g fish_user_paths ~/.cabal/bin ~/.ghcup/bin $fish_user_paths
 # set -g fish_user_paths ~/.cargo/bin $fish_user_paths
 
-thefuck --alias | source
+# Not used because of broken pipe errors: https://github.com/nvbn/thefuck/issues/1530
+# Brewfile: brew install
+# here: thefuck --alias | source
 
 # uv
 fish_add_path "/Users/florian.duetsch/.local/bin"

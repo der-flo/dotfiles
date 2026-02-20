@@ -28,7 +28,6 @@ brew 'fd'
 brew 'lazydocker'
 brew 'lsd' # https://github.com/eza-community/eza ?
 brew 'ncdu'
-brew 'thefuck'
 brew 'tldr'
 
 # https://github.com/Homebrew/homebrew-cask/blob/master/USAGE.md
