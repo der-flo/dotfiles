@@ -3,7 +3,13 @@ if status is-interactive
 end
 
 /opt/homebrew/bin/brew shellenv | source
-mise activate fish | source
+mise activate fish --shims | source
+
+# Speziell für Claude
+launchctl setenv LANG de_DE.UTF-8
+launchctl setenv LC_ALL de_DE.UTF-8
+set -gx LANG de_DE.UTF-8
+set -gx LC_ALL de_DE.UTF-8
 
 abbr -a gic 'git checkout'
 abbr -a gicp 'git checkout --patch'
