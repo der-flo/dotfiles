@@ -1,16 +1,16 @@
+# TODO: Remove packages really not needed anymore (the out-commented ones)
+
 # https://github.com/Homebrew/homebrew-bundle
 # https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f
-
-tap 'hashicorp/tap'
 
 brew 'chezmoi'
 brew 'coreutils' # For e. g. `numfmt`
 brew 'fish'
 brew 'fisher'
-brew 'libyaml' # For 'ruby-install' via mise
+# brew 'libyaml' # For 'ruby-install' via mise
 brew 'mas'
 brew 'mise'
-brew "mysql-client" # For gem 'mysql2'
+# brew "mysql-client" # For gem 'mysql2'
 brew 'pass'
 brew 'pinentry-mac'
 brew 'pwgen'
@@ -18,8 +18,7 @@ brew 'ripgrep'
 # brew 'ruby-build' # Needed or included in mise?
 brew 'tmux'
 brew 'watch'
-brew 'zstd' # For gem 'mysql2'
-brew 'hashicorp/tap/terraform'
+# brew 'zstd' # For gem 'mysql2'
 
 # Nice source of helpers:
 # https://draptik.github.io/2023-10-digital-craftsmanship-nordoberpfalz-modern-linux-cli-tools
@@ -31,7 +30,6 @@ brew 'ncdu'
 brew 'tldr'
 
 # https://github.com/Homebrew/homebrew-cask/blob/master/USAGE.md
-cask 'alacritty'
 cask 'docker-desktop'
 cask 'font-blex-mono-nerd-font'
 cask 'font-ibm-plex-mono'
@@ -41,13 +39,13 @@ cask 'ghostty'
 cask 'google-chrome'
 cask 'hammerspoon'
 cask 'karabiner-elements'
-cask 'p4v' # P4Merge
+# cask 'p4v' # P4Merge
 cask 'rubymine'
 cask 'sourcetree'
 cask 'spotify'
 cask 'signal'
 cask 'visual-studio-code'
-cask 'vlc'
+# cask 'vlc'
 cask 'zed'
 
 # https://github.com/mas-cli/mas
@@ -59,7 +57,7 @@ mas 'Xcode', id: 497799835
 mas 'Pages', id: 409201541
 mas 'Keynote', id: 409183694
 mas 'Trello', id: 1278508951
-mas 'JSON Peep for Safari 1.3.2', id: 1458969831
+# mas 'JSON Peep for Safari 1.3.2', id: 1458969831
 
 ############################
 # Specific for home computer
@@ -102,31 +100,27 @@ if `/opt/homebrew/bin/chezmoi data --format=json | jq .chezmoi.config.data.isHom
   # cask 'mactex-no-gui'
   # cask 'tuxguitar'
 else
-  # Previously but not currently used software installed with Homebrew:
-  #   cowsay, dos2unix, fswatch, graphviz, htop-osx,
-  #   jemalloc, memcached, ntfs-3g, s3cmd, terminal-notifier, unison
-
   brew 'awscli'
   brew 'fswatch'
   brew 'git-lfs'
+  brew 'graphviz'
   brew 'iperf'
   brew 'telnet'
   brew 'uv'
   brew 'wget'
-  # brew 'git'
   # brew 'gnupg'
   # brew 'mysql-connector-c'
-  # brew 'reattach-to-user-namespace'
 
   # TODO: Replace with https://github.com/matryer/xbar ?
   cask 'bitbar'
 
   cask 'bitwarden'
   cask 'cyberduck'
+  cask 'gcloud-cli'
   cask 'gimp'
   cask 'miniconda'
-  cask 'mysqlworkbench'
-  cask 'veracrypt'
+  # cask 'mysqlworkbench'
+  # cask 'veracrypt'
   cask 'wireshark-app'
 
   mas 'Windows App', id: 1295203466
@@ -144,6 +138,7 @@ else
   vscode "leighlondon.eml"
   vscode "michaelnewton.textile-preview"
   vscode "mitchdenny.ecdc"
+  vscode "ms-azuretools.vscode-containers"
   vscode "ms-azuretools.vscode-docker"
   vscode "ms-ceintl.vscode-language-pack-de"
   vscode "ms-python.debugpy"
