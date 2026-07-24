@@ -1,5 +1,14 @@
 #!/bin/sh
 
+# Achtung! Globs werden zum Zeitpunkt der Registrierung aufgelöst. `tmutil` unterstützt keine Wildcards.
+# Das heißt, es macht grundsätzlich Sinn, dieses Skript immer wieder mal laufen zu lassen.
+# Alternative: find ~/Projekte -type d -name node_modules -prune -exec tmutil addexclusion {} +
+#
+# Mit `tmutil isexcluded` kann man sehen, was ggf. schon automatisch von TimeMachine bzw. den macOS-Apps ausgeschlossen
+# wird. Das ist z. B. für diverse Cache-Verzeichnisse der Fall.
+
+# TODO: Globs haben nicht funktioniert?
+
 echo "configuring TimeMachine…"
 
 sudo tmutil addexclusion -p /Applications
@@ -22,12 +31,15 @@ sudo tmutil addexclusion -p {{ .chezmoi.homeDir }}/Applications
 sudo tmutil addexclusion -p {{ .chezmoi.homeDir }}/Downloads
 sudo tmutil addexclusion -p {{ .chezmoi.homeDir }}/Library/Caches
 sudo tmutil addexclusion -p {{ .chezmoi.homeDir }}/Movies
+
+# TODO: Wirklich?
 sudo tmutil addexclusion -p {{ .chezmoi.homeDir }}/Music
+
 sudo tmutil addexclusion -p {{ .chezmoi.homeDir }}/tmp
+sudo tmutil addexclusion -p {{ .chezmoi.homeDir }}/.cache
+sudo tmutil addexclusion -p {{ .chezmoi.homeDir }}/.bundle/cache
 
 {{- if .isHome }}
-sudo tmutil addexclusion -p /Users/der_flo/.bundle
-sudo tmutil addexclusion -p /Users/der_flo/.cache
 sudo tmutil addexclusion -p /Users/der_flo/.cargo
 sudo tmutil addexclusion -p /Users/der_flo/.rustup
 sudo tmutil addexclusion -p /Users/der_flo/.vscode
@@ -35,8 +47,24 @@ sudo tmutil addexclusion -p /Users/der_flo/Applications
 sudo tmutil addexclusion -p /Users/der_flo/Library
 {{- else }}
 sudo tmutil addexclusion -p /Users/florian.duetsch/Library/Containers/com.docker.docker
+sudo tmutil addexclusion -p '/Users/florian.duetsch/Library/Application Support/Slack/Service Worker/CacheStorage'
+sudo tmutil addexclusion -p '/Users/florian.duetsch/Library/Application Support/com.apple.wallpaper'
+sudo tmutil addexclusion -p '/Users/florian.duetsch/Library/Application Support/Claude/Cache'
+sudo tmutil addexclusion -p '/Users/florian.duetsch/Library/Application Support/Codex/component_crx_cache'
+sudo tmutil addexclusion -p /Users/florian.duetsch/Projekte/**/*.log
+sudo tmutil addexclusion -p /Users/florian.duetsch/Projekte/**/node_modules
+sudo tmutil addexclusion -p /Users/florian.duetsch/Projekte/**/tmp
+sudo tmutil addexclusion -p /Users/florian.duetsch/.local/share/mise
+sudo tmutil addexclusion -p /Users/florian.duetsch/.bun
+sudo tmutil addexclusion -p /Users/florian.duetsch/.codex/plugins
+sudo tmutil addexclusion -p /Users/florian.duetsch/.codex/.tmp
+sudo tmutil addexclusion -p /Users/florian.duetsch/.vscode/extensions
+sudo tmutil addexclusion -p /Users/florian.duetsch/.yarn/berry/cache
+sudo tmutil addexclusion -p /Users/florian.duetsch/.gem
+sudo tmutil addexclusion -p /Users/florian.duetsch/.npm
 sudo tmutil addexclusion -p '/Users/florian.duetsch/VirtualBox VMs'
 sudo tmutil addexclusion -p /Users/florian.duetsch/src
+sudo tmutil addexclusion -p /Users/florian.duetsch/.Trash
 {{- end }}
 
 sudo tmutil enable

@@ -36,7 +36,7 @@ end
 
 abbr -a be 'bundle exec'
 abbr -a bo 'bundle open'
-abbr -a bi 'bundle install -j4'
+abbr -a bi 'bundle install'
 
 abbr -a todo_flo 'rg "TODO\sFlo"'
 abbr -a todo 'rg --pcre2 "TODO(?! Prio [23])"'

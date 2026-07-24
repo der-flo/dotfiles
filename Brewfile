@@ -30,6 +30,9 @@ brew 'ncdu'
 brew 'tldr'
 
 # https://github.com/Homebrew/homebrew-cask/blob/master/USAGE.md
+cask 'chatgpt'
+cask 'claude'
+cask 'claude-code'
 cask 'docker-desktop'
 cask 'font-blex-mono-nerd-font'
 cask 'font-ibm-plex-mono'
@@ -39,6 +42,7 @@ cask 'ghostty'
 cask 'google-chrome'
 cask 'hammerspoon'
 cask 'karabiner-elements'
+cask 'obsidian'
 # cask 'p4v' # P4Merge
 cask 'rubymine'
 cask 'sourcetree'
@@ -50,12 +54,12 @@ cask 'zed'
 
 # https://github.com/mas-cli/mas
 # TODO Home: Ist das alles aus dem App Store?
-mas 'Numbers', id: 409203825
+mas 'Numbers', id: 361304891
 # mas 'GarageBand', id: 682658836
 # mas 'iMovie', id: 408981434
 mas 'Xcode', id: 497799835
-mas 'Pages', id: 409201541
-mas 'Keynote', id: 409183694
+mas 'Pages', id: 361309726
+mas 'Keynote', id: 361285480
 mas 'Trello', id: 1278508951
 # mas 'JSON Peep for Safari 1.3.2', id: 1458969831
 
@@ -105,6 +109,7 @@ else
   brew 'git-lfs'
   brew 'graphviz'
   brew 'iperf'
+  brew 'mkcert'
   brew 'telnet'
   brew 'uv'
   brew 'wget'
@@ -118,19 +123,23 @@ else
   cask 'cyberduck'
   cask 'gcloud-cli'
   cask 'gimp'
+  cask 'microsoft-teams'
   cask 'miniconda'
   # cask 'mysqlworkbench'
   # cask 'veracrypt'
+  cask 'slack'
+  cask 'tunnelblick'
   cask 'wireshark-app'
+  cask 'xbar'
 
   mas 'Windows App', id: 1295203466
   mas 'The Unarchiver', id: 425424353
   mas 'Telefon', id: 406825478
+  mas 'Userscripts-Mac-App', id: 1463298887 # https://github.com/quoid/userscripts
 
   # TODO: Everything needed for work environment?
   vscode "dbaeumer.vscode-eslint"
   vscode "dotjoshjohnson.xml"
-  vscode "fabianlauer.vs-code-xml-format"
   vscode "golf1052.code-sync"
   vscode "gruntfuggly.todo-tree"
   vscode "hashicorp.terraform"

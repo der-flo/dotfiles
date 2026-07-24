@@ -38,13 +38,7 @@ hs.loadSpoon("ReloadConfiguration")
 spoon.ReloadConfiguration:bindHotkeys({ reloadConfiguration = { hyper, "r" } })
 spoon.ReloadConfiguration:start()
 
--- TODO: Replace with chezmoi tricks?
-local isPrivateHost = hs.fnutils.find(hs.host.names(), function(name)
-  return name:find("^flo%-air") ~= nil
-end) ~= nil
-
-local new_browser_window = isPrivateHost and "new_safari_window" or "new_chrome_window"
-hs.hotkey.bind(hyper, "c", "open new browser window", require(new_browser_window))
+hs.hotkey.bind(hyper, "c", "open new browser window", require "new_safari_window")
 
 -- TODO: configured directly in Ghostty
 -- hs.hotkey.bind(hyper, "t", require "new_alacritty_window")

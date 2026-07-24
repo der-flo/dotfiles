@@ -4,7 +4,10 @@
 
 # TODO: Bumpen
 node = "22.13.0"
-ruby = "4.0.3"
+ruby = "4.0.6"
 
 [settings]
 idiomatic_version_file_enable_tools = ["ruby"]
+
+[settings.ruby]
+compile = false

@@ -5,4 +5,5 @@ set -e
 # https://mise.jdx.dev
 
 # mise uninstall ruby@3.3.5
-mise use --global ruby@3.4.1
+# TODO: Ist das klug?
+mise use --global ruby@4.0.6

@@ -43,7 +43,7 @@
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "workbench.tree.indent": 24,
-    "workbench.colorTheme": "Default Light+",
+    "workbench.colorTheme": "Light+",
     "rust-analyzer.check.command": "clippy",
     "[rust]": {
         "editor.defaultFormatter": "rust-lang.rust-analyzer",
