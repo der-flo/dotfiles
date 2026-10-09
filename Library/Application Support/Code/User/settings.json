@@ -60,4 +60,9 @@
     "todo-tree.tree.showCountsInTree": true,
     "editor.fontWeight": "400",
     "editor.lineHeight": 16,
+    "diffEditor.renderSideBySide": false,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "git.confirmSync": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "git.autofetch": true
 }

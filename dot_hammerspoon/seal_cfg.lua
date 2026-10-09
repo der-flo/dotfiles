@@ -5,7 +5,7 @@
 local openEditor = require "open_editor"
 
 function runTrack(command)
-  local output = hs.execute("/usr/local/bin/track " .. command)
+  local output = hs.execute("/Users/florian.duetsch/bin/track " .. command)
   hs.notify.new({
     title = "track",
     informativeText = output

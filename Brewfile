@@ -15,6 +15,7 @@ brew 'pass'
 brew 'pinentry-mac'
 brew 'pwgen'
 brew 'ripgrep'
+brew 'rustup'
 # brew 'ruby-build' # Needed or included in mise?
 brew 'tmux'
 brew 'watch'
@@ -74,7 +75,6 @@ if `/opt/homebrew/bin/chezmoi data --format=json | jq .chezmoi.config.data.isHom
   brew 'nomad'
   brew 'pkg-config' # For crate 'relm4'
   brew 'rclone'
-  brew 'rustup-init'
   brew 'swaks'
 
   cask 'adobe-creative-cloud'
