@@ -4,6 +4,8 @@
 # * https://gist.github.com/romanhaa/9804183f242991007b316a59c4ba5e5a
 # * https://marketmix.com/de/mac-osx-umfassende-liste-der-terminal-defaults-commands/
 # * TODO: https://github.com/rusty1s/dotfiles/blob/master/macos/defaults.sh
+#
+# Or `-g` instead of `NSGlobalDomain`
 
 # Dock
 defaults write com.apple.dock "orientation" -string "left"
@@ -29,4 +31,6 @@ defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool 
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
-# TODO: "Alle Eingabequellen: Punkt mit doppeltem Leerzeichen hinzufügen" deaktivieren
+
+# No period for two spacebar presses
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
