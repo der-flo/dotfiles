@@ -45,7 +45,6 @@ hs.hotkey.bind(hyper, "c", "open new browser window", require "new_safari_window
 
 -- TODO: Used?
 hs.hotkey.bind(hyper, "i", "toogle KSheet", require "toggle_ksheet")
-hs.hotkey.showHotkeys(hyper, "o")
 
 -- TODO: Diese 3 Funktionen testen und robuster machen
 local openEditor = require "open_editor"
@@ -53,7 +52,7 @@ local finder = require "finder"
 hs.hotkey.bind(hyper, "d", "open editor in opened dir", function()
   openEditor(finder.opened_dir())
 end)
-hs.hotkey.bind(hyper, "f", function()
+hs.hotkey.bind(hyper, "f", "open Finder", function()
   -- TODO: Add again with other keycode
   -- openEditor(finder.selected_path())
 
@@ -74,17 +73,20 @@ hs.hotkey.bind(hyper, "space", "toggle Seal", function()
   spoon.Seal:toggle()
 end)
 -- Standardprogramme schnell anspringen, zwischen ihnen wechseln
-hs.hotkey.bind(hyper, "1", "launch or focus terminal", function()
+hs.hotkey.bind(hyper, "1", "launch or focus Ghostty", function()
   hs.application.launchOrFocus("Ghostty")
 end)
 hs.hotkey.bind(hyper, "2", "launch or focus RubyMine", function()
   hs.application.launchOrFocus("RubyMine")
 end)
-hs.hotkey.bind(hyper, "3", "launch or focus Zed", function()
-  hs.application.launchOrFocus("Zed")
+hs.hotkey.bind(hyper, "3", "launch or focus VS Code", function()
+  hs.application.launchOrFocusByBundleID("com.microsoft.VSCode")
 end)
-hs.hotkey.bind(hyper, "4", "launch or focus Chrome", function()
-  hs.application.launchOrFocus("Google Chrome")
+hs.hotkey.bind(hyper, "4", "launch or focus Safari", function()
+  hs.application.launchOrFocus("Safari")
+end)
+hs.hotkey.bind(hyper, "5", "launch or focus Codex", function()
+  hs.application.launchOrFocusByBundleID("com.openai.codex")
 end)
 
 --------------------------------------------------------------------------------
@@ -93,25 +95,9 @@ end)
 -- Die Animationen sind laggy, also schalten wir sie ab.
 hs.window.animationDuration = 0
 
--- TODO: Used?
+local windowLayouts = require "window_layouts"
 hs.hotkey.bind(hyper2, "f", "arrange coding windows", function()
-  hs.mjomatic.go({
-    "iiiCCCCC",
-    "iiiCCCCC",
-    "",
-    "i iTerm2",
-    "C Code"
-  })
-end)
-
-hs.hotkey.bind(hyper2, "g", "arrange coding windows (2)", function()
-  hs.mjomatic.go({
-    "iivvvvvv",
-    "iivvvvvv",
-    "",
-    "i iTerm2",
-    "v MacVim"
-  })
+  windowLayouts.apply(windowLayouts.coding)
 end)
 
 -- TODO: hs.grid.show?
@@ -142,6 +128,12 @@ local moveHotkeys = {
   screen_right = { hyper2, "e", message = "move window to right screen" },
 }
 spoon.WindowScreenLeftAndRight:bindHotkeys(moveHotkeys)
+
+-- Keep the event tap alive. Register after all hotkeys so the help includes them.
+hyperHelp = require("hyper_help")({
+  { mods = hyper, prefix = "⌘⌃⌥", title = "Hyper · rechte ⌘ · ⌘⌥⌃" },
+  { mods = hyper2, prefix = "⌘⌃⇧", title = "Hyper2 · rechte ⌥ · ⌘⌃⇧" },
+})
 
 --------------------------------------------------------------------------------
 -- hs.alert.show("Config loaded")
