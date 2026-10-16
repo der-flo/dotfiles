@@ -17,9 +17,6 @@ function obj.bareCalc(query)
         return choices
     end
 
-    -- Change decimal separator to comma
-    query, _ = query:gsub(",", ".")
-
     -- Filter out commas and dollar signs
     query, _ = query:gsub("[%,%$]", "")
 
