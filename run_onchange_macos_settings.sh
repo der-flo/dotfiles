@@ -7,6 +7,24 @@
 #
 # Or `-g` instead of `NSGlobalDomain`
 
+# Keyboard: cycle through windows of the current application with Cmd+<.
+# For the German layout: character 60 (<), keycode 50, modifier 1048576 (Cmd).
+# Merge only shortcut 27 so all other system shortcuts are preserved.
+# XML keeps booleans and integers typed; OpenStep syntax stores them as strings.
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 27 \
+  '<dict>
+    <key>enabled</key><true/>
+    <key>value</key><dict>
+      <key>parameters</key><array>
+        <integer>60</integer><integer>50</integer><integer>1048576</integer>
+      </array>
+      <key>type</key><string>standard</string>
+    </dict>
+  </dict>'
+
+# Reload shortcuts in the current session without requiring a new login.
+/System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+
 # Dock
 defaults write com.apple.dock "orientation" -string "left"
 defaults write com.apple.dock autohide -bool true
