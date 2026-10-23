@@ -10,7 +10,6 @@ brew 'fisher'
 # brew 'libyaml' # For 'ruby-install' via mise
 brew 'mas'
 brew 'mise'
-# brew "mysql-client" # For gem 'mysql2'
 brew 'pass'
 brew 'pinentry-mac'
 brew 'pwgen'
@@ -19,7 +18,6 @@ brew 'rustup'
 # brew 'ruby-build' # Needed or included in mise?
 brew 'tmux'
 brew 'watch'
-# brew 'zstd' # For gem 'mysql2'
 
 # Nice source of helpers:
 # https://draptik.github.io/2023-10-digital-craftsmanship-nordoberpfalz-modern-linux-cli-tools
@@ -105,20 +103,19 @@ if `/opt/homebrew/bin/chezmoi data --format=json | jq .chezmoi.config.data.isHom
   # cask 'tuxguitar'
 else
   brew 'awscli'
+  brew 'cloc'
   brew 'fswatch'
   brew 'git-lfs'
   brew 'graphviz'
   brew 'iperf'
   brew 'mkcert'
+  brew 'mysql-client@8.4' # For gem 'mysql2'
   brew 'telnet'
   brew 'uv'
   brew 'wget'
   # brew 'gnupg'
-  # brew 'mysql-connector-c'
 
-  # TODO: Replace with https://github.com/matryer/xbar ?
-  cask 'bitbar'
-
+  cask 'azure-cli'
   cask 'bitwarden'
   cask 'cyberduck'
   cask 'gcloud-cli'
