@@ -38,10 +38,7 @@ hs.loadSpoon("ReloadConfiguration")
 spoon.ReloadConfiguration:bindHotkeys({ reloadConfiguration = { hyper, "r" } })
 spoon.ReloadConfiguration:start()
 
-hs.hotkey.bind(hyper, "c", "open new browser window", require "new_safari_window")
-
--- TODO: configured directly in Ghostty
--- hs.hotkey.bind(hyper, "t", require "new_alacritty_window")
+hs.hotkey.bind(hyper, "b", "open new browser window", require "new_safari_window")
 
 -- TODO: Used?
 hs.hotkey.bind(hyper, "i", "toogle KSheet", require "toggle_ksheet")
@@ -49,7 +46,7 @@ hs.hotkey.bind(hyper, "i", "toogle KSheet", require "toggle_ksheet")
 -- TODO: Diese 3 Funktionen testen und robuster machen
 local openEditor = require "open_editor"
 local finder = require "finder"
-hs.hotkey.bind(hyper, "d", "open editor in opened dir", function()
+hs.hotkey.bind(hyper, "e", "open editor in opened dir", function()
   openEditor(finder.opened_dir())
 end)
 hs.hotkey.bind(hyper, "f", "open Finder", function()
@@ -134,8 +131,15 @@ spoon.WindowScreenLeftAndRight:bindHotkeys(moveHotkeys)
 
 -- Keep the event tap alive. Register after all hotkeys so the help includes them.
 hyperHelp = require("hyper_help")({
-  { mods = hyper, prefix = "⌘⌃⌥", title = "Hyper · rechte ⌘ · ⌘⌥⌃" },
-  { mods = hyper2, prefix = "⌘⌃⇧", title = "Hyper2 · rechte ⌥ · ⌘⌃⇧" },
+  {
+    mods = hyper, prefix = "⌘⌃⌥", title = "Hyper · rechte ⌘ · ⌘⌥⌃",
+    -- Display only; ↗ marks shortcuts configured outside Hammerspoon.
+    extraShortcuts = { "C: Codex", "T: open new terminal window (Ghostty)" },
+  },
+  {
+    mods = hyper2, prefix = "⌘⌃⇧", title = "Hyper2 · rechte ⌥ · ⌘⌃⇧",
+    heading = "Fenstersteuerung",
+  },
 })
 
 --------------------------------------------------------------------------------

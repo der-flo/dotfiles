@@ -1,4 +1,4 @@
--- Show the active shortcuts while a Hyper prefix is held on its own.
+-- Show active shortcuts and display-only entries while a Hyper prefix is held on its own.
 return function(profiles)
   local heldProfile
   local dismissed = false
@@ -19,10 +19,21 @@ return function(profiles)
 
   local function show(profile)
     local lines = { profile.title, "" }
+    if profile.heading then
+      table.insert(lines, 1, profile.heading)
+    end
+    local shortcuts = {}
     for _, hotkey in ipairs(hs.hotkey.getHotkeys()) do
       if hotkey.idx:sub(1, #profile.prefix) == profile.prefix then
-        lines[#lines + 1] = hotkey.msg:sub(#profile.prefix + 1)
+        shortcuts[#shortcuts + 1] = hotkey.msg:sub(#profile.prefix + 1)
       end
+    end
+    for _, shortcut in ipairs(profile.extraShortcuts or {}) do
+      shortcuts[#shortcuts + 1] = shortcut .. " ↗"
+    end
+    table.sort(shortcuts)
+    for _, shortcut in ipairs(shortcuts) do
+      lines[#lines + 1] = shortcut
     end
     local text = hs.styledtext.new(table.concat(lines, "\n"), {
       font = { name = "Menlo", size = 24 },
@@ -31,7 +42,7 @@ return function(profiles)
     }):setStyle({
       font = { name = "Menlo-Bold", size = 30 },
       color = { red = 0.55, green = 0.8, blue = 1 },
-    }, 1, #profile.title)
+    }, 1, #(profile.heading or profile.title))
 
     alertId = hs.alert.show(text, {
       padding = 24,
