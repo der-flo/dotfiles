@@ -3,8 +3,14 @@ return function(profiles)
   local heldProfile
   local dismissed = false
   local alertId
+  local showTimer
+  local showDelay = 0.5
 
   local function hide()
+    if showTimer then
+      showTimer:stop()
+      showTimer = nil
+    end
     if alertId then
       hs.alert.closeSpecific(alertId, 0)
       alertId = nil
@@ -65,8 +71,11 @@ return function(profiles)
       if not flags:containExactly(heldProfile.mods) then
         hide()
         dismissed = true
-      elseif not dismissed and not alertId then
-        show(heldProfile)
+      elseif not dismissed and not alertId and not showTimer then
+        showTimer = hs.timer.doAfter(showDelay, function()
+          showTimer = nil
+          show(heldProfile)
+        end)
       end
     end
 
