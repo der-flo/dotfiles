@@ -99,6 +99,9 @@ local windowLayouts = require "window_layouts"
 hs.hotkey.bind(hyper2, "f", "arrange coding windows", function()
   windowLayouts.apply(windowLayouts.coding)
 end)
+hs.hotkey.bind(hyper2, "1", "arrange first Space windows", function()
+  windowLayouts.apply(windowLayouts.firstSpace)
+end)
 
 -- TODO: hs.grid.show?
 

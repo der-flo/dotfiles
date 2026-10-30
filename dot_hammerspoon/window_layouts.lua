@@ -9,6 +9,14 @@ layouts.coding = {
   ["com.microsoft.VSCode"] = { screen = "right", x = 0.3, y = 0, w = 0.7, h = 1 },
 }
 
+layouts.firstSpace = {
+  ["com.tinyspeck.slackmacgap"] = { screen = "left", x = 0, y = 0, w = 0.5, h = 1 },
+  ["com.tlphn.Telephone"] = { screen = "right", x = 0, y = 0, w = 0.1, h = 1 / 4 },
+  ["de.adigi.redminereview"] = { screen = "right", x = 0, y = 1 / 4, w = 0.6, h = 1 / 2 },
+  ["com.apple.Notes"] = { title = "Arbeitszeiten", screen = "right", x = 0, y = 2 / 3, w = 0.1, h = 1 / 3 },
+  ["com.apple.Safari"] = { screen = "right", x = 0.4, y = 0, w = 0.6, h = 1 },
+}
+
 function layouts.apply(layout)
   local screens = hs.screen.allScreens()
   table.sort(screens, function(a, b)
@@ -16,7 +24,7 @@ function layouts.apply(layout)
   end)
 
   if #screens < 2 or screens[1]:fullFrame().x == screens[#screens]:fullFrame().x then
-    hs.alert.show("Coding-Layout benötigt einen linken und einen rechten Monitor")
+    hs.alert.show("Layout benötigt einen linken und einen rechten Monitor")
     return
   end
 
@@ -30,7 +38,8 @@ function layouts.apply(layout)
   for _, window in ipairs(hs.window.visibleWindows()) do
     local app = window:application()
     local rule = app and layout[app:bundleID()]
-    if rule and window:isStandard() and not window:isFullScreen() then
+    local matchesTitle = rule and (not rule.title or window:title() == rule.title)
+    if matchesTitle and window:isStandard() and not window:isFullScreen() then
       local frame = targets[rule.screen]:frame()
       window:setFrame({
         x = frame.x + frame.w * rule.x,
